@@ -11,40 +11,59 @@
       <link rel="icon" href="\images\CB_logo.png">
       <!--Le styles-->
       <link href="css/bootstrap.min.css" rel="stylesheet">
+	   <link href="css/style.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
+      <!--link href="css/animate.css" rel="stylesheet"-->
       <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+      <!--style>
+         #header{
+            animation-delay: 0s;
+            animation-direction: 1s;
+         }
+         #intro{
+            animation-delay: 1s;
+            animation-direction: 1s;
+         }
+      </style-->
    </head>
    
    <body>
       <div class="container">
-         <a href="#">
-         <img src="\images\reverse_karman_1.png" class="img-responsive">
-         </a>
-         <!--header class="jumbotron subhead" id="overview">
-            <h1> Dr. Chandan Bose </h1-->
-            <!--p class="lead"> Postdoctoral Research Associate </p>
-            <h> University of Liège </h -->
-         <!--/header-->
-         <div class="masthead">
-            <div class="navbar">
-               <div class="navbar-inner">
-                  <div class="container">
-                     <ul class="nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="biography.html">Profile</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="awards.html">Recognitions</a></li>
-                        <li><a href="teaching.html">Teaching</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                     </ul>
+         <section class="showcase">
+			<div class="video-container">
+				<!--video src="https://traversymedia.com/downloads/video.mov" autoplay muted loop></video-->
+				<video src="h_125.mp4" autoplay muted loop></video>
+			</div>
+			<div class="content">
+				<h1>Dr. Chandan Bose</h1>
+            <h3>WBI Excellence Postdoctoral Fellow</h3>
+            <h4>Aerospace and Mechanical Engineering</h4>
+				<h5>University of Liège</h5>
+				<a href="#intro" class="btn">Read More</a>
+			</div>
+		</section>
+         <section id="intro">
+            <div class="masthead">
+               <div class="navbar">
+                  <div class="navbar-inner">
+                     <div class="container">
+                        <ul class="nav">
+                           <li class="active"><a href="index.html">Home</a></li>
+                           <li><a href="biography.html">Profile</a></li>
+                           <li><a href="research.html">Research</a></li>
+                           <li><a href="publications.html">Publications</a></li>
+                           <li><a href="awards.html">Recognitions</a></li>
+                           <li><a href="teaching.html">Teaching</a></li>
+                           <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
+         </section>
          <div class="well">
-         <table style="border-spacing: 10px;border-collapse: separate;">
+            <table style="border-spacing: 10px;border-collapse: separate;">
             <tbody>
                <tr>
                   <td width="0pct" valign="top">
@@ -53,18 +72,18 @@
                   <td valign="center" margin-top="10px" style="font-size: 0pt;">
                      <h3> Welcome to my website! </h3>
                      <p>
-                        <span style="font-size: 15px">I am currently a Wallonie Bruxelles International Excellence Postdoctoral Research Associate in the <a href="http://www.ltas-aea.ulg.ac.be//cms/"> Fluid-Structure Interactions and Experimental Aerodynamics Laboratory</a>, Dept.of Aerospace and Mechanical Engineering, University of Liege, Belgium.
+                        <span style="font-size: 15px">I am currently a Wallonie Bruxelles International Excellence Postdoctoral Research Associate in the <a href="http://www.ltas-aea.ulg.ac.be//cms/"> Fluid-Structure Interactions and Experimental Aerodynamics Laboratory</a>, Dept.of Aerospace and Mechanical Engineering, University of Liège, Belgium.
                         <span style="font-size: 15px">I have obtained M.S. and Ph.D. from the Dept. of Applied Mechanics, IIT Madras.
                         <span style="font-size: 15px">I am passionately interested in fluid dynamics problems of different  tastes especially which are having a flavour of nonlinear dynamics. My current research focus is on understanding low speed unsteady aerodynamics/ hydrodynamics and nonlinear fluid-structure interaction behaviour of bio-inspired propulsion.                     
                      </p>
-
+                     <!--button class="btn btn-primary"> Animate </button-->
                   </td>
                </tr>
             </tbody>
          </table>
-            
          <hr width="5" noshade>
-            <div class="row-fluid">
+         <!--section id="online" class="animated bounceIn"-->
+         <div class="row-fluid">
             <div class="centered">
                <div class="span6">
                <h3 style="color:Tomato;"> Online Presence: </h3>
@@ -76,7 +95,7 @@
                </div>
                <div class="span1">
                   <a href="https://www.researchgate.net/profile/Chandan_Bose3">
-                  <img src="\images\RG_logo_n.png" alt="">
+                  <img src="\images\RG.png" alt="">
                   </a>
                </div>
                <div class="span2">
@@ -97,6 +116,7 @@
                </div>
             </div>
          </div>
+      <!--/section-->
          <hr size="5" noshade>
          <div class="row-fluid">
             <div class="span5">
@@ -179,14 +199,14 @@
                </div>
                <hr size="5" noshade>
                <div class="well">
-               <marquee> <h4 style="color:Tomato;"> * April 2020: <a href="https://doi.org/10.1016/j.jfluidstructs.2020.102999"> New paper on Immersed Boundary Method published in JFS!!</a> * Our research featured in `Immerse', 2018 (Annual Technical Magazine of IIT Madras) - <a href="http://www.t5eiitm.org/flurry-chaos-behind-natural-flight/"> "Up in a flurry: The chaos behind natural flight" </a> ***** </h4></marquee>
+               <marquee> <h4 style="color:Tomato;"> * April 2020: <a href="https://doi.org/10.1016/j.jfluidstructs.2020.102999"> New paper on Immersed Boundary Method published in JFS!!</a> * Our research featured in 'Immerse', 2018 (Annual Technical Magazine of IIT Madras) - <a href="http://www.t5eiitm.org/flurry-chaos-behind-natural-flight/"> "Up in a flurry: The chaos behind natural flight" </a> ***** </h4></marquee>
                </div>
          <hr size="5" noshade>
                <div class="span4 feature-item">
                   <h5> <span class="date"> January, 2020 </span> </h5>
                   <h4 class="feature-heading">
                      <a href="https://www.uliege.be/cms/c_9054334/fr/repertoire?uid=U234354">
-                     Joined the University of Liege as a Wallonie Bruxelles International Excellence Postdoctoral Fellow.
+                     Joined the University of Liège as a Wallonie Bruxelles International Excellence Postdoctoral Fellow.
                      </a>
                      <br/>
                   </h4>
