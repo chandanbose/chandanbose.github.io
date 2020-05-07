@@ -14,13 +14,46 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
       <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+
+   <style>
+      .btncls{
+         background-color:#B80C4D;
+         border: #2e6da4;
+         font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+         font-size: 15px;
+         color: #fff;
+         letter-spacing: 1px;
+         padding: 8px 12px;
+         font-size: 14px;
+         font-weight: normal;
+         border-radius: 4px;
+         line-height: 1.5;
+         text-decoration:none;
+         }
+      .btncls:hover{
+         background-color:#F773A5;
+         border: #2e6da4;
+         font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+         font-size: 15px;
+         color: #000;
+         letter-spacing: 1px;
+         padding: 8px 12px;
+         font-size: 14px;
+         font-weight: normal;
+         border-radius: 4px;
+         line-height: 1.5;
+         text-decoration:none;
+         }
+   </style>
+
    </head>
    
    <body>
       <div class="container">
          <a href="#">
-            <img src="\images\reverse_karman_1.png" class="img-responsive">
+            <img src="\images\reverse_karman_1.png" class="img-responsive animated pulse">
          </a>
          <!--header class="jumbotron subhead" id="overview">
             <h1> Dr. Chandan Bose </h1-->
@@ -37,7 +70,7 @@
                         <li><a href="research.html">Research</a></li>
                         <li><a href="publications.html">Publications</a></li>
                         <li><a href="awards.html">Recognitions</a></li>
-                        <li><a href="teaching.html">Teaching</a></li>
+                        <!--li><a href="teaching.html">Teaching</a></li-->
                         <li><a href="gallery.html">Gallery</a></li>
                      </ul>
                   </div>
@@ -71,9 +104,13 @@
                      <img src="\images\wb_research_1_1.png" class="img-responsive">
                   </div>
                   <hr>
-                  <div class="page-header">
-                  <h4><b style="color:Tomato;">Track 1: Bio-Inspired Propulsion at low Reynolds numbers</b></h4>
-                  </div>
+                  <p>
+                     <button class="btncls" type="button" data-toggle="collapse" data-target="#track1" aria-expanded="false" aria-controls="">
+                        <h4>Track 1: Bio-Inspired Propulsion at Low Reynolds Numbers</h4>
+                     </button>
+                  </p>
+                  <div class="collapse" id="track1">
+                  <!--h4><b style="color:Tomato;">Track 1: Bio-Inspired Propulsion at low Reynolds numbers</b></h4-->
                   <div class="row-fluid">
                      <div class="span12">
                         <section id="Chaos">
@@ -141,10 +178,15 @@
                         </section>
                      </div>
                   </div>
-                  
-                  <div class="page-header">
-                     <h4><b style="color:Tomato;">Track 2: Nonlinear aeroelasticity</b> </h4>
-                     <hr>
+               </div>
+               <p>
+                  <button class="btncls" type="button" data-toggle="collapse" data-target="#track2" aria-expanded="false" aria-controls="collapseExample">
+                     <h4>Track 2: Nonlinear Aeroelasticity</h4>
+                  </button>
+               </p>
+               <div class="collapse" id="track2">
+                     <!--h4><b style="color:Tomato;">Track 2: Nonlinear aeroelasticity</b> </h4-->
+                     <!--hr-->
                      <h5>1. Dynamic stall and stall flutter in turbulent flow regime using hybrid RANS/ DES/ LES. </h5>
                      <!--hr>
                      <p>
@@ -176,9 +218,30 @@
                      </p>
                      <hr-->
                   </div>
-               <div class="page-header">
-                     <h4><b style="color:Tomato;">Track 3: Modal decomposition of fluid flow and reduced order modelling</b> </h4>
+
+               <p>
+                  <button class="btncls" type="button" data-toggle="collapse" data-target="#track3" aria-expanded="false" aria-controls="collapseExample">
+                     <h4>Track 3: Flow Energy Harvesting</h4>
+                  </button>
+               </p>
+               <div class="collapse" id="track3">
+                  <!--h4><b style="color:Tomato;">Track 4: Flow energy harvesting </b></h4-->
+                     <!--hr>
+                     <h5>. </h5>
                      <hr>
+                     <p>
+                        More details coming ...
+                     </p>
+                     </hr-->
+               </div>
+               <p>
+                  <button class="btncls" type="button" data-toggle="collapse" data-target="#track4" aria-expanded="false" aria-controls="collapseExample">
+                     <h4>Track 4: Modal Decomposition and Reduced Order Modelling</h4>
+                  </button>
+               </p>
+               <div class="collapse" id="track4">
+                     <!--h4><b style="color:Tomato;">Track 4: Modal decomposition of fluid flow and reduced order modelling</b> </h4-->
+                     <!--hr-->
                      <h5>1. Proper orthonal decomposition. </h5>
                      <!--hr>
                      <p>
@@ -192,19 +255,15 @@
                      </p>
                      <hr-->
                   </div>
-               <div class="page-header">
-                  <h4><b style="color:Tomato;">Track 4: Flow energy harvesting </b></h4>
-                     <!--hr>
-                     <h5>. </h5>
-                     <hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     </hr-->
-                  </div>
-               <div class="page-header">
-                  <h4><b style="color:Tomato;">Track 5: Physiological fluid mechanics</b> </h4>
-                     <hr>
+
+                  <p>
+                     <button class="btncls" type="button" data-toggle="collapse" data-target="#track5" aria-expanded="false" aria-controls="collapseExample">
+                        <h4>Track 5: Physiological Fluid Mechanics</h4>
+                     </button>
+                  </p>
+                  <div class="collapse" id="track5">
+                  <!--h4><b style="color:Tomato;">Track 5: Physiological fluid mechanics</b> </h4-->
+                     <!--hr-->
                      <h5>1. Flow dynamics of phonation. </h5>
                      <!--hr>
                      <p>
@@ -212,9 +271,15 @@
                      </p>
                      <hr-->
                   </div>
-               <div class="page-header">
-                  <h4><b style="color:Tomato;">Track 6: Numerical solver development</b> </h4>
-                     <hr>
+
+                  <p>
+                     <button class="btncls" type="button" data-toggle="collapse" data-target="#track6" aria-expanded="false" aria-controls="collapseExample">
+                        <h4>Track 6: Numerical solver development</h4>
+                     </button>
+                  </p>
+                  <div class="collapse" id="track6">
+                  <!--h4><b style="color:Tomato;">Track 6: Numerical solver development</b> </h4-->
+                     <!--hr-->
                      <h5>1. Development of robust FSI coupling interfaces. </h5>
                      <!--hr>
                      <p>
@@ -228,9 +293,14 @@
                      </p>
                      <hr-->
                   </div>
-                  <div class="page-header">
-                  <h4><b style="color:Tomato;">Track 7: Machine learning in fluid mechanics </b></h4>
-                     <hr>
+                  <p>
+                     <button class="btncls" type="button" data-toggle="collapse" data-target="#track7" aria-expanded="false" aria-controls="collapseExample">
+                        <h4>Track 7: Machine learning in fluid mechanics</h4>
+                     </button>
+                  </p>
+                  <div class="collapse" id="track7">
+                  <!--h4><b style="color:Tomato;">Track 7: Machine learning in fluid mechanics </b></h4-->
+                     <!--hr-->
                      <h5>1. Physics-informed neural networks. </h5>
                      <!--hr>
                      <p>
@@ -267,7 +337,7 @@
          <span> @2019 Chandan Bose - All rights reserved! </span>
          </div-->
 
-<footer id="footer">
+      <footer id="footer">
          <div class="container-fluid">
             <div class="row-fluid">
                <div class="span12">
@@ -276,7 +346,7 @@
             </div>
          </div>
       </footer>
-      </div>
+</div>
          <!--footer id="footer">
          <div class="container-fluid">
             <div class="row-fluid">

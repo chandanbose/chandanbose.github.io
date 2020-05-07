@@ -14,13 +14,49 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
       <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+
+      <style>
+         .btncls{
+            background-color:#B80C4D;
+            border: #2e6da4;
+            font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+            font-size: 15px;
+            color: #fff;
+            letter-spacing: 1px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: normal;
+            border-radius: 4px;
+            line-height: 1.5;
+            text-decoration:none;
+            }
+         .btncls:hover{
+            background-color:#F773A5;
+            border: #2e6da4;
+            font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+            font-size: 15px;
+            color: #000;
+            letter-spacing: 1px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: normal;
+            border-radius: 4px;
+            line-height: 1.5;
+            text-decoration:none;
+            }
+      
+         div button{
+            display:inline-block;
+         }
+      </style>
    </head>
    
    <body>
       <div class="container">
          <a href="#">
-            <img src="\images\reverse_karman_1.png" class="img-responsive">
+            <img src="\images\reverse_karman_1.png" class="img-responsive animated pulse">
          </a>
          <!--header class="jumbotron subhead" id="overview">
             <h1> Dr. Chandan Bose </h1-->
@@ -37,26 +73,42 @@
                         <li><a href="research.html">Research</a></li>
                         <li><a href="publications.html">Publications</a></li>
                         <li><a href="awards.html">Recognitions</a></li>
-                        <li><a href="teaching.html">Teaching</a></li>
+                        <!--li><a href="teaching.html">Teaching</a></li-->
                         <li><a href="gallery.html">Gallery</a></li>
                      </ul>
                   </div>
                </div>
             </div>
          </div>
-            <div class="span8 offset1">
-               <section id="published">
-                  <div class="page-header">
+         <div class="span8 offset1">
+            <section id="published">
+               <div class="btn-group-sm centered" role="group" aria-label="">
+                     <!--a class="btn btn-primary" data-toggle="collapse" href="#awards" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <h3>Awards and Honors</h3>
+                     </a-->
+                  <button class="btncls" type="button" data-toggle="collapse" data-target="#journal" aria-expanded="false" aria-controls="collapseExample">
+                     <h4>Refereed Journals</h4>
+                  </button>
+                  <button class="btncls" type="button" data-toggle="collapse" data-target="#proceeding" aria-expanded="false" aria-controls="collapseExample">
+                     <h4>Indexed Proceedings</h4>
+                  </button>
+                  <button class="btncls" type="button" data-toggle="collapse" data-target="#chapter" aria-expanded="false" aria-controls="collapseExample">
+                     <h4>Book Chapters</h4>
+                  </button>
+               </div>
+
+               <div class="collapse" id="journal" style="font-size: 15px">
                   <!--h3 style="background-color:Tomato; color:White;"> Refereed Journal Publications </h3-->
-                  <h3> Refereed Journal Publications </h3>
-                     <h5>*note: All papers are indexed in SCI/ SCI Expanded/ WoS </h5>
-                  </div>
+                  <!--h3> Refereed Journal Publications </h3-->
+                  <!--h5>*note: All papers are indexed in SCI/ SCI Expanded/ WoS </h5-->
+
                   <!--hr size="5" noshade-->
+                  <div class="page-header">
+                     <h3> Refereed Journal Publications </h3>
+                  </div>
                   <section id="2020">
-                     <!--div class="page-header">
-                     <h4>2020</h4>
-                     </div>
-                     <br/-->
+                     <h2><b>2020</b></h2>
+                     <hr size="5" noshade>
                      <div class="row-fluid">
                         <div class="span3">
                            <!--a href="" class="thumbnail"-->
@@ -97,8 +149,8 @@
                      <hr>
                   </section>
                   <section id="2019">
-                     <!--h3>2019</h3>
-                     <br/-->
+                     <h2><b>2019</b></h2>
+                     <hr size="5" noshade>
                      <div class="row-fluid">
                         <div class="span3">
                            <a href="" class="thumbnail">
@@ -121,8 +173,8 @@
                   </section>
                   <hr>
                   <section id="2018">
-                     <!--h3>2018</h3>
-                     <br/-->
+                     <h2><b>2018</b></h2>
+                     <hr size="5" noshade>
                      <div class="row-fluid">
                         <div class="span3">
                            <a href="" class="thumbnail">
@@ -167,8 +219,8 @@
                   </section>
                   <hr>
                   <section id="2017">
-                     <!--h3>2017</h3>
-                     <br/-->
+                     <h2><b>2017</b></h2>
+                     <hr size="5" noshade>
                   <div class="row-fluid">
                      <div class="span3">
                            <a href="" class="thumbnail">
@@ -241,16 +293,19 @@
                      <li class="publication">G. Augue, N. Massa, H. Turpis, X. Duis, S.V. Nunc, “Ipsum consequat nisl vel pretium lectus", 2018.</li>
                      <li class="publication">D.J. Nunc, N. Massa, E.N. Dignissim, “Felis eget velit aliquet sagittis id consectetur purus ut faucibus”, 2018.</li>
                      <li class="publication">P. Magna, Z. Malesuada, A. Maecenas, N. Vitae, “Duis convallis convallis tellus id interdum velit laoreet”, 2018.</li>
-                  </ol-->
-         </div>
+                  </ol>
+                  </section-->
       </section>
+      </div>
       </section>
+      </div>
       <hr>
       <div class="span8 offset1">
-            <section id="published">
-                  <div class="page-header">
+      <section id="published">
+      <div class="collapse" id="proceeding" style="font-size: 15px">
+               <div class="page-header">
                   <h3> Indexed Proceedings </h3>
-                  </div>
+               </div>
                <ol>
                   <li>
                      <b style="color:Tomato;">Chandan Bose</b>, Sunetra Sarkar, Sayan Gupta,  <a href="https://www.matec-conferences.org/articles/matecconf/abs/2018/07/matecconf_icoev2018_08001/matecconf_icoev2018_08001.html"> <b> Stochastic bifurcation analysis of an elastically mounted flapping airfoil in an inviscid fluid </b> </a>, <b> MATEC Web of Conferences </b>, 148, 08001, DOI: 10.1051/matecconf/201814808001, 2018.
@@ -272,11 +327,13 @@
                      <b style="color:Tomato;">Chandan Bose</b>, Sayan Gupta, Sunetra Sarkar, <a href= "https://www.sciencedirect.com/science/article/pii/S1877705816303241"> <b> Dynamical stability analysis of a fluid structure  interaction system using high fidelity Naviers-Stokes solver </b></a>, <b> Procedia Engineering </b>, 144, pp. 883-890, DOI: 10.1016/j.proeng.2016.05.107, 2016
                   </li>
                </ol>  
-         </section>
+      </div>
+      </section>
       </div>
       <hr>
       <div class="span8 offset1">
          <section id="published">
+            <div class="collapse" id="chapter" style="font-size: 15px">
             <div class="page-header">
                <h3> Book Chapters </h3>
             </div>
@@ -305,6 +362,7 @@
                   <b style="color:Tomato;"> Chandan Bose </b>, S. Krishna Kumar, Sunetra Sarkar and Sayan Gupta, <a href="https://link.springer.com/chapter/10.1007/978-981-13-0365-4_71"> <b> Interaction of a Flexible Splitter Plate with Vortex Shedding Past a Rigid Circular Cylinder </b></a>, In Book: <b> Recent Advances in Structural Engineering </b> Volume 2, Eds. A. Rama Mohan Rao and K. Ramanjaneyulu, Springer Nature, Singapore, 2018. ISBN: 978-981-13-0364-7, DOI: 10.1007/978-981-13-0365-4_71, 2018.
                </li>
             </ol>  
+            </div>
          </section>
       </div>
    </div>

@@ -14,18 +14,25 @@
 	   <link href="css/style.css" rel="stylesheet">
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
-      <!--link href="css/animate.css" rel="stylesheet"-->
+      <link href="css/animate.css" rel="stylesheet">
       <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
-      <!--style>
-         #header{
+      <style>
+         #head{
             animation-delay: 0s;
-            animation-direction: 1s;
+            animation-direction: 3s;
+            animation-iteration-count: infinite;
          }
-         #intro{
-            animation-delay: 1s;
-            animation-direction: 1s;
+         #news{
+            animation-delay: 0s;
+            animation-direction: 3s;
+            animation-iteration-count: infinite;
          }
-      </style-->
+      </style>
+      <style>
+         img.img_circ {
+            border-radius: 50%;
+         }
+      </style>
    </head>
    
    <body>
@@ -37,10 +44,11 @@
 			</div>
 			<div class="content">
 				<h1>Dr. Chandan Bose</h1>
-            <h3>WBI Excellence Postdoctoral Fellow</h3>
+            <h3>Wallonie Bruxelles International Excellence Postdoctoral Fellow</h3>
             <h4>Aerospace and Mechanical Engineering</h4>
 				<h5>University of Liège</h5>
-				<a href="#intro" class="btn">Read More</a>
+            <a href="#intro" id="head" class="btn animated bounce slow">Read More</a>
+            <span class="animated bounce"></span>
 			</div>
 		</section>
          <section id="intro">
@@ -54,7 +62,7 @@
                            <li><a href="research.html">Research</a></li>
                            <li><a href="publications.html">Publications</a></li>
                            <li><a href="awards.html">Recognitions</a></li>
-                           <li><a href="teaching.html">Teaching</a></li>
+                           <!--li><a href="teaching.html">Teaching</a></li-->
                            <li><a href="gallery.html">Gallery</a></li>
                         </ul>
                      </div>
@@ -63,18 +71,18 @@
             </div>
          </section>
          <div class="well">
+            <h1 id="welcome" class="centered"> Welcome Folks! </h1>
             <table style="border-spacing: 10px;border-collapse: separate;">
             <tbody>
                <tr>
                   <td width="0pct" valign="top">
-                     <div><span class="lfloat"><img width="1500px" src="\images\myDP.jpg" alt="" title="Chandan Bose"></span></div>
+                     <div><span class="lfloat"><img class="img_circ" width="1200px" src="\images\myDP.jpg" alt="" title="Chandan Bose"></span></div>
                   </td>
                   <td valign="center" margin-top="10px" style="font-size: 0pt;">
-                     <h3> Welcome to my website! </h3>
                      <p>
-                        <span style="font-size: 15px">I am currently a Wallonie Bruxelles International Excellence Postdoctoral Research Associate in the <a href="http://www.ltas-aea.ulg.ac.be//cms/"> Fluid-Structure Interactions and Experimental Aerodynamics Laboratory</a>, Dept.of Aerospace and Mechanical Engineering, University of Liège, Belgium.
+                        <span style="font-size: 15px">I am currently a Postdoctoral Research Associate in the <a href="http://www.ltas-aea.ulg.ac.be//cms/"> Fluid-Structure Interactions and Experimental Aerodynamics Laboratory</a>, Dept.of Aerospace and Mechanical Engineering, University of Liège, Belgium. I also closely collaborate with the the <a href="https://www.mtfc.uliege.be/cms/c_3978232/en/multiphysics-and-turbulent-flow-computation-research-group-portal"> Multi-physics and Turbulent Flow Computation</a> research group here.
                         <span style="font-size: 15px">I have obtained M.S. and Ph.D. from the Dept. of Applied Mechanics, IIT Madras.
-                        <span style="font-size: 15px">I am passionately interested in fluid dynamics problems of different  tastes especially which are having a flavour of nonlinear dynamics. My current research focus is on understanding low speed unsteady aerodynamics/ hydrodynamics and nonlinear fluid-structure interaction behaviour of bio-inspired propulsion.                     
+                        <span style="font-size: 15px">I am passionately interested in fluid dynamics problems of different  tastes especially with a flavour of nonlinear dynamics. My current research focus is on understanding low speed unsteady aerodynamics/ hydrodynamics and nonlinear fluid-structure interaction behaviour of bio-inspired propulsion.                     
                      </p>
                      <!--button class="btn btn-primary"> Animate </button-->
                   </td>
@@ -86,7 +94,7 @@
          <div class="row-fluid">
             <div class="centered">
                <div class="span6">
-               <h3 style="color:Tomato;"> Online Presence: </h3>
+               <h3 id="news" class="animated flash slower" style="color:Tomato;"> Online Presence: </h3>
                </div>
                <div class="span1">
                   <a href="https://scholar.google.com/citations?user=yyDoWroAAAAJ&hl=en">
@@ -193,9 +201,7 @@
          </div>
          <hr size="5" noshade>
                <div class="row-fluid">
-                  <hr>
-                  <h2 class="centered">Recent News</h2>
-                  <hr>
+                  <h2 id="news" class="centered animated flash slower">Recent News</h2>
                </div>
                <hr size="5" noshade>
                <div class="well">
@@ -212,7 +218,7 @@
                   </h4>
                   <hr>
                   <div class="centered">
-                     <img src="\images\joined_ulg.jpg" alt="">
+                     <img class="img_circ" src="\images\joined_ulg.jpg" alt="">
                   </div>
                   <hr>
                   <p>
@@ -227,7 +233,7 @@
                   </h4>
                   <hr>
                   <div class="centered">
-                     <img src="\images\defended_thesis.jpg" alt="">
+                     <img class="img_circ" src="\images\defended_thesis.jpg" alt="">
                   </div>
                   <hr>
                   <p>
@@ -242,7 +248,7 @@
                   </h4>
                   <hr size="2">
                   <div class="centered">
-                     <img src="\images\receiving_IRA.jpg" alt="">
+                     <img class="img_circ" src="\images\receiving_IRA.jpg" alt="">
                   </div>
                   <hr>
                   <p>
