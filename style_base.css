@@ -44,7 +44,7 @@ h1 {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
+	background-image: var(--primary-color) url('/images/cover.PNG') no-repeat center
 		center/cover;
 }
 
@@ -88,43 +88,3 @@ h1 {
 	transform: scale(0.98);
 }
 
-.nav_ul{
-	position absolute
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
-	float: center;
-	text-align: center;
-}
-
-.nav_ul li{
-	float: left;
-	width: 132px;
-	height: 40px;
-	background-color: black;
-	opacity: 0.8;
-	text-align: center;
-	line-height: 40px;
-	font-size: 18px;
-	margin-right: 5px;
-}
-
-.nav_ul li a{
-	text-decoration: none;
-	color: white;
-	display: block;
-	text-align: center;
-}
-
-.nav_ul li a:hover{
-    background-color: green;
-}
-
-.nav_ul li ul li{
-	font-size: 15px;
-	display: none;
-}
-
-.nav_ul li:hover ul li{
-	display: block;
-}

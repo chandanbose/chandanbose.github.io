@@ -15,6 +15,7 @@
       <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
       <link href="css/theme.css" rel="stylesheet">
       <link href="css/animate.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
       <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
 
    <style>
@@ -60,7 +61,7 @@
             <!--p class="lead"> Postdoctoral Research Associate </p>
             <h> University of Liège </h -->
          <!--/header-->
-         <div class="masthead">
+         <!--div class="masthead">
             <div class="navbar">
                <div class="navbar-inner">
                   <div class="container">
@@ -70,13 +71,53 @@
                         <li><a href="research.html">Research</a></li>
                         <li><a href="publications.html">Publications</a></li>
                         <li><a href="awards.html">Recognitions</a></li>
-                        <!--li><a href="teaching.html">Teaching</a></li-->
+                        <li><a href="teaching.html">Teaching</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                      </ul>
                   </div>
                </div>
             </div>
+         </div-->
+
+         <div class="container">
+            <section id="intro">
+                           <ul class="nav_ul">
+                              <li class="active"><a href="index.html">Home</a></li>
+                              <li><a href="biography.html">Profile</a></li>
+                              <li><a href="research.html">Research</a>
+                              <ul>
+                                 <li><a href="academic_projects.html">Academic Projects</a></li>
+                                 <li><a href="funded_projects.html">Funded Projects</a></li>
+                                 <li><a href="collaborators.html">Collaborators</a></li>
+                              </ul>
+                              </li>
+                              <li><a href="publications.html">Publications</a>
+                              <ul>
+                                 <li><a href="journals.html">Journal Articles</a></li>
+                                 <li><a href="proceedings.html">Proceedings</a></li>
+                                 <li><a href="chapters.html">Book Chapters</a></li>
+                                 <li><a href="conferences.html">Conference Presentations</a></li>
+                              </ul>
+                              </li>
+                              <li><a href="recognision.html">Recognitions</a>
+                              <ul>
+                                 <li><a href="awards.html">Awards/ Honors</a></li>
+                                 <li><a href="reviewer.html">Academic Service</a></li>
+                                 <li><a href="invited.html">Invited Talks</a></li>
+                              </ul>
+                              </li>
+                              <li><a href="teaching.html">Teaching</a>
+                              <ul>
+                                 <li><a>Assisting Courses</a></li>
+                                 <li><a>Mentoring</a></li>
+                                 <li><a>Codes/ Tutorials</a></li>
+                              </ul>
+                              </li>
+                              <li><a href="gallery.html">Gallery</a></li>
+                           </ul>
+            </section>
          </div>
+
          <div class="row-fluid">
             <!--div class="span3 bs-docs-sidebar" id="navparent">
                <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
@@ -103,241 +144,6 @@
                   <div class="figure">
                      <img src="\images\wb_research_1_1.png" class="img-responsive">
                   </div>
-                  <hr>
-                  <p>
-                     <button class="btncls" type="button" data-toggle="collapse" data-target="#track1" aria-expanded="false" aria-controls="">
-                        <h4>Track 1: Bio-Inspired Propulsion at Low Reynolds Numbers</h4>
-                     </button>
-                  </p>
-                  <div class="collapse" id="track1">
-                  <!--h4><b style="color:Tomato;">Track 1: Bio-Inspired Propulsion at low Reynolds numbers</b></h4-->
-                  <div class="row-fluid">
-                     <div class="span12">
-                        <section id="Chaos">
-                           <h5>1. Dynamical transition in the unsteady flow field of rigid and flexible flapping wings.</h5>
-                           <hr>
-                           <img src="\images\GFM_poster.png" class="float-right" alt="Chaos" height="350" width="350">
-                           <p>
-                           Natural flyers flap their wings periodically to generate desired aerodynamic loads to fly by leaving a variety of wake patterns in the trail. The nature of these vortex shedding patterns hold the key to the aerodynamic load generation. The manifestation of chaos in the flow-field behind periodically flapping foils is an interesting phenomenon which, in turn, results in chaotic force generation. The leading-edge vortex is found to be the primary trigger behind the transition from order to chaos in the flow topology. Even a small erratic behavior in the leading-edge vortex could spell a complete eventual breakdown of a regular wake, which is sustained by the frequent and spontaneous formation of the vortex couples and the subsequent vortex interactions.
-                           </p>
-                           <br/>
-                           <p>
-                              <b style="color:Blue;">GFM Poster</b>: <a href="https://gfm.aps.org/meetings/dfd-2018/5b97834cb8ac31610362f352">Chaotic Manifolds of a flapping foil</a>. <b style="color:Tomato;">DOI: 10.1103/APS.DFD.2018.GFM.P0011</b>.
-                           </p>
-                           <p>
-                              <b style="color:Blue;">GFM Video</b>: <a href="https://gfm.aps.org/meetings/dfd-2018/5b991362b8ac31610362f436">Transition from Order to Chaos in the Wake of a Flapping Airfoil</a>. <b style="color:Tomato;">DOI: 10.1103/APS.DFD.2018.GFM.V0031</b>.
-                           </p> 
-                        </section>
-                     </div>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span12">
-                        <section id="3D">
-                           <h5>2. Three dimensional flow dynamics behind finite-span flapping wings.</h5>
-                           <hr>
-                           <img src="\images\3D.png" class="float-right" alt="Chaos" height="350" width="350">
-                           <p>
-                           More details here..
-                           </p>
-                        </section>
-                     </div>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span12">
-                        <section id="Gust">
-                           <h5>3. Effect of gust on the unsteady aerodynamics and FSI dynamics of flapping wings.</h5>
-                           <hr>
-                           <img src="\images\Gust.png" class="float-right" alt="Chaos" height="350" width="350">
-                           <p>
-                           More details here..
-                           </p>
-                        </section>
-                     </div>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span12">
-                        <section id="Exp">
-                           <h5>4. Experimental Investigation of aerodynamic load generation by flapping wings.</h5>
-                           <hr>
-                           <img src="\images\Exp_1.png" class="float-right" alt="Chaos" height="350" width="350">
-                           <p>
-                           More details here..
-                           </p>
-                        </section>
-                     </div>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span12">
-                        <section id="Fish">
-                           <h5>5. Undulated swimming and fish schooling.</h5>
-                           <hr>
-                           <img src="\images\fish_schools.jpg" class="float-right" alt="Chaos" height="300" width="300">
-                           <p>
-                           More details here..
-                           </p>
-                        </section>
-                     </div>
-                  </div>
-               </div>
-               <p>
-                  <button class="btncls" type="button" data-toggle="collapse" data-target="#track2" aria-expanded="false" aria-controls="collapseExample">
-                     <h4>Track 2: Nonlinear Aeroelasticity</h4>
-                  </button>
-               </p>
-               <div class="collapse" id="track2">
-                     <!--h4><b style="color:Tomato;">Track 2: Nonlinear aeroelasticity</b> </h4-->
-                     <!--hr-->
-                     <h5>1. Dynamic stall and stall flutter in turbulent flow regime using hybrid RANS/ DES/ LES. </h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                     <h5>2. Effect of structural (distributed/ concentrated) and aerodynamic nonlinearity on the bifurcation behavior aeroelastic systems.</h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                     <h5>3. Synchronization characteristics of nonlinear aeroelastic systems.</h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                     <h5>4. Improving the lower order aerodynamic models (LVM/ UVLM/ LB) to capture the effect of leading-edge separation.</h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                     <h5>5. Suppressing the parametric instability of aeroelastic systems using nonlinear energy sinks.</h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                  </div>
-
-               <p>
-                  <button class="btncls" type="button" data-toggle="collapse" data-target="#track3" aria-expanded="false" aria-controls="collapseExample">
-                     <h4>Track 3: Flow Energy Harvesting</h4>
-                  </button>
-               </p>
-               <div class="collapse" id="track3">
-                  <!--h4><b style="color:Tomato;">Track 4: Flow energy harvesting </b></h4-->
-                     <!--hr>
-                     <h5>. </h5>
-                     <hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     </hr-->
-               </div>
-               <p>
-                  <button class="btncls" type="button" data-toggle="collapse" data-target="#track4" aria-expanded="false" aria-controls="collapseExample">
-                     <h4>Track 4: Modal Decomposition and Reduced Order Modelling</h4>
-                  </button>
-               </p>
-               <div class="collapse" id="track4">
-                     <!--h4><b style="color:Tomato;">Track 4: Modal decomposition of fluid flow and reduced order modelling</b> </h4-->
-                     <!--hr-->
-                     <h5>1. Proper orthonal decomposition. </h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                     <h5>2. Dynamic mode decomposition. </h5>                  
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                  </div>
-
-                  <p>
-                     <button class="btncls" type="button" data-toggle="collapse" data-target="#track5" aria-expanded="false" aria-controls="collapseExample">
-                        <h4>Track 5: Physiological Fluid Mechanics</h4>
-                     </button>
-                  </p>
-                  <div class="collapse" id="track5">
-                  <!--h4><b style="color:Tomato;">Track 5: Physiological fluid mechanics</b> </h4-->
-                     <!--hr-->
-                     <h5>1. Flow dynamics of phonation. </h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                  </div>
-
-                  <p>
-                     <button class="btncls" type="button" data-toggle="collapse" data-target="#track6" aria-expanded="false" aria-controls="collapseExample">
-                        <h4>Track 6: Numerical Solver Development</h4>
-                     </button>
-                  </p>
-                  <div class="collapse" id="track6">
-                  <!--h4><b style="color:Tomato;">Track 6: Numerical solver development</b> </h4-->
-                     <!--hr-->
-                     <h5>1. Development of robust FSI coupling interfaces. </h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                     <h5>2. Development of IBM based FSI solver.</h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                  </div>
-                  <p>
-                     <button class="btncls" type="button" data-toggle="collapse" data-target="#track7" aria-expanded="false" aria-controls="collapseExample">
-                        <h4>Track 7: Machine Learning in Fluid Mechanics</h4>
-                     </button>
-                  </p>
-                  <div class="collapse" id="track7">
-                  <!--h4><b style="color:Tomato;">Track 7: Machine learning in fluid mechanics </b></h4-->
-                     <!--hr-->
-                     <h5>1. Physics-informed neural networks. </h5>
-                     <!--hr>
-                     <p>
-                        More details coming ...
-                     </p>
-                     <hr-->
-                  </div>
-               </section>
-            </div>
-         </div>
-   <div class="row-fluid">
-   <div class="span10 offset1">
-      <section id="statemet">
-                  <div class="page-header">
-                     <h3>Mentors, Collaborators and Friends:</h3>
-                     <hr>
-                     <ul>
-                        <li> <a href="http://www.ltas-aea.ulg.ac.be/cms/index.php?page=dimitriadis">Prof. Grigorios Dimitriadis</a>, Aerospace and Mechanical Engineering, University of Liege, Belgium. (Postdoc Advisor)</li>
-                        <li> <a href="https://home.iitm.ac.in/sunetra/">Prof. Sunetra Sarkar</a>, Aerospace Engineering, IIT Madras, India. (Ph.D. Advisor)</li>
-                        <li> <a href="https://home.iitm.ac.in/sayan/">Prof. Sayan Gupta</a>, Applied Mechanics, IIT Madras, India. (Ph.D. Advisor)</li>
-                        <li> <a href="https://www.mtfc.uliege.be/cms/c_3978232/en/multiphysics-and-turbulent-flow-computation-research-group-portal">Prof. Vincent Terrapon</a>, Aerospace and Mechanical Engineering, University of Liege, Belgium.</li>
-                        <li> <a href="http://berndnoack.com/">Prof. Bernd Noack</a>, Chair of Institute for Turbulence-Noise-Vibration Interactions and Control, Harbin Institute of Technology, China (Ph.D. Examiner)</li>
-                        <li> <a href="https://people.ucd.ie/vikram.pakrashi">Prof. Vikram Pakrashi</a>, School of Mechanical and Materials Engineering, University College Dublin, Irland</a>. </li>
-                        <li> <a href="https://scholar.google.com/citations?user=UaBn1J4AAAAJ&hl=en">Prof. Xing Zhang</a>, Institute of Mechanics, Chinese Acadamy of Sciences, China</a>. </li>
-                        <li> <a href="https://www.iitk.ac.in/new/sachin-y-shinde">Dr. Sachin Shinde</a>, Mechanical Engineering, IIT Kanpur, India.</li>
-                        <li> <a href="https://mech.snu.edu.in/people/faculty/venkatramani-jagadish">Dr. J. Venkatramani</a>, Mechanical Engineering, Shiv Nadar University, India.</li>
-                        <li> <a href="https://nitdgp.ac.in/faculty/4a9002e0-1d7b-4048-9cfa-a860f963e554">Dr. Sirshendu Mandal</a>, Mechanical Engineering, NIT Durgapur, India.</li>
-                        <li> <a href="https://scholar.google.co.in/citations?user=kgVQd3sAAAAJ&hl=en">Dr. Sandip Sarkar</a>, Mechanical Engineering, Jadavpur University, India.</li>
-                        <li> Dr. Sourav Sarkar, Mechanical Engineering, Jadavpur University, India.</li>
-                        <li> Dr. Santhosh Balakrishnan, Mechanical Engineering, Amrita School of Engineering, India.</li>
-                        <li> Mr. S. Krishnakumar, Centre for Atmospheric and Oceanic Sciences (CAOS), IISc, India.</li>
-                        <li> Mr. Dipanjan Majumdar, Aerospace Engineering, IIT Madras, India.</li>
-                        <li> Ms. Rajanya Chatterjee, Applied Mechanics, IIT Madras, India.</li>
-                        </ul>
-                  </div>
-            </div>
-      </div>
       
          <!--div  id="footer">
          <span> @2019 Chandan Bose - All rights reserved! </span>
