@@ -176,3 +176,16 @@ h1 {
   background: black;
   color: white;
 }
+
+p.excerpt{
+	border: 3px solid #0066FF;
+	background-color:#d0d7f5;
+	padding:5px;margin-top:5px;
+	margin-bottom:5px;
+	margin-left:5px;
+	margin-right:5px;
+	}
+
+	.vCenterChild {
+		vertical-align: middle;
+	}
