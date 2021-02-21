@@ -11,7 +11,7 @@
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', serif;
 	line-height: 1.5;
 }
 
@@ -70,8 +70,28 @@ h1 {
 }
 
 .content {
-	z-index: 2;
+	position: absolute;
+	top: 480px;
+	left: 575px;
+	font-size: 25px;
+	z-index: 5;
 }
+
+.content_name {
+	position: absolute;
+	top: 40px;
+	left: 270px;
+	font-size: 18px;
+	font-family: "Georgia", serif;
+}
+
+.overlay {
+	position: absolute;
+	top: 270px;
+	right: 100px;
+	z-index: 5;
+}
+
 
 .btn {
 	display: inline-block;
