@@ -71,7 +71,7 @@ h1 {
 
 .content {
 	position: absolute;
-	top: 480px;
+	top: 550px;
 	left: 575px;
 	font-size: 25px;
 	z-index: 5;
@@ -88,11 +88,17 @@ h1 {
 
 .overlay {
 	position: absolute;
-	top: 270px;
-	right: 100px;
+	top: 300px;
+	left: 575px;
 	z-index: 5;
 }
 
+.overlay_pic {
+	position: absolute;
+	top: 250px;
+	right: 100px;
+	z-index: 5;
+}
 
 .btn {
 	display: inline-block;
