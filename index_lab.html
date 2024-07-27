@@ -55,7 +55,14 @@
             border-radius: 10px; /* Optional: for rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: for shadow effect */
             opacity: 0.5; /* Adjust opacity as needed */
-            /*z-index: -1;*/
+            z-index: -1;
+        }
+        .text-container {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the text */
+            padding: 10px;
+            border-radius: 5px; /* Optional: for rounded corners */
         }
       </style>
    </head>
@@ -127,7 +134,9 @@
 <div class="row-fluid">
    <div class="span12">
       <div class="background-pic">
+         <div class="text-container">
             <h1 id="welcome" class="centered"> Welcome to the Bioinspired Fluid-Structure Laboratory! </h1>
+         </div>
       </div>
    </div>
 </div>
