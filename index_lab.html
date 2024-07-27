@@ -44,6 +44,8 @@
             background-size: cover;
             background-position: center;
             position: relative;
+            justify-content: center;
+            text-align: center; /* Center the text horizontally */
             display: flex;
             padding: 10px;
             width: 1000px; /* Adjust width as needed */
@@ -56,16 +58,14 @@
         .text-container {
             position: relative;
             align-items: center;
-            justify-content: center;
-            text-align: center; /* Center the text horizontally */
-            color: rgb(255, 0, 0); /* Change text color as needed */
+            color: rgb(0, 0, 0); /* Change text color as needed */
             z-index: 1;
-            background: rgba(247, 246, 246, 0.25); /* Semi-transparent background for the text */
+            background: rgba(247, 246, 246, 0); /* Semi-transparent background for the text */
             padding: 10px;
             border-radius: 5px; /* Optional: for rounded corners */
             animation: fadeIn 2s ease-in-out; /* Add fade-in animation */
             font-weight: bold; /* Make text bold */
-            font-family: 'Arial Black', Gadget, sans-serif; /* Use a thick font */
+            /* font-family: 'Arial Black', Gadget, sans-serif; */ /* Use a thick font */ 
         }
 
         @keyframes fadeIn {
