@@ -38,9 +38,10 @@
             border-radius: 50%;
          }
       </style>
-      <style>
+
+      <!-- <style>
          .background-pic {
-            background-image: url('../pictures/images/BioFSILab-2.png');
+            /* background-image: url('../pictures/images/BioFSILab-2.png'); */
             background-size: cover;
             background-position: center;
             justify-content: center;
@@ -55,6 +56,8 @@
             opacity: 1.0; /* Adjust opacity as needed */
             z-index: -1;
         }
+        </style> -->
+      <style>
         .text-container {
             position: relative;
             align-items: center;
@@ -67,20 +70,19 @@
             /* font-family: 'Arial Black', Gadget, sans-serif; */ /* Use a thick font */ 
             /* font-family: 'Roboto', sans-serif; */ /* Use Roboto font */
             font-family: 'Times New Roman', Times, serif; /* Use Times New Roman font */
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+            /* margin-top: 40px; */
+        }        
       </style>
+
+
+
+
    </head>
    
    <body>
+
+
+
       <div id="fb-root"></div>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="WMa8hv3Z"></script>
       <div class="container">
@@ -95,7 +97,7 @@
          <section id="intro">
                         <ul class="nav_ul">
                            <li class="active"><a href="home.html">Home</a></li>
-                           <li><a href="BioFSILab.html"> Team</a>
+                           <li><a href="BioFSILab.html">Team</a>
                            <!--ul>
                               <li><a href="biography.html"> Dr Chandan Bose </a></li>
                               <li><a href="BioFSILab.html">BioFSILab Members</a></li>
@@ -116,6 +118,7 @@
                                  <li><a href="conferences.html">Conference Presentations</a></li>
                            </ul-->
                            </li>
+                           <li><a href="news.html">News</a></li>
                            <!--li><a href="awards.html">Recognitions</a>
                            <ul>
                               <li><a href="awards.html">Awards/ Honors</a></li>
@@ -139,7 +142,8 @@
                         </ul>
          </section>
       </div>
-      <br/>
+      <!-- <br/> -->
+   
 
         
 <div class="row-fluid">
@@ -148,9 +152,19 @@
             <h1 id="welcome" class="centered"> Bioinspired Fluid-Structure Interaction Laboratory </h1>
             <h2 id="welcome" class="centered"><b style="color:rgb(5, 77, 32);">Aerospace Engineering, University of Birmingham</b></h2>
          </div>
+         
       <div class="background-pic">
+         <div class="slideshow">
+            <!-- <div class="slide" style="background-image: url('../pictures/images/cover_lab_1.png');"></div> -->
+            <div class="slide" style="background-image: url('../pictures/images/BioFSILab-2.png');"></div>
+            <!-- <div class="slide" style="background-image: url('../pictures/images/3d_2.png');"></div> -->
+         
+         </div>
       </div>
+      
+
       <br/>
+
       <div class="well" id="acad">
          <p>
             <h5> Welcome to the Bioinspired Fluid-Structure Interaction Laboratory, led by <a href="https://www.birmingham.ac.uk/staff/profiles/metallurgy/bose-chandan">Dr. Chandan Bose</a>, Assistant Professor of Aerospace Engineering at the University of Birmingham. Our lab specializes in investigating complex multi-physics problems characterized by coupled nonlinear interactions, with a primary focus on bio-inspired fluid-structure interactions. We delve into unsteady aerodynamics and nonlinear aeroelasticity, drawing inspiration from nature to uncover the fundamental mechanisms driving these phenomena. Through this bio-inspired approach, our research aims to contribute to groundbreaking advancements in aerospace engineering and related disciplines.</h5>
@@ -391,5 +405,6 @@
    <script src="../js/jquery-1.9.1.min.js"></script>
    <script src="../js/bootstrap.min.js"></script>
       <script> $('#main-carousel').carousel(); </script>
+   <script src="../js/slideshow.js"></script>
    </body>
 </html>
