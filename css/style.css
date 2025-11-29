@@ -280,3 +280,80 @@ p.excerpt{
     40%  { opacity: 0; }
     100% { opacity: 0; }
 }
+
+
+/* year in journals */
+.hidden {
+    display: none;
+}
+
+.year-icon {
+    cursor: pointer;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.year-icon:hover {
+    opacity: 0.7;
+}
+
+/* Highlights in news.html */
+.highlight-box {
+    background: #f1f5ff;      
+    border-left: 6px solid #1548df;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.highlight-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #df154e;
+    margin-bottom: 10px;
+}
+
+.highlight-item {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+/* text in highlight box in news.html */
+.highlight-card {
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 250px;
+    margin: 10px 15px 10px 0;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.highlight-card:hover {
+    transform: scale(1.03);
+}
+
+.highlight-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.highlight-card-title {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #1548df;
+    text-align: center;
+}
+
+.highlight-card-desc {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #333;
+    text-align: center;
+}
