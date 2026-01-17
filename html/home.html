@@ -153,13 +153,22 @@
             <h2 id="welcome" class="centered"><b style="color:rgb(5, 77, 32);">Aerospace Engineering, University of Birmingham</b></h2>
          </div>
          
-      <div class="background-pic">
+      <div class="background-pic" style="position: relative;">
          <div class="slideshow">
             <!-- <div class="slide" style="background-image: url('../pictures/images/cover_lab_1.png');"></div> -->
             <div class="slide" style="background-image: url('../pictures/images/BioFSILab-2.png');"></div>
             <!-- <div class="slide" style="background-image: url('../pictures/images/3d_2.png');"></div> -->
          
          </div>
+         <button id="nextBtn" title="Next slide" aria-label="Next slide" style="position:absolute; right:20px; top:50%; transform:translateY(-50%); background-color: rgba(0,0,0,0.45); color:#fff; border:none; width:44px; height:44px; padding:0; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:2;">
+            <i class="fa fa-chevron-right" aria-hidden="true" style="font-size:20px; line-height:1;"></i>
+         </button>
+
+         <button id="previousBtn" title="Previous slide" aria-label="Previous slide" style="position:absolute; left:20px; top:50%; transform:translateY(-50%); background-color: rgba(0,0,0,0.45); color:#fff; border:none; width:44px; height:44px; padding:0; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:2;">
+            <i class="fa fa-chevron-left" aria-hidden="true" style="font-size:20px; line-height:1;"></i>
+         </button>
+
+
       </div>
       
 

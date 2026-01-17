@@ -163,7 +163,8 @@ h1 {
 }
 
 .nav_ul li a:hover{
-    background-color: green;
+    /* background-color: green; */
+	transform: scale(1.05);
 }
 
 .nav_ul li ul li{
