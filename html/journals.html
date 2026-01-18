@@ -166,6 +166,135 @@
 
                   <hr>
 
+                  <section id="2026">
+                     <h2><b>2026</b></h2>
+                     <hr size="5" noshade>
+
+                     <div class="row-fluid">
+                        <div class="span3">
+                           <a href="" class="thumbnail">
+                           <img class="" src="../pictures/images/J27.png" alt="">
+                           </a>
+                        </div>
+                        <div class="span9">
+                           <h4> 27. GPU optimized integration of immersed boundary method and overset mesh framework for moving boundary problems</h4>
+                           <br/>
+                           <p>Debajyoti Kumar, Siddharth D Sharma, <b style="color:Tomato;"> Chandan Bose</b>, Somnath Roy</p>
+                           <a href=""><b>Journal of Computational Physics</b></a>, under review, 2026.
+                           <br/>
+                           <p>
+                              <b><a href=""></a></b>
+                           </p>
+                           <p>
+                              This paper focuses on a GPU-optimized overset grid framework coupled with a sharp-interface Immersed Boundary Method (IBM) for high-fidelity simulation of incompressible flows involving moving bodies, multi-body interactions, and complex geometries. The method addresses long-standing limitations of overset IBM, such as expensive hole-cutting, donor-search operations, and poor scalability, by leveraging a lightweight sliding-window block reallocation strategy, minimalistic interface maps, and flux-preserving interpolation between coarse and refined meshes. A combined Array-of-Structures / Structure-of-Arrays data layout, explicit OpenACC constructs using unified memory architecture. At the same time, a dual-level OpenMP–OpenACC parallelism assigns each overset block to a dedicated GPU, enabling multi-GPU execution without message-passing overhead. The solver is validated and verified across a wide range of canonical and complex cases, including flow past cylinders and spheres, sedimentation of smooth and rough particles, and fluttering plates, with results demonstrating second-order accuracy, local and global mass conservation, and excellent agreement with experimental and numerical benchmarks. High-Reynolds-number propeller simulations confirm DNS-level resolution, with sub-grid stresses remaining at least one order lower than resolved fluxes, and Kolmogorov scales adequately captured by the overset mesh. Multi-body demonstrations involving two flapping robotic butterflies following independent sinusoidal trajectories highlight robust block autonomy and accurate vortex-interaction dynamics. Overall, the proposed framework reduces computational cost by up to 200× relative to CPU execution, retains accuracy while using significantly fewer grid points than uniform DNS meshes, scales efficiently across multiple GPUs, and establishes a versatile and scalable methodology for simulating turbulent, bio-inspired, and strongly unsteady moving-body flows.
+                           </p>
+                        </div>
+                     </div>
+                     <hr>  
+
+                     <div class="row-fluid">
+                        <div class="span3">
+                           <a href="" class="thumbnail">
+                           <img class="" src="../pictures/images/J26.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="span9">
+                           <h4> 26. Effect of Transverse Gust on Free-Falling Plates</h4>
+                           <br/>
+                           <p>Jawahar Sivabharathy Samuthira Pandi, Ahmet Gungor, <b style="color:Tomato;"> Chandan Bose</b>, Antonio Attili, Ignazio Maria Viola</p>
+                           <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics"><b>Journal of Fluid Mechanics</b></a>, under review, 2026.
+                           <br/>
+                           <p>
+                              <b><a href=""></a></b>
+                           </p>
+                           <p>
+                            The effects of transverse gusts on free-falling plates are investigated using two-way coupled fluid-structure interaction simulations for a Galilei
+                            number (Ga) between 10 and 50 and a density ratio (&rho;) between 5 and 50. We consider a gust ratio (GR) up to 5, where GR is the ratio of
+                            the free-stream velocity change to an estimate of the terminal velocity. We demonstrate thatthe plate experiences the gust as a transienthorizontal force, which displaces it horizontally. This results in a transient
+                            reduction in the angle of attack, an increase in absolute velocity, and the generation of circulation. The vertical component of the latter increases
+                            the upward aerodynamic force, slowing down the vertical descent of the
+                           plate. Furthermore, the plate's horizontal displacement with respect to its
+                           original wake results in a further transient increase in the upward
+                           aerodynamic force. We also demonstrate that a similar gust uplifting
+                           mechanism occurs on circular cylinders, resulting from the more than
+                           linear increase in drag with the relative flow velocity. The altitude gained
+                           by the plate in response to the gust is maximum for ρ = 15, and
+                           increases non-monotonically with Ga and GR. The non-monotonic trend is
+                           due to plate pitch: if the maximum pitch of the plate in response to the
+                           gust is close to vertical, the plate temporarily falls faster, losing some of
+                           the altitude it has gained. The present findings reveal an energyharvesting mechanism that free-falling bodies can exploit to increase
+                           their time afloat.
+                           </p>                       
+                        </div>
+                     </div>
+                     <hr>  
+
+                     <div class="row-fluid">
+                        <div class="span3">
+                           <a href="" class="thumbnail">
+                           <img class="" src="../pictures/images/J25.png" alt="">
+                           </a>
+                        </div>
+                        <div class="span9">
+                           <h4> 25. Wake Stability of Permeable Disks</h4>
+                           <br/>
+                           <p>Doudou Huang, <b style="color:Tomato;"> Chandan Bose</b>, Antonio Attili, Ignazio Maria Viola</b></p>
+                           <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics"><b>Journal of Fluid Mechanics</b></a>, under review, 2026.
+                           <br/>
+                           <p>
+                              <b><a href=""></a></b>
+                           </p>
+                           <p>
+                              We numerically investigate the steady and unsteady wake of threedimensional permeable disks over a Reynolds number (Re) range of 100
+                              – 400 and a Darcy number (Da) range of 10-9 – 10-3. For disks with low
+                              permeability (Da ≤ 8 × 10-5), the dynamical transition route is the same
+                              as that of impervious disks, with the critical Reynolds number for all
+                              bifurcations increasing with decreasing permeability. In contrast, for disks
+                              with high permeability (Da ≥ 2 × 10-4), all unsteady bifurcations are
+                              suppressed and the wake remains in a steady regime throughout the Re
+                              range considered. Interestingly, at moderate Da, permeability gives rise
+                              to two previously unreported flow regimes. The first one is an `SVR
+                              breathing' regime occurring for Da ≈ 10-4 and Re ≈ 200, attributed to the
+                              subharmonic lock-in between two distinct unsteady dynamics: the
+                              shedding of hairpin vortices and the comparatively low frequency
+                              unsteadiness of the near wake recirculation regions. The second one is an
+                              `intermittency' regime, which occurs at Da ≈ 1.5 × 10-4, Re ≈ 200; the
+                              wake alternates irregularly between two periodic modes with orthogonal
+                              planes of symmetry. The intermittency arises from the energy
+                              competition between two modes, as the vortices lack sufficient energy to
+                              sustain stable single-mode harmonic oscillations. These findings
+                              demonstrate that permeability can fundamentally alter wake dynamics
+                              and highlight its potential as a stabilising mechanism for free-falling
+                              disks.
+                           </p>
+                        </div>
+                     </div>
+                     <hr>                     
+
+
+                     <div class="row-fluid">
+                        <div class="span3">
+                           <a href="" class="thumbnail">
+                           <img class="" src="../pictures/images/J24.png" alt="">
+                           </a>
+                        </div>
+                        <div class="span9">
+                           <h4> 24. Interfacial vortex recapture enhances thrust in tiny water skaters</h4>
+                           <br/>
+                           <p>Pankaj Rohilla, Johnathan N. O’Neil, Paras Singh, Victor M. Ortega-Jimenez, Daehyun Choi, <b style="color:Tomato;"> Chandan Bose*</b>,  Saad Bhamla</p>
+                           <a href="https://academic.oup.com/pnasnexus"><b>PNAS Nexus</b></a>, Under Review, 2026.
+                           <br/>
+                           <p>
+                              <b><a href="https://doi.org/10.1101/2024.06.17.599397">https://doi.org/10.1101/2024.06.17.599397</a></b>
+                           </p>
+                           <p>
+                           Vortex recapture underpins the exceptional mobility of nature’s finest fliers and swimmers. Utilized by agile fruit flies and efficient jellyfish, this phenomenon is well-documented in bulk fluids. Despite extensive studies on organismal locomotion at the water’s surface, a vital fluidic interface where diverse life forms interact, hydrodynamics of interfacial vortex recapture remains unexplored. We investigate interfacial (on water) vortical hydrodynamics in Microvelia americana, one of the smallest and fastest water striders, skating at 50 body lengths per second (BL/s) or 15 cm/s. Their middle legs shed counter-rotating vortices, re-energized by their hind legs, demonstrating interfacial vortex recapture. High-speed imaging, particle imaging velocimetry, physical models, and CFD simulations show re-energization increases thrust by creating positive pressure at the hind tarsi, acting as a virtual wall. This vortex capture is facilitated by the tripod gait, leg morphology, and precise spatio-temporal placement of the hind tarsi during the power stroke. Our study extends vortex recapture principles from bulk fluids to the interface, offering insights into efficient interfacial locomotion, where surface tension and capillary waves challenge movement. Understanding interfacial vortex hydrodynamics can guide the development of energy-efficient microrobots to explore the planet’s water surface niches, critical frontlines of climate change and pollution.
+                           </p>                       
+                        </div>
+                     </div>
+                     <hr>                  
+                  </section>
+
                   <section id="2025">
                      <h2><b>2025</b></h2>
                      <hr size="5" noshade>
