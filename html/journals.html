@@ -186,7 +186,14 @@
                               <b><a href=""></a></b>
                            </p>
                            <p>
-                              This paper presents a GPU-optimised overset-grid framework coupled with a sharp-interface immersed boundary method for high-fidelity simulation of incompressible flows with moving, interacting bodies and complex geometries. By replacing traditional, costly overset operations with lightweight block reallocation, minimal interface mapping, and flux-preserving interpolation, the method achieves excellent scalability and efficiency on multi-GPU systems without message passing. The solver is rigorously validated across canonical and complex benchmarks, demonstrating second-order accuracy, strong mass conservation, and DNS-level resolution at high Reynolds numbers. Multi-body simulations further highlight its robustness in capturing unsteady vortex interactions, while overall performance shows up to 200× speed-up over CPU execution with substantially reduced mesh requirements, establishing a powerful and scalable tool for turbulent and bio-inspired flow problems.
+                              This paper presents a GPU-optimised overset-grid framework coupled with a sharp-interface immersed boundary method for high-fidelity 
+                              simulation of incompressible flows with moving, interacting bodies and complex geometries. By replacing traditional, costly overset 
+                              operations with lightweight block reallocation, minimal interface mapping, and flux-preserving interpolation, the method achieves
+                              excellent scalability and efficiency on multi-GPU systems without message passing. The solver is rigorously validated across canonical 
+                              and complex benchmarks, demonstrating second-order accuracy, strong mass conservation, and DNS-level resolution at high Reynolds numbers. 
+                              Multi-body simulations further highlight its robustness in capturing unsteady vortex interactions, while overall performance shows up to 
+                              200× speed-up over CPU execution with substantially reduced mesh requirements, establishing a powerful and scalable tool for turbulent 
+                              and bio-inspired flow problems.
                            </p>
                         </div>
                      </div>
@@ -208,22 +215,14 @@
                               <b><a href=""></a></b>
                            </p>
                            <p>
-                            The effects of transverse gusts on free-falling plates are investigated using two-way coupled fluid-structure interaction simulations for a Galilei
-                            number (Ga) between 10 and 50 and a density ratio (&rho;) between 5 and 50. We consider a gust ratio (GR) up to 5, where GR is the ratio of
-                            the free-stream velocity change to an estimate of the terminal velocity. We demonstrate thatthe plate experiences the gust as a transienthorizontal force, which displaces it horizontally. This results in a transient
-                            reduction in the angle of attack, an increase in absolute velocity, and the generation of circulation. The vertical component of the latter increases
-                            the upward aerodynamic force, slowing down the vertical descent of the
-                           plate. Furthermore, the plate's horizontal displacement with respect to its
-                           original wake results in a further transient increase in the upward
-                           aerodynamic force. We also demonstrate that a similar gust uplifting
-                           mechanism occurs on circular cylinders, resulting from the more than
-                           linear increase in drag with the relative flow velocity. The altitude gained
-                           by the plate in response to the gust is maximum for ρ = 15, and
-                           increases non-monotonically with Ga and GR. The non-monotonic trend is
-                           due to plate pitch: if the maximum pitch of the plate in response to the
-                           gust is close to vertical, the plate temporarily falls faster, losing some of
-                           the altitude it has gained. The present findings reveal an energyharvesting mechanism that free-falling bodies can exploit to increase
-                           their time afloat.
+                            This study uses fully coupled fluid–structure interaction simulations to examine how transverse gusts influence 
+                            the dynamics of free-falling plates over a range of Galilei numbers, density ratios, and gust strengths. Gusts 
+                            act as transient horizontal impulses that alter the plate’s angle of attack, increase circulation, and enhance 
+                            upward aerodynamic forces, temporarily slowing vertical descent and increasing altitude gained. Additional lift 
+                            arises from the plate’s lateral displacement relative to its wake, while a similar gust-induced uplifting mechanism 
+                            is identified for circular cylinders through the nonlinear drag response to increased relative velocity. The altitude 
+                            gain depends non-monotonically on flow and gust parameters due to gust-induced pitching, revealing a passive 
+                            energy-harvesting mechanism by which freely falling bodies can extend their time aloft.
                            </p>                       
                         </div>
                      </div>
@@ -245,27 +244,13 @@
                               <b><a href=""></a></b>
                            </p>
                            <p>
-                              We numerically investigate the steady and unsteady wake of threedimensional permeable disks over a Reynolds number (Re) range of 100
-                              – 400 and a Darcy number (Da) range of 10-9 – 10-3. For disks with low
-                              permeability (Da ≤ 8 × 10-5), the dynamical transition route is the same
-                              as that of impervious disks, with the critical Reynolds number for all
-                              bifurcations increasing with decreasing permeability. In contrast, for disks
-                              with high permeability (Da ≥ 2 × 10-4), all unsteady bifurcations are
-                              suppressed and the wake remains in a steady regime throughout the Re
-                              range considered. Interestingly, at moderate Da, permeability gives rise
-                              to two previously unreported flow regimes. The first one is an `SVR
-                              breathing' regime occurring for Da ≈ 10-4 and Re ≈ 200, attributed to the
-                              subharmonic lock-in between two distinct unsteady dynamics: the
-                              shedding of hairpin vortices and the comparatively low frequency
-                              unsteadiness of the near wake recirculation regions. The second one is an
-                              `intermittency' regime, which occurs at Da ≈ 1.5 × 10-4, Re ≈ 200; the
-                              wake alternates irregularly between two periodic modes with orthogonal
-                              planes of symmetry. The intermittency arises from the energy
-                              competition between two modes, as the vortices lack sufficient energy to
-                              sustain stable single-mode harmonic oscillations. These findings
-                              demonstrate that permeability can fundamentally alter wake dynamics
-                              and highlight its potential as a stabilising mechanism for free-falling
-                              disks.
+                              This study numerically examines the steady and unsteady wake dynamics of three-dimensional permeable disks over a wide range of 
+                              Reynolds and Darcy numbers. At low permeability, the wake undergoes the same sequence of bifurcations as impervious disks, 
+                              with increasing permeability delaying the onset of unsteadiness. At high permeability, all unsteady bifurcations are suppressed 
+                              and the wake remains steady across the Reynolds numbers considered. At intermediate permeability, two previously unreported 
+                              regimes emerge—an SVR “breathing” mode and an intermittency regime—arising from nonlinear interactions and energy competition
+                              between distinct wake instabilities. Overall, the results show that permeability can fundamentally reshape wake dynamics and 
+                              act as an effective stabilising mechanism for free-falling disks.
                            </p>
                         </div>
                      </div>
@@ -288,7 +273,14 @@
                               <b><a href="https://doi.org/10.1101/2024.06.17.599397">https://doi.org/10.1101/2024.06.17.599397</a></b>
                            </p>
                            <p>
-                           Vortex recapture underpins the exceptional mobility of nature’s finest fliers and swimmers. Utilized by agile fruit flies and efficient jellyfish, this phenomenon is well-documented in bulk fluids. Despite extensive studies on organismal locomotion at the water’s surface, a vital fluidic interface where diverse life forms interact, hydrodynamics of interfacial vortex recapture remains unexplored. We investigate interfacial (on water) vortical hydrodynamics in Microvelia americana, one of the smallest and fastest water striders, skating at 50 body lengths per second (BL/s) or 15 cm/s. Their middle legs shed counter-rotating vortices, re-energized by their hind legs, demonstrating interfacial vortex recapture. High-speed imaging, particle imaging velocimetry, physical models, and CFD simulations show re-energization increases thrust by creating positive pressure at the hind tarsi, acting as a virtual wall. This vortex capture is facilitated by the tripod gait, leg morphology, and precise spatio-temporal placement of the hind tarsi during the power stroke. Our study extends vortex recapture principles from bulk fluids to the interface, offering insights into efficient interfacial locomotion, where surface tension and capillary waves challenge movement. Understanding interfacial vortex hydrodynamics can guide the development of energy-efficient microrobots to explore the planet’s water surface niches, critical frontlines of climate change and pollution.
+                           This study reveals that vortex recapture, a key mechanism underlying efficient locomotion in bulk fluids, 
+                           also operates at the air–water interface. Using experiments, high-speed flow measurements, physical models, 
+                           and simulations, the authors show that the water strider Microvelia americana exploits interfacial vortex 
+                           recapture by re-energising vortices shed by the middle legs with the hind legs, effectively creating a virtual 
+                           wall that enhances thrust. This mechanism is enabled by the insect’s tripod gait, leg morphology, and precise 
+                           leg timing, overcoming the unique challenges of surface-tension-dominated flows. The findings extend vortex 
+                           recapture theory to interfacial locomotion and provide design principles for energy-efficient surface-walking 
+                           microrobots.
                            </p>                       
                         </div>
                      </div>
