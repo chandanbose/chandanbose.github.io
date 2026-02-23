@@ -163,10 +163,76 @@
          </div>
       </div>
    </div>
+
          
-           <div class="row-fluid">
-            <div class="span12">
-            <table style="border-spacing: 10px;border-collapse: separate;">
+   <!--div class="row-fluid">
+      <div class="span12">
+
+      <div class="background-pic" style="position: relative;">
+      <div class="slideshow">
+            <div class="slide" style="background-image: url('../pictures/images/cover_lab_1.png');"></div>
+            <div class="slide" style="background-image: url('../pictures/images/BioFSILab-2.png');"></div>
+            <div class="slide" style="background-image: url('../pictures/images/3d_2.png');"></div>
+
+      </div>
+       <button id="nextBtn" title="Next slide" aria-label="Next slide" style="position:absolute; right:20px; top:50%; transform:translateY(-50%); background-color: rgba(0,0,0,0.45); color:#fff; border:none; width:44px; height:44px; padding:0; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:2;">
+            <i class="fa fa-chevron-right" aria-hidden="true" style="font-size:20px; line-height:1;"></i>
+      </button>
+
+       <button id="previousBtn" title="Previous slide" aria-label="Previous slide" style="position:absolute; left:20px; top:50%; transform:translateY(-50%); background-color: rgba(0,0,0,0.45); color:#fff; border:none; width:44px; height:44px; padding:0; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; z-index:2;">
+            <i class="fa fa-chevron-left" aria-hidden="true" style="font-size:20px; line-height:1;"></i>
+      </button>
+   </div-->
+
+   <div class="gallery">
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-0.jpeg" alt="Image 1">
+      </div>
+         <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-01.png" alt="Image 2">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-1.jpeg" alt="Image 3">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-2.jpeg" alt="Image 4">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-3.jpeg" alt="Image 5">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-4.jpeg" alt="Image 6">
+      </div>
+      <!--div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-5.jpeg" alt="Image 7">
+      </div-->
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-6.jpeg" alt="Image 8">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-7.png" alt="Image 9">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-8.jpeg" alt="Image 10">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-9.png" alt="Image 11">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-10.png" alt="Image 12">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-11.png" alt="Image 13">
+      </div>
+      <div class="gallery-slide active">
+           <img src="../pictures/images/BioFSILab/Group_Photos/BioFSILab-Group-12.jpeg" alt="Image 14">
+      </div>
+
+      <button class="gallery-btn prev">&#10094;</button>
+      <button class="gallery-btn next">&#10095;</button>
+   </div>
+
+   <table style="border-spacing: 10px;border-collapse: separate;">
             <tbody>
                <tr>
                    <h3> PhD Scholars </h3>
@@ -196,8 +262,8 @@
                      </td>
                      </tr>
                   </tbody>
-               </table>
-            <table style="border-spacing: 10px;border-collapse: separate;">
+   </table>
+   <table style="border-spacing: 10px;border-collapse: separate;">
             <tbody>
                <tr>
                      <hr size="5" noshade>
@@ -222,8 +288,8 @@
                   </td>
                   </tr>
                   </tbody>
-               </table>
-      <table style="border-spacing: 10px;border-collapse: separate;">
+   </table>
+   <table style="border-spacing: 10px;border-collapse: separate;">
             <tbody>
                <tr>
                      <hr size="5" noshade>
@@ -243,8 +309,8 @@
                      </td>
                      </tr>
                   </tbody>
-               </table>
-            <table style="border-spacing: 10px;border-collapse: separate;">
+   </table>
+   <table style="border-spacing: 10px;border-collapse: separate;">
             <tbody>
                <tr>
                      <hr size="5" noshade>
@@ -264,8 +330,8 @@
                      </td>
                      </tr>
                   </tbody>
-               </table>
-      <table style="border-spacing: 10px;border-collapse: separate;">
+   </table>
+   <table style="border-spacing: 10px;border-collapse: separate;">
             <tbody>
                <tr>
 
@@ -530,7 +596,31 @@
       </footer>
    </div>
      
+<script>
+  const slides = document.querySelectorAll(".gallery-slide");
+  let index = 0;
 
+  function showSlide(i) {
+    slides.forEach(s => s.classList.remove("active"));
+    slides[i].classList.add("active");
+  }
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }
+
+  function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  }
+
+  document.querySelector(".gallery-btn.next").addEventListener("click", nextSlide);
+  document.querySelector(".gallery-btn.prev").addEventListener("click", prevSlide);
+
+  // Optional autoplay
+  setInterval(nextSlide, 3000);
+</script>
       <!-- Javascript files -->
       <script src="../js/jquery-1.9.1.min.js"></script>
       <script src="../js/bootstrap.min.js"></script>
