@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+      <meta charset="utf-8">
+      <title> CV - Dr. Chandan Bose </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Personal Website - Dr. Chandan Bose">
+      <meta name="author" content="Dr. Chandan Bose">
+      <meta name="keywords" content="Chandan Bose">
+   <link rel="icon" href="../pictures/images/BioFSI_Lab_Logo.png">
+      
+   <!-- Le styles -->
+   <link href="../css/bootstrap.min.css" rel="stylesheet">
+   <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+   <link href="../css/theme.css" rel="stylesheet">
+   <link href="../css/animate.css" rel="stylesheet">
+   <link href="../css/style.css" rel="stylesheet">
+      <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style id="cv-styles">
+      .cv-page { --cv-accent: brown; --cv-ink: #1f2a37; --cv-muted: #5b6673; --cv-line: #e4e8ec; --cv-soft: #f6f7f8; --cv-link: #1548df; color: var(--cv-ink); margin-top: 18px; }
+      .cv-page p { margin: 0 0 8px; font-size: 16px; line-height: 1.55; }
+      .cv-page a { color: var(--cv-link); overflow-wrap: anywhere; }
+      .cv-content { min-width: 0; }
+      .cv-hero { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 22px 30px; align-items: center; margin: 0 0 28px; padding: 30px 34px; border-radius: 10px; color: #1f1f1f;
+         background: linear-gradient(135deg, #b0b0b0 0%, #dcdcdc 50%, #ffffff 100%); border: 1px solid #d0d0d0; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+      .cv-hero-main { min-width: 0; }
+      .cv-hero { position: relative; }
+      .cv-back { position: absolute; top: 14px; right: 16px; display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,.85); border: 1px solid #9a9a9a; color: #1f1f1f !important; font-size: 14px; font-weight: bold; text-decoration: none !important; z-index: 2; transition: background .15s, border-color .15s; }
+      .cv-back:hover, .cv-back:focus { background: #fff; border-color: var(--cv-accent); color: var(--cv-accent) !important; }
+      .cv-photo { width: 170px; height: 210px; object-fit: cover; object-position: 50% 20%; border-radius: 10px; border: 4px solid #fff; box-shadow: 0 6px 16px rgba(0,0,0,.18); background: #222; }
+      .cv-hero .cv-eyebrow { margin: 0 0 6px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: bold; color: #555; }
+      .cv-hero h2 { margin: 0 0 6px; font-size: 36px; line-height: 1.15; color: #1a1a1a; }
+      .cv-post { font-size: 20px; font-weight: normal; color: #444; white-space: nowrap; }
+      .cv-insti { font-size: 18px !important; font-weight: bold; color: #222; }
+      .cv-addr { font-size: 15px !important; color: #444; }
+      .cv-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+      .cv-btn { display: inline-flex; align-items: center; gap: 7px; padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,.8); border: 1px solid #9a9a9a; color: #1f1f1f !important; font-weight: bold; font-size: 15px; text-decoration: none !important; }
+      .cv-btn:hover, .cv-btn:focus { background: #fff; border-color: #555; }
+      .cv-btn-primary { background: var(--cv-accent); border-color: var(--cv-accent); color: #fff !important; }
+      .cv-btn-primary:hover, .cv-btn-primary:focus { background: #7d1f1f; border-color: #7d1f1f; }
+      .cv-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; grid-column: 1 / -1; }
+      .cv-stats li { padding: 14px 8px 12px; background: rgba(255,255,255,.9); border: 1px solid #d6d6d6; border-top: 3px solid var(--cv-accent); border-radius: 8px; text-align: center; }
+      .cv-stat-n { display: block; font-size: 30px; font-weight: bold; line-height: 1.1; color: var(--cv-accent); }
+      .cv-stat-l { display: block; margin-top: 3px; font-size: 12px; line-height: 1.25; color: #444; }
+      .cv-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 28px; align-items: start; }
+      .cv-toc { position: sticky; top: 16px; padding: 16px 14px; background: var(--cv-soft); border: 1px solid var(--cv-line); border-radius: 10px; max-height: calc(100vh - 32px); overflow: auto; }
+      .cv-toc-title { margin: 0 0 8px !important; font-size: 13px !important; letter-spacing: .1em; text-transform: uppercase; font-weight: bold; color: var(--cv-muted); }
+      .cv-toc ul { list-style: none; margin: 0; padding: 0; }
+      .cv-toc li a { display: flex; gap: 8px; align-items: baseline; padding: 6px 8px; border-radius: 6px; color: var(--cv-ink) !important; font-size: 15px; text-decoration: none; line-height: 1.3; }
+      .cv-toc li a .fa { width: 16px; text-align: center; color: var(--cv-accent); flex-shrink: 0; }
+      .cv-toc li a:hover, .cv-toc li a.is-active { background: #fff; color: var(--cv-accent) !important; box-shadow: inset 3px 0 0 var(--cv-accent); }
+      .cv-updated-top { display: inline-flex; align-items: center; gap: 6px; margin-left: 10px; padding: 2px 10px; border-radius: 999px; background: rgba(255,255,255,.75); border: 1px solid #c9c9c9; color: #444; font-size: 12px; letter-spacing: .02em; text-transform: none; font-weight: bold; vertical-align: 1px; }
+      .cv-updated-top time { color: var(--cv-accent); }
+      @media (max-width: 480px) { .cv-updated-top { display: flex; width: max-content; margin: 6px 0 0; } }
+      .cv-section { margin: 0 0 22px; padding: 22px 26px; background: #fff; border: 1px solid var(--cv-line); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.03); scroll-margin-top: 16px; }
+      .cv-h { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 2px solid #f0e2e2; font-size: 23px; color: var(--cv-accent); }
+      .cv-h-icon { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #f5e4e4; font-size: 17px; flex-shrink: 0; }
+      .cv-sub { margin: 18px 0 0; }
+      .cv-sub:first-of-type { margin-top: 0; }
+      .cv-sub h4 { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; font-size: 18px; color: var(--cv-ink); }
+      .cv-count { padding: 1px 9px; border-radius: 999px; background: #f5e4e4; color: var(--cv-accent); font-size: 13px; }
+      .cv-entry { position: relative; padding: 0 0 14px 20px; margin: 0 0 14px; border-left: 2px solid var(--cv-line); }
+      .cv-entry::before { content: ""; position: absolute; left: -6px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--cv-accent); box-shadow: 0 0 0 3px #f5e4e4; }
+      .cv-entry:last-child { margin-bottom: 0; padding-bottom: 0; }
+      .cv-entry-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+      .cv-org { font-size: 17px; font-weight: bold; line-height: 1.35; }
+      .cv-role { font-style: italic; color: var(--cv-muted); font-size: 16px; }
+      .cv-meta { text-align: right; flex-shrink: 0; }
+      .cv-date { display: block; font-weight: bold; font-size: 15px; color: var(--cv-accent); white-space: nowrap; }
+      .cv-place { display: block; font-size: 14px; color: var(--cv-muted); }
+      .cv-entry p { font-size: 15px; }
+      .cv-list, .cv-bullets { margin: 4px 0 0 0; padding: 0 0 0 20px; }
+      .cv-list li, .cv-bullets li { margin: 0 0 8px; font-size: 15px; line-height: 1.55; }
+      .cv-list li:has(.cv-when) { list-style: none; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 14px; margin-left: -20px; padding: 6px 0; border-bottom: 1px dashed var(--cv-line); }
+      .cv-list li:has(.cv-when):last-child { border-bottom: 0; }
+      .cv-when { font-weight: bold; font-size: 14px; color: var(--cv-accent); }
+      .cv-tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+      .cv-tags li { padding: 6px 14px; border-radius: 999px; background: var(--cv-soft); border: 1px solid var(--cv-line); font-size: 15px; }
+      .cv-grant { padding: 14px 16px; margin: 0 0 12px; border: 1px solid var(--cv-line); border-left: 4px solid var(--cv-accent); border-radius: 8px; background: #fcfcfc; }
+      .cv-grant:last-child { margin-bottom: 0; }
+      .cv-grant-title { font-size: 16px; line-height: 1.4; margin-bottom: 4px; }
+      .cv-grant-proj { color: var(--cv-muted); font-size: 15px !important; }
+      .cv-facts { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+      .cv-fact { padding: 3px 10px; border-radius: 999px; background: #fff; border: 1px solid var(--cv-line); font-size: 13px; }
+      .cv-fact b { color: var(--cv-accent); margin-right: 3px; }
+      .cv-people { font-size: 14px !important; color: var(--cv-muted); margin: 2px 0 0 !important; }
+      .cv-pubtools { display: flex; align-items: center; gap: 10px; margin: -4px 0 16px; padding: 8px 12px; border: 1px solid var(--cv-line); border-radius: 8px; background: var(--cv-soft); }
+      .cv-pubtools .fa { color: var(--cv-muted); }
+      .cv-pubtools input { flex: 1; min-width: 0; margin: 0; padding: 6px 4px; border: 0; background: transparent; box-shadow: none; font-size: 15px; height: auto; }
+      .cv-pubtools input:focus { outline: none; box-shadow: none; }
+      #cv-pubhits { font-size: 13px; color: var(--cv-muted); white-space: nowrap; }
+      .cv-pubs { list-style: none; margin: 0; padding: 0; }
+      .cv-pubs li { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--cv-line); font-size: 15px; line-height: 1.55; }
+      .cv-pubs li:last-child { border-bottom: 0; }
+      .cv-pubs li[hidden] { display: none; }
+      .cv-pubno { align-self: start; padding: 2px 0; border-radius: 6px; background: #f5e4e4; color: var(--cv-accent); font-weight: bold; font-size: 13px; text-align: center; }
+      .cv-pubno-blank { background: transparent; }
+      .cv-pubno-blank::before { content: "\2022"; color: var(--cv-accent); font-size: 18px; line-height: 1; }
+      .cv-venue strong { color: #1a3d7c; }
+      .cv-if strong { color: #b03a2e; font-weight: normal; font-size: 13px; }
+      .cv-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      /* --- visual refinements --- */
+      .cv-section { border-top: 4px solid var(--cv-accent); }
+      .cv-grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+      .cv-grid2 .cv-grant { margin: 0; display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s; }
+      .cv-grid2 .cv-grant:hover, .cv-cards .cv-entry:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,.07); }
+      .cv-grid2 .cv-facts { margin-top: auto; padding-top: 6px; }
+      .cv-fact-val { background: var(--cv-accent) !important; border-color: var(--cv-accent) !important; color: #fff; font-weight: bold; }
+      .cv-fact-role { font-weight: bold; color: var(--cv-accent); }
+      .cv-fact .fa { color: var(--cv-muted); }
+      .cv-cards .cv-entry { margin: 0; padding: 14px 16px; border: 1px solid var(--cv-line); border-radius: 8px; background: #fcfcfc; transition: transform .15s, box-shadow .15s; }
+      .cv-cards .cv-entry::before { display: none; }
+      .cv-cards .cv-entry-head { flex-direction: column-reverse; gap: 4px; margin: 0; }
+      .cv-cards .cv-meta { text-align: left; display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+      .cv-cards .cv-org { font-size: 16px; }
+      .cv-cards .cv-role { font-size: 15px; }
+      .cv-cards .cv-entry p { margin: 6px 0 0; font-size: 14px; word-break: break-word; }
+      .cv-entry .cv-place::before { content: "\f041"; font-family: FontAwesome; margin-right: 5px; color: #aaa; }
+      .cv-awards li:has(.cv-when) { grid-template-columns: 64px minmax(0, 1fr); }
+      .cv-awards .cv-when { display: inline-block; align-self: start; padding: 2px 0; border-radius: 6px; background: #f5e4e4; text-align: center; font-size: 13px; }
+      .cv-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+      .cv-tab { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--cv-line); background: #fff; color: var(--cv-ink); font-size: 15px; font-weight: bold; cursor: pointer; }
+      .cv-tab:hover { border-color: var(--cv-accent); }
+      .cv-tab.is-active { background: var(--cv-accent); border-color: var(--cv-accent); color: #fff; }
+      .cv-tab.is-active .cv-count { background: rgba(255,255,255,.25); color: #fff; }
+      .cv-js .cv-section#cv-publications .cv-sub { margin-top: 0; }
+      .cv-js .cv-section#cv-publications .cv-sub h4 { display: none; }
+      .cv-js .cv-section#cv-publications.is-searching .cv-sub h4 { display: flex; margin-top: 14px; }
+      .cv-pubside { display: flex; flex-direction: column; align-items: stretch; gap: 4px; }
+      .cv-pubside .cv-pubno { align-self: stretch; }
+      .cv-pubyear { font-size: 12px; color: var(--cv-muted); text-align: center; }
+      .cv-pill { display: inline-block; padding: 0 8px; border-radius: 999px; font-size: 12px; font-weight: bold; line-height: 1.7; vertical-align: 1px; }
+      .cv-pill-review { background: #fff4dc; color: #8a5a00; border: 1px solid #f0d9a3; }
+      .cv-pill-acc { background: #e5f4e7; color: #1b5e20; border: 1px solid #bfe0c3; }
+      .cv-students { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+      .cv-stu { display: flex; flex-direction: column; padding: 16px 18px; border: 1px solid var(--cv-line); border-radius: 10px; background: #fcfcfc; }
+      .cv-stu p { margin: 0 0 6px; }
+      .cv-stu-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 8px; }
+      .cv-badge { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: bold; letter-spacing: .03em; text-transform: uppercase; }
+      .cv-badge-primary { background: var(--cv-accent); color: #fff; }
+      .cv-badge-co { background: #f5e4e4; color: var(--cv-accent); }
+      .cv-stu-when { font-size: 13px; color: var(--cv-muted); white-space: nowrap; }
+      .cv-stu-name { font-size: 18px !important; font-weight: bold; }
+      .cv-thesis { font-size: 15px !important; font-style: italic; color: var(--cv-ink); }
+      .cv-thesis-k { display: block; font-style: normal; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; font-weight: bold; color: var(--cv-muted); margin-bottom: 2px; }
+      .cv-fund { font-size: 13px !important; color: var(--cv-muted); }
+      .cv-fund .fa { color: var(--cv-accent); }
+      .cv-stu-meta { font-size: 13px !important; color: var(--cv-muted); margin-top: auto !important; padding-top: 4px; }
+      .cv-outcome { margin: 8px 0 0 !important; padding: 6px 10px; border-radius: 6px; background: #eef7ef; font-size: 13px !important; }
+      .cv-outcome .fa { color: #2e7d32; }
+      .cv-before { display: block; color: var(--cv-muted); font-size: 12px; margin-top: 2px; }
+      .cv-stu-link { color: var(--cv-ink) !important; text-decoration: none; }
+      .cv-stu-link:hover { color: var(--cv-accent) !important; text-decoration: underline; }
+      .cv-sub h4 { padding-left: 10px; border-left: 3px solid var(--cv-accent); }
+      @media (max-width: 979px) {
+         .cv-layout { grid-template-columns: minmax(0, 1fr); }
+         .cv-toc { position: static; max-height: none; }
+         .cv-toc ul { display: flex; flex-wrap: wrap; gap: 6px; }
+         .cv-toc li a { padding: 5px 10px; background: #fff; border: 1px solid var(--cv-line); font-size: 14px; }
+      }
+      @media (max-width: 767px) {
+         .cv-hero { padding: 22px 18px; grid-template-columns: minmax(0, 1fr); } .cv-photo { width: 120px; height: 150px; justify-self: start; } .cv-back { top: 12px; right: 12px; padding: 6px 11px; font-size: 13px; } .cv-hero h2 { font-size: 28px; } .cv-post { display: block; font-size: 17px; white-space: normal; }
+         .cv-stats { display: flex; flex-wrap: wrap; } .cv-stats li { flex: 1 1 28%; min-width: 0; }
+         .cv-toc ul { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; -webkit-overflow-scrolling: touch; } .cv-toc li { flex: 0 0 auto; } .cv-toc li a { white-space: nowrap; }
+         .cv-section { padding: 18px 16px; }
+         .cv-grid2, .cv-students { grid-template-columns: 1fr; }
+         .cv-meta { text-align: left; }
+         .cv-list li:has(.cv-when) { grid-template-columns: 1fr; gap: 2px; }
+         .cv-pubs li { grid-template-columns: 1fr; gap: 4px; }
+         .cv-pubside { flex-direction: row; gap: 8px; align-items: center; } .cv-pubno { padding: 2px 8px; }
+      }
+      @media print {
+         @page { size: A4; margin: 14mm 13mm 16mm; }
+         html, body { background: #fff !important; }
+         body { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 11pt; }
+         .container { width: auto !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
+         .container > a:first-child, #intro, #footer, .cv-back, .cv-toc, .cv-actions, .cv-pubtools, .cv-tabs, .cv-updated-top .fa { display: none !important; }
+         .cv-page { margin: 0; }
+         .cv-page p, .cv-list li, .cv-pubs li { font-size: 10pt !important; line-height: 1.4 !important; }
+         .cv-hero { box-shadow: none; padding: 16px 20px; margin-bottom: 14px; grid-template-columns: 110px minmax(0, 1fr); gap: 12px 20px; break-inside: avoid; }
+         .cv-photo { width: 110px; height: 136px; box-shadow: none; }
+         .cv-hero h2 { font-size: 24pt; }
+         .cv-stats li { padding: 8px 4px; } .cv-stat-n { font-size: 18pt; }
+         .cv-layout { display: block; }
+         .cv-section { box-shadow: none; padding: 12px 16px; margin: 0 0 12px; break-inside: auto; border-radius: 6px; }
+         .cv-h { font-size: 15pt; margin-bottom: 10px; padding-bottom: 6px; break-after: avoid; }
+         .cv-sub h4 { font-size: 12pt; break-after: avoid; }
+         .cv-js .cv-section#cv-publications .cv-sub { display: block !important; margin-top: 12px; }
+         .cv-js .cv-section#cv-publications .cv-sub h4 { display: flex !important; }
+         .cv-pubs li[hidden] { display: grid !important; }
+         .cv-entry, .cv-grant, .cv-stu, .cv-cards .cv-entry, .cv-pubs li, .cv-list li { break-inside: avoid; }
+         .cv-grid2 .cv-grant:hover, .cv-cards .cv-entry:hover, .cv-value:hover { transform: none; }
+         .cv-page a { color: #1a3d7c !important; text-decoration: none; }
+         .cv-print-foot { display: block !important; }
+         /* PDF in greyscale (website stays brown) */
+         .cv-page { --cv-accent: #4a4a4a; }
+         .cv-h { border-bottom-color: #e3e3e3; }
+         .cv-h-icon, .cv-count, .cv-pubno, .cv-awards .cv-when, .cv-badge-co { background: #e9e9e9 !important; }
+         .cv-entry::before { box-shadow: 0 0 0 3px #e9e9e9; }
+         .cv-if strong { color: #666; }
+         .cv-fact-val { background: #6b6b6b !important; border-color: #6b6b6b !important; color: #fff !important; }
+         .cv-page a[href]::after, .cv-page abbr[title]::after { content: none !important; }
+         .cv-grant p, .cv-stu p, .cv-cards .cv-entry p { font-size: 9pt !important; }
+         .cv-grid2, .cv-students { gap: 8px; } .cv-grant, .cv-stu, .cv-cards .cv-entry { padding: 8px 10px; }
+         .cv-list li:has(.cv-when) { padding: 3px 0; }
+      }
+      .cv-print-foot { display: none; margin-top: 10px; font-size: 9pt; color: #777; text-align: center; }
+   </style>
+</head>
+   
+   <body>
+      <div class="container">
+        <div class="row-fluid">
+        <div class="span12 cv-page">
+
+         <header class="cv-hero">
+            <a class="cv-back" href="BioFSILab.html"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to BioFSI Lab</a>
+            <img class="cv-photo" src="../pictures/images/CB_DP_2025.JPG" alt="Portrait of Dr Chandan Bose" width="666" height="869">
+            <div class="cv-hero-main">
+               <p class="cv-eyebrow">Curriculum Vitae <span class="cv-updated-top"><i class="fa fa-refresh" aria-hidden="true"></i> Last updated <time id="cv-updated-date" datetime="2026-10-27">27 October 2026</time></span></p>
+               <h2>Chandan Bose <span class="cv-post">MS, PhD, MRAeS, FHEA</span></h2>
+               <p class="cv-insti">Assistant Professor of Aerospace Engineering, The University of Birmingham</p>
+               <p class="cv-addr">Head of the Bio-Inspired Fluid-Structure Interaction Laboratory, Aerospace Engineering<br>School of Metallurgy and Materials, College of Engineering and Physical Sciences<br>Pritchatts Road, Edgbaston Campus, University of Birmingham, B15 2TT</p>
+               <div class="cv-actions">
+                  <a class="cv-btn cv-btn-primary" id="cv-pdf-btn" href="files/CV_Chandan_Bose.pdf" title="Save this CV as a PDF (choose &lsquo;Save as PDF&rsquo; in the print window)"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF</a>
+                  <a class="cv-btn" href="mailto:c.bose@bham.ac.uk"><i class="fa fa-envelope-o" aria-hidden="true"></i> c.bose@bham.ac.uk</a>
+                  <a class="cv-btn" href="https://www.birmingham.ac.uk/staff/profiles/metallurgy/bose-chandan" target="_blank" rel="noopener"><i class="fa fa-university" aria-hidden="true"></i> University profile</a>
+               </div>
+            </div>
+            <ul class="cv-stats" aria-label="At a glance">
+               <li><span class="cv-stat-n">34</span><span class="cv-stat-l">Journal articles</span></li>
+               <li><span class="cv-stat-n">15</span><span class="cv-stat-l">Book chapters</span></li>
+               <li><span class="cv-stat-n">8</span><span class="cv-stat-l">Indexed proceedings</span></li>
+               <li><span class="cv-stat-n">16</span><span class="cv-stat-l">Grants &amp; fellowships</span></li>
+               <li><span class="cv-stat-n">10</span><span class="cv-stat-l">PhD &amp; postdoc researchers</span></li>
+            </ul>
+         </header>
+
+         <div class="cv-layout">
+            <nav class="cv-toc" aria-label="CV sections">
+               <p class="cv-toc-title">Contents</p>
+               <ul>
+                  <li><a href="#cv-area-of-expertise"><i class="fa fa-compass" aria-hidden="true"></i> Area of Expertise</a></li>
+                  <li><a href="#cv-academic-appointments"><i class="fa fa-briefcase" aria-hidden="true"></i> Academic Appointments</a></li>
+                  <li><a href="#cv-leadership-and-administrative-responsibilities"><i class="fa fa-sitemap" aria-hidden="true"></i> Leadership &amp; Administration</a></li>
+                  <li><a href="#cv-professional-qualifications"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Qualifications &amp; Education</a></li>
+                  <li><a href="#cv-fellowships"><i class="fa fa-star" aria-hidden="true"></i> Fellowships</a></li>
+                  <li><a href="#cv-project-funding-and-grantsmanship"><i class="fa fa-gbp" aria-hidden="true"></i> Research Funding</a></li>
+                  <li><a href="#cv-awards-honors"><i class="fa fa-trophy" aria-hidden="true"></i> Awards &amp; Honors</a></li>
+                  <li><a href="#cv-publications"><i class="fa fa-book" aria-hidden="true"></i> Publications</a></li>
+                  <li><a href="#cv-academic-service-outreach"><i class="fa fa-handshake-o" aria-hidden="true"></i> Academic Service &amp; Outreach</a></li>
+                  <li><a href="#cv-teaching-experience"><i class="fa fa-university" aria-hidden="true"></i> Teaching Experience</a></li>
+                  <li><a href="#cv-student-supervision"><i class="fa fa-users" aria-hidden="true"></i> Student Supervision</a></li>
+               </ul>
+            </nav>
+
+            <div class="cv-content">
+            <section class="cv-section" id="cv-area-of-expertise" aria-labelledby="cv-area-of-expertise-h">
+               <h3 class="cv-h" id="cv-area-of-expertise-h"><span class="cv-h-icon"><i class="fa fa-compass" aria-hidden="true"></i></span>Area of Expertise</h3>
+               
+<ul class="cv-tags"><li>Fluid-Structure Interaction</li><li>Bioinspired Engineering</li><li>Unsteady Aerodynamics</li><li>Nonlinear Aeroelasticity</li><li>Flapping Flight</li><li>Turbulent Flows</li><li>Flow Energy Harvesting</li><li>Data-Driven Reduced Order Modelling</li></ul>
+            </section>
+
+            <section class="cv-section" id="cv-academic-appointments" aria-labelledby="cv-academic-appointments-h">
+               <h3 class="cv-h" id="cv-academic-appointments-h"><span class="cv-h-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></span>Academic Appointments</h3>
+               
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">School of Met &amp; Mat, College of EPS, University of Birmingham</div><div class="cv-role">Assistant Professor of Aerospace Engineering</div></div><div class="cv-meta"><span class="cv-date">August 2023 - Present</span><span class="cv-place">Birmingham, UK</span></div></div><p><strong>Research, Teaching, Administration</strong></p></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Indian Institute of Technology Bombay</div><div class="cv-role">Visiting Assistant Professor</div></div><div class="cv-meta"><span class="cv-date">August 2025 - Present</span><span class="cv-place">Mumbai, India</span></div></div><p><strong>Research and Education</strong></p></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">School of Engineering, University of Edinburgh</div><div class="cv-role">University Teacher (Adjunct Lecturer) - 0.6FTE</div></div><div class="cv-meta"><span class="cv-date">September 2022 - February 2023</span><span class="cv-place">Edinburgh, UK</span></div></div><p><strong>Lecturer and Course Organiser for the course - Fluid Mechanics 4 (Mechanical)</strong><br> <a href="http://www.drps.ed.ac.uk/22-23/dpt/cxmece10004.htm" target="_blank" rel="noopener">http://www.drps.ed.ac.uk/22-23/dpt/cxmece10004.htm</a></p></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">School of Engineering, University of Edinburgh</div><div class="cv-role">Post-Doctoral Research Associate</div></div><div class="cv-meta"><span class="cv-date">September 2021 - July 2023</span><span class="cv-place">Edinburgh, UK</span></div></div><p><strong>Project: Dandidrone - A Dandelion-Inspired Drone for Swarm Sensing (funded by ERC).</strong><br> <a href="https://voilab.eng.ed.ac.uk/dandidrone" target="_blank" rel="noopener">https://voilab.eng.ed.ac.uk/dandidrone</a><br> Advisor: Prof. Ignazio Maria Viola.</p></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Dept. of Aerospace and Mechanical Engineering, University of Liège</div><div class="cv-role">Wallonie Bruxelles International Excellence Post-Doctoral Fellow</div></div><div class="cv-meta"><span class="cv-date">January, 2020 - September, 2021</span><span class="cv-place">Liège, Belgium</span></div></div><p>Advisor: Prof. Grigorios Dimitriadis.</p></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Dept. of Applied Mechanics, Indian Institute of Technology Madras</div><div class="cv-role">Project Officer</div></div><div class="cv-meta"><span class="cv-date">September, 2019 - December, 2019</span><span class="cv-place">Chennai, India</span></div></div><p>Advisors: Prof. Sunetra Sarkar &amp; Prof. Sayan Gupta.</p></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Dept. of Applied Mechanics, Indian Institute of Technology Madras</div><div class="cv-role">Graduate Research Scholar</div></div><div class="cv-meta"><span class="cv-date">July, 2014 - September, 2019</span><span class="cv-place">Chennai, India</span></div></div></div>
+            </section>
+
+            <section class="cv-section" id="cv-leadership-and-administrative-responsibilities" aria-labelledby="cv-leadership-and-administrative-responsibilities-h">
+               <h3 class="cv-h" id="cv-leadership-and-administrative-responsibilities-h"><span class="cv-h-icon"><i class="fa fa-sitemap" aria-hidden="true"></i></span>Leadership and Administrative Responsibilities</h3>
+               
+<div class="cv-grid2 cv-cards"><div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">EPSRC, UKRI</div><div class="cv-role">EPSRC Peer Review College Member</div></div><div class="cv-meta"><span class="cv-date">March 2026 - Present</span><span class="cv-place">Birmingham, UK</span></div></div></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Institute of Data and AI</div><div class="cv-role">Fellow and Theme Lead, Uni. of Birmingham</div></div><div class="cv-meta"><span class="cv-date">June 2025 - Present</span><span class="cv-place">Birmingham, UK</span></div></div></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Centre for Optimisation, Simulation and Data Driven Modelling</div><div class="cv-role">Deputy Director and Fluid Mechanics Lead, Uni. of Birmingham</div></div><div class="cv-meta"><span class="cv-date">September 2024 - Present</span><span class="cv-place">Birmingham, UK</span></div></div></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Birmingham Environment for Academic Research (BEAR), Uni. of Birmingham</div><div class="cv-role">Chair of Birmingham Fluid Dynamics and OpenFOAM Special Interest Groups</div></div><div class="cv-meta"><span class="cv-date">January 2024 - Present</span><span class="cv-place">Birmingham, UK</span></div></div></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Midlands Fluid Mechanics Group</div><div class="cv-role">Co-Lead, University of Birmingham</div></div><div class="cv-meta"><span class="cv-date">January 2024 - Present</span><span class="cv-place">Birmingham, UK</span></div></div></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">School of Met &amp; Mat, University of Birmingham</div><div class="cv-role">Deputy School Impact Lead, EDI Committee Member</div></div><div class="cv-meta"><span class="cv-date">September 2023 - Present</span><span class="cv-place">Birmingham, UK</span></div></div></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">FOSSEE Project, IIT Bombay <a href="https://cfd.fossee.in/team" target="_blank" rel="noopener">https://cfd.fossee.in/team</a></div><div class="cv-role">Co-PI and Advisor of CFD with OpenFOAM</div></div><div class="cv-meta"><span class="cv-date">March 2022 - Present</span><span class="cv-place">Bombay, India</span></div></div></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">University of Edinburgh</div><div class="cv-role">Coordinator of the Edinburgh Fluid Dynamics Group, <a href="https://www.efdg.ed.ac.uk/" target="_blank" rel="noopener">https://www.efdg.ed.ac.uk/</a></div></div><div class="cv-meta"><span class="cv-date">January 2022 - July 2023</span><span class="cv-place">Edinburgh, UK</span></div></div></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">University of Edinburgh</div><div class="cv-role">Member of Academic Senate</div></div><div class="cv-meta"><span class="cv-date">August 2022 - July 2023</span><span class="cv-place">Edinburgh, UK</span></div></div><p><a href="https://www.ed.ac.uk/academic-services/committees/senate" target="_blank" rel="noopener">https://www.ed.ac.uk/academic-services/committees/senate</a></p></div></div>
+            </section>
+
+            <section class="cv-section" id="cv-professional-qualifications" aria-labelledby="cv-professional-qualifications-h">
+               <h3 class="cv-h" id="cv-professional-qualifications-h"><span class="cv-h-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>Professional Qualifications</h3>
+               
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Institute for Academic Development, The University of Edinburgh</div><div class="cv-role">Post Graduate Certification Programme in Academic Practice (PgCert)</div></div><div class="cv-meta"><span class="cv-date">2024</span><span class="cv-place">Edinburgh, UK</span></div></div></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Indian Institute of Technology Madras</div><div class="cv-role">M.S. &amp; Ph.D., Department of Applied Mechanics</div></div><div class="cv-meta"><span class="cv-date">2019</span><span class="cv-place">Chennai, T.N., India</span></div></div><p><strong>Thesis: Dynamical Analysis of Unsteady Flow Phenomena around Flapping Wings</strong><br> Overall GPA: <strong>9.57/10</strong> (10/10, based on 10 best courses required for 30 credits)</p><p><strong>Achievements:</strong></p><ul class="cv-bullets"><ul class="cv-list"><li><strong>Institute Research Award, IIT Madras.</strong></li><li><strong>V. Ramamurthy Best Thesis Award in Applied Mechanics Department, IIT Madras.</strong></li><li><strong>Innovative Thesis Project Award, Indian National Academy of Engineering.</strong></li></ul></ul></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Jadavpur University</div><div class="cv-role">B.E., Department of Civil Engineering</div></div><div class="cv-meta"><span class="cv-date">2013</span><span class="cv-place">Kolkata, W.B., India</span></div></div><p><strong>Final Year Project: Design of Civil Structures Subjected to Wind and Earthquake Loads.</strong></p><p>Overall GPA: <strong>9.01/10</strong></p><p><strong>Achievement: First Class Honors, University Gold Medalist.</strong></p></div>
+            </section>
+
+            <section class="cv-section" id="cv-fellowships" aria-labelledby="cv-fellowships-h">
+               <h3 class="cv-h" id="cv-fellowships-h"><span class="cv-h-icon"><i class="fa fa-star" aria-hidden="true"></i></span>Fellowships</h3>
+               
+<div class="cv-grid2"><div class="cv-grant"><div class="cv-grant-title"><strong>Chargé de Recherches - FNRS Post-Doctoral Fellowship</strong> by <strong>F.N.R.S., Belgium</strong></div><p class="cv-grant-proj"><em>Project: Numerical and Experimental Investigation of Three-Dimensional Dynamic Stall at Low to Moderate Reynolds Numbers: Prediction and Control.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">€100,000</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 years (Awarded in June 2021)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div><p class="cv-people"><b>Promoters:</b> Prof. Grigorios Dimitriadis and Prof. Vincent Terrapon, Dept. of Aerospace and Mechanical Engineering, University of Liege, Belgium.</p></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Wallonie Bruxelles International Excellence Post-Doctoral Fellowship</strong> by <strong>Wallonie Bruxelles International, Belgium</strong></div><p class="cv-grant-proj"><em>Project: Numerical and Experimental Investigation of the Non-Linear Fluid-Structure Interaction Dynamics of Flapping Wings in Turbulent Flows.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">€52,000</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 years (2020 - 2021)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div><p class="cv-people"><b>Promoter:</b> Prof. Grigorios Dimitriadis, Dept. of Aerospace and Mechanical Engineering, University of Liege, Belgium.</p></div></div>
+            </section>
+
+            <section class="cv-section" id="cv-project-funding-and-grantsmanship" aria-labelledby="cv-project-funding-and-grantsmanship-h">
+               <h3 class="cv-h" id="cv-project-funding-and-grantsmanship-h"><span class="cv-h-icon"><i class="fa fa-gbp" aria-hidden="true"></i></span>Project Funding and Grantsmanship</h3>
+               
+<div class="cv-grid2"><div class="cv-grant"><div class="cv-grant-title"><strong>The Scheme for Promotion of Academic and Research Collaboration (SPARC) with IIT Kharagpur</strong> by <strong>Govt. of India</strong></div><p class="cv-grant-proj"><em>Project: Simulating Nature in Exa-Scale: GPU-Accelerated Fluid-Structure Interaction Modelling of Bio-Inspired Drone Swarms.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£76k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 years (2026 - 2028)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div><p class="cv-people"><b>Co-investigator:</b> Dr. Somnath Roy, IIT Kharagpur, India.</p></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Going Global - Springboard Programme with Max Plank Institute, Germany</strong> by <strong>British Council</strong></div><p class="cv-grant-proj"><em>Project: Investigating Collective Flight &amp; Swimming For Bio-Inspired Robotics.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£7k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 1 year (Jan 2026 - Dec 2026)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Institute of Data and AI Pump Priming Collision Grant</strong> by <strong>University of Birmingham</strong></div><p class="cv-grant-proj"><em>Project: DeepSight: Data-Driven Early Detection of Glaucoma and Virtual Surgery Modelling.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£16k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 months (January 2026 - July 2026)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Access To HPC Grant</strong> by <strong>Engineering and Physical Sciences Research Council, UK</strong></div><p class="cv-grant-proj"><em>Project: Wave propagation and impulse enhancement in squid-inspired flexible nozzles subjected to rotary wake.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£37k (9,830,400 CPUh on Cirrus)</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 1 year (2026 - 2027)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>COSIMO Network+ Seedcorn Grant</strong> by <strong>University of Birmingham</strong></div><p class="cv-grant-proj"><em>Project: DeepSight: Smarter Glaucoma Detection via Spatio-Temporal Deep Learning.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£6.5k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 months (September 2025 - March 2026)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Baskerville HPC Grant</strong> by <strong>University of Birmingham</strong></div><p class="cv-grant-proj"><em>Project: GPU-Accelerated Solver Development for Simulating Butterfly Swarms.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£35k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 10 months (April 2025 - January 2026)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>International Exchange Grant with IIT Kharagpur, India</strong> by <strong>Royal Society</strong></div><p class="cv-grant-proj"><em>Project: Development of a Multi-GPU Fluid-Structure Interaction Solver for Simulating Bio-Inspired Flapping Flight.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£11k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 years (Dec 2024 - Nov 2026)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div><p class="cv-people"><b>Co-investigator:</b> Dr. Somnath Roy, IIT Kharagpur, India.</p></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Going Global - Springboard Programme with ESPCI Paris, CNRS, France</strong> by <strong>British Council</strong></div><p class="cv-grant-proj"><em>Project: Wave Energy Conversion through the Wave-Structure Interaction of Bioinspired Flexible Membranes.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£7k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 1 year (Jan 2025 - Dec 2025)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div><p class="cv-people"><b>Co-investigator:</b> Prof. Ramiro Godoy-Diana, CNRS.</p></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Impact Acceleration Account Funding</strong> by <strong>EPSRC</strong></div><p class="cv-grant-proj"><em>Project: Open-Source Code and Software Impact Pathways.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£6k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 months (Jan 2025 - June 2025)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>EuroMech Colloquium Funding</strong> by <strong>EuroMech Society</strong></div><p class="cv-grant-proj"><em>Project: Colloquium on Bio-Inspired Fluid-Structure Interaction.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">€3k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 1 year (2024 - 2025)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div><p class="cv-people"><b>Co-investigator:</b> Prof. Ramiro Godoy-Diana, CNRS.</p></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>UK-France Collaborative Seed Funding</strong> by <strong>French Embassy, UK</strong></div><p class="cv-grant-proj"><em>Project: Vortex-Dominated Flow Physics of Bio-Inspired Porous and Flexible Structures</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£10k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 1 year (2023 - 2024)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div><p class="cv-people"><b>Co-investigator:</b> Prof. Ramiro Godoy-Diana, CNRS.</p></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Archer2 Pioneer Grant</strong> by <strong>Engineering and Physical Sciences Research Council, UK</strong></div><p class="cv-grant-proj"><em>Project: Investigation of Bio-Inspired Multi-Phase Fluid-Structure Interaction Problems.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£70k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 years (2023 - 2026)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Access To HPC Grant</strong> by <strong>Engineering and Physical Sciences Research Council, UK</strong></div><p class="cv-grant-proj"><em>Project: Flight dynamics of free-falling three-dimensional porous bodies subjected to stochastic transverse gusts.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£30k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 1 year (2023 - 2024)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div><p class="cv-people"><b>Co-investigator:</b> Dr. Ignazio Maria Viola, Reader, School of Engineering, University of Edinburgh.</p></div>
+<div class="cv-grant"><div class="cv-grant-title"><strong>Access To HPC Grant</strong> by <strong>Engineering and Physical Sciences Research Council, UK</strong></div><p class="cv-grant-proj"><em>Project: Fluid-Structure Interaction and wake dynamics of dandelion seed flight under gust.</em></p><div class="cv-facts"><span class="cv-fact cv-fact-val">£28k</span><span class="cv-fact"><i class="fa fa-clock-o" aria-hidden="true"></i> 1 year (2022 - 2023)</span><span class="cv-fact cv-fact-role" title="Principal Investigator">PI</span></div><p class="cv-people"><b>Co-investigator:</b> Dr. Ignazio Maria Viola, Reader, School of Engineering, University of Edinburgh.</p></div></div>
+            </section>
+
+            <section class="cv-section" id="cv-awards-honors" aria-labelledby="cv-awards-honors-h">
+               <h3 class="cv-h" id="cv-awards-honors-h"><span class="cv-h-icon"><i class="fa fa-trophy" aria-hidden="true"></i></span>Awards &amp; Honors</h3>
+               
+<ul class="cv-list cv-awards"><li><span class="cv-when">2025</span><span class="cv-what"><strong>Delivered keynote lectures</strong> at the <strong>11th and 12th International Conference on Fluid Mechanics &amp; Fluid Power (FMFP-2024 and FMFP-2025)</strong>, held in December 2024 and 2025, respectively, in India.</span></li><li><span class="cv-when">2025</span><span class="cv-what"><strong>Awarded the 2025 CoSeC Fellowship</strong> by the Science an Technology Facilities Council, UK.</span></li><li><span class="cv-when">2025</span><span class="cv-what"><strong>Awarded the Best Simulation Image Prize (Saddal &amp; Bose)</strong> by ARCHER2, EPCC in 2025.</span></li><li><span class="cv-when">2025</span><span class="cv-what"><strong>Shortlisted for HPCwire awards for best use of High Performance Computing using our supercomputer BlueBEAR and Tier 2 HPC system Baskerville</strong> in 2025.</span></li><li><span class="cv-when">2025</span><span class="cv-what"><strong>Awarded the Indian Overseas Prize</strong> by <strong>NRI Welfare Society</strong> in July 2025.</span></li><li><span class="cv-when">2025</span><span class="cv-what"><strong>Best Poster Award (Huang, Bose)</strong> in the DisCoVor 2025 conference held at Montana, USA, in June 2025.</span></li><li><span class="cv-when">2025</span><span class="cv-what"><strong>Best Poster Award (Huang, Bose)</strong> in the Future Wind and Marine 2025 conference held at Edinburgh, Scotland, in February 2025.</span></li><li><span class="cv-when">2024</span><span class="cv-what"><strong>Featured article by the Editor</strong> in <strong>Physics of Fluids</strong>: &lsquo;Wake-induced response of vibro-impacting systems&rsquo;, 2024.</span></li><li><span class="cv-when">2024</span><span class="cv-what"><strong>Awarded the Best Early Career Simulation Image Prize</strong> by ARCHER2, EPCC in 2024.</span></li><li><span class="cv-when">2024</span><span class="cv-what"><strong>Awarded Fellowship of Higher Education Academy (FHEA)</strong> by Advance HE, 2024.</span></li><li><span class="cv-when">2022</span><span class="cv-what"><strong>Nominated for the O.C. Zienkiewicz Award for Young Scientists in Computational Engineering Sciences</strong> by ECCOMAS, 2022.</span></li><li><span class="cv-when">2021</span><span class="cv-what"><strong>FNRS Postdoctoral Fellowship, Belgium</strong>, June 2021. <a href="https://www.uliege.be/cms/c_14099490/en/121-new-frs-fnrs-research-mandates-at-uliege" target="_blank" rel="noopener"><strong>Web Link</strong></a>.</span></li><li><span class="cv-when">2020&ndash;21</span><span class="cv-what"><strong>Wallonie Bruxelles International Excellence Postdoctoral Fellowship</strong>, University of Liege , Belgium, 2020-2021.</span></li><li><span class="cv-when">2020</span><span class="cv-what"><strong>Innovative Thesis Project Award</strong> at Doctoral Level, <strong>Indian National Academy of Engineering</strong>, 2020, <a href="https://www.inae.in/innovative-student-projects-award/" target="_blank" rel="noopener"><strong>Web Link</strong></a>.</span></li><li><span class="cv-when">2020</span><span class="cv-what"><strong>V. Ramamurthy Best Thesis Award</strong> in Applied Mechanics Department, IIT Madras, 2020, <a href="https://www.iitm.ac.in/recognitions/student-awards?awards_category_value=convocation_day&amp;field_student_awards_year_value=2020" target="_blank" rel="noopener"><strong>Web Link</strong></a>.</span></li><li><span class="cv-when">2019</span><span class="cv-what"><strong>Institute Research Award</strong>, IIT Madras, 2019.</span></li><li><span class="cv-when">2018</span><span class="cv-what"><strong>Outstanding Reviewer</strong> recognition by International Journal of Non-Linear Mechanics, 2018.</span></li><li><span class="cv-when">2022</span><span class="cv-what"><strong>Winner of the Cover of the OpenFOAM Journal</strong> - 2021, 2022.</span></li><li><span class="cv-when">2021</span><span class="cv-what"><strong>Reviewer of the Year 2020</strong> in ASME Journal of Computational and Nonlinear Dynamics, 2021, <a href="https://www.asme.org/publications-submissions/journals/asme-journal-program-awards/awards-reviewers-of-the-year/2020-reviewers-of-the-year" target="_blank" rel="noopener"><strong>Web Link</strong></a>.</span></li><li><span class="cv-when">2018&ndash;19</span><span class="cv-what"><strong>Innovative Research Project Grant (2018-19)</strong> as PI from IC&amp;SR, IIT Madras.</span></li><li><span class="cv-when">2018</span><span class="cv-what"><strong>SERB International Travel Support Grant</strong>, DST, India for attending IUTAM Symposium, 2018.</span></li><li><span class="cv-when">2018</span><span class="cv-what"><strong>FGSA Travel Award for Excellence in Graduate Studies</strong>, American Physical Society, 2018.</span></li><li><span class="cv-when">2019</span><span class="cv-what"><strong>Editor&rsquo;s Pick</strong> in <strong>Physics of Fluids</strong>: &lsquo;Investigating chaotic wake dynamics past a flapping airfoil and the role of vortex interactions behind the chaotic transition&rsquo;, 2019.</span></li><li><span class="cv-when">2017</span><span class="cv-what"><strong>Boeing Travel Grant</strong> for attending AIAA Aviation Conference, 2017.</span></li><li><span class="cv-when">2015</span><span class="cv-what"><strong>Excellent Poster Award</strong>, European Physical Society in XVII IUPAP CCP, IITG, 2015.</span></li><li><span class="cv-when">2013</span><span class="cv-what"><strong>Jadavpur University Gold Medal</strong> for standing First in order of merit in B.E. Civil Final Examination, 2013.</span></li><li><span class="cv-when">2013</span><span class="cv-what"><strong>Prof. Santimoy Niyogi Memorial Gold Medal</strong>, Society of Civil Engineers, Jadavpur University, 2013.</span></li><li><span class="cv-when">2013</span><span class="cv-what"><strong>Swapan Chandra Memorial Bronze Medal</strong>, Jadavpur University, 2013.</span></li><li><span class="cv-when">2013</span><span class="cv-what"><strong>Parthasarathi Ghosh Memorial Award</strong>, Jadavpur University, 2013.</span></li><li><span class="cv-when">2013</span><span class="cv-what"><strong>Sunit Kundu Memorial Gold Centered Silver Medal</strong>, Jadavpur University, 2013.</span></li></ul>
+            </section>
+
+            <section class="cv-section" id="cv-publications" aria-labelledby="cv-publications-h">
+               <h3 class="cv-h" id="cv-publications-h"><span class="cv-h-icon"><i class="fa fa-book" aria-hidden="true"></i></span>Publications</h3>
+               <div class="cv-pubtools"><label class="cv-visually-hidden" for="cv-pubsearch">Search publications</label><i class="fa fa-search" aria-hidden="true"></i><input id="cv-pubsearch" type="search" placeholder="Search publications by title, author, journal or year"><span id="cv-pubhits" aria-live="polite"></span></div>
+<div class="cv-tabs" role="tablist" aria-label="Publication type"><button type="button" role="tab" class="cv-tab is-active" aria-selected="true" data-target="cv-publications-journal-articles">Journal articles <span class="cv-count">34</span></button><button type="button" role="tab" class="cv-tab" aria-selected="false" data-target="cv-publications-book-chapters">Book chapters <span class="cv-count">15</span></button><button type="button" role="tab" class="cv-tab" aria-selected="false" data-target="cv-publications-scopus-indexed-proceedings">Proceedings <span class="cv-count">8</span></button><button type="button" role="tab" class="cv-tab" aria-selected="false" data-target="cv-publications-selected-international-conference-presentations-2025">Conference talks (2025) <span class="cv-count">10</span></button></div><div class="cv-sub" id="cv-publications-journal-articles"><h4>Journal Articles<span class="cv-count">34</span></h4>
+<ol class="cv-pubs">
+<li><span class="cv-pubside"><span class="cv-pubno">J34</span><span class="cv-pubyear">2026</span></span><div>Doudou Huang, Ahmet Gungor, <strong>Chandan Bose</strong>, Antonio Attili, Ignazio Maria Viola: <strong>Drag Enhancement on Permeable Disks: Mechanism, Scaling and Modelling</strong>, <span class="cv-pill cv-pill-review">Under review</span> in <span class="cv-venue"><strong>Journal of Fluid Mechanics</strong></span>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J33</span><span class="cv-pubyear">2026</span></span><div>Doudou Huang, <strong>Chandan Bose</strong>, Antonio Attili, Ignazio Maria Viola: <strong>Increasing Reynolds Number Promotes Wake Stabilisation behind a Permeable Disk</strong>, <span class="cv-pill cv-pill-review">Under review</span> in <span class="cv-venue"><strong>Journal of Fluid Mechanics</strong></span>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J32</span><span class="cv-pubyear">2026</span></span><div>Paras Singh, Yukesh Karki, Victor Hernandez, Daehyun Choi, Saad Bhamla, <strong>Chandan Bose</strong><sup>*</sup>: <strong>Multi-objective Bayesian optimization of rigid and flexible nozzles for energy-efficient pulsed jet propulsion</strong>, <span class="cv-pill cv-pill-review">Under review</span> in <span class="cv-venue"><strong>Physical Review Fluids</strong></span>, DOI: <a href="https://doi.org/10.48550/arXiv.2606.19252" target="_blank" rel="noopener">10.48550/arXiv.2606.19252</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J31</span><span class="cv-pubyear">2026</span></span><div>Hibah Saddal, Lucky Jayswal, <strong>Chandan Bose</strong><sup>*</sup>: <strong>Effects of plunging acceleration on the passive morphing of avian-inspired flexible foils</strong>, <span class="cv-pill cv-pill-review">Under review</span> in <span class="cv-venue"><strong>Journal of Fluids and Structures</strong></span>, DOI: <a href="https://doi.org/10.48550/arXiv.2603.27794" target="_blank" rel="noopener">10.48550/arXiv.2603.27794</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J30</span><span class="cv-pubyear">2026</span></span><div>Haimi Jha, Hibah Saddal, <strong>Chandan Bose</strong><sup>*</sup>: <strong>Efficacy of the Weak Formulation of Sparse Nonlinear Identification in Predicting Vortex-Induced Vibrations</strong>, <span class="cv-pill cv-pill-review">Revised</span> in <span class="cv-venue"><strong>Journal of Fluids and Structures</strong></span>, DOI: <a href="https://doi.org/10.48550/arXiv.2603.27840" target="_blank" rel="noopener">10.48550/arXiv.2603.27840</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J29</span><span class="cv-pubyear">2026</span></span><div>Daehyun Choi, Paras Singh, Saad Bhamla, <strong>Chandan Bose</strong><sup>*</sup>: <strong>Computational and reduced-order modelling of elastic wave-driven impulse enhancement in pulsed jets through passively flexible nozzles</strong>, <span class="cv-pill cv-pill-review">Under review</span> in <span class="cv-venue"><strong>Journal of Fluid Mechanics</strong></span>, DOI: <a href="https://doi.org/10.48550/arXiv.2605.17319" target="_blank" rel="noopener">10.48550/arXiv.2605.17319</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J28</span><span class="cv-pubyear">2026</span></span><div>Daehyun Choi, Paras Singh, Ian Bergerson, Minho Kim, Jieun Park, Halley J. Wallace, Kenny Zhang, Sandy Y. Hsieh, Aqua T. Asberry, Theodore A. Uyeno, William F. Gilly, Hyungmin Park, Daeshik Kang, <strong>Chandan Bose</strong>, Saad Bhamla: <strong>Squid-inspired superpropulsion</strong>, <span class="cv-pill cv-pill-review">Revised</span> in <span class="cv-venue"><strong>Science Advances</strong></span>, DOI: <a href="https://doi.org/10.48550/arXiv.2605.03239" target="_blank" rel="noopener">10.48550/arXiv.2605.03239</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J27</span><span class="cv-pubyear">2026</span></span><div>Pankaj Rohilla, Johnathan N. O’Neil, Paras Singh, Victor M. Ortega-Jimenez, Daehyun Choi, <strong>Chandan Bose</strong><sup>*</sup>, Saad Bhamla: <strong>Interfacial vortex recapture enhances thrust in tiny water skaters</strong>, <span class="cv-pill cv-pill-review">Revised</span> in <span class="cv-venue"><strong>Royal Rociety Interface</strong></span>, DOI: <a href="https://doi.org/10.1101/2024.06.17.599397" target="_blank" rel="noopener">10.1101/2024.06.17.599397</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J26</span><span class="cv-pubyear">2026</span></span><div>Debajyoti Kumar, Siddharth D Sharma, <strong>Chandan Bose</strong>, Somnath Roy: <strong>GPU optimized integration of immersed boundary method and overset mesh framework for moving boundary problems</strong>, <span class="cv-venue"><strong>Computer Methods in Applied Mechanics and Engineering</strong></span>, Volume 461, Part C, Article: 119241, DOI: <a href="https://doi.org/10.1016/j.cma.2026.119241" target="_blank" rel="noopener">10.1016/j.cma.2026.119241</a> [<a href="http://dx.doi.org/10.2139/ssrn.6277625" target="_blank" rel="noopener">Preprint</a>].</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J25</span><span class="cv-pubyear">2026</span></span><div>Jawahar S. S. Pandi, Ahmet Gungor, <strong>Chandan Bose</strong>, Antonio Attili, Ignazio Maria Viola: <strong>Effect of Transverse Gust on Free-Falling Plates</strong>, <span class="cv-venue"><strong>Journal of Fluid Mechanics</strong></span>, Volume 1040, A23, DOI: <a href="https://doi.org/10.1017/jfm.2026.11850" target="_blank" rel="noopener">10.1017/jfm.2026.11850</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J24</span><span class="cv-pubyear">2026</span></span><div>Doudou Huang, <strong>Chandan Bose</strong>, Antonio Attili, Ignazio Maria Viola: <strong>Wake dynamics of permeable disks across the transition from steady to chaotic flow</strong>, <span class="cv-venue"><strong>Journal of Fluid Mechanics</strong></span>, Volume 1035, A15, DOI: <a href="https://doi.org/10.1017/jfm.2026.11514" target="_blank" rel="noopener">10.1017/jfm.2026.11514</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J23</span><span class="cv-pubyear">2025</span></span><div><strong>Chandan Bose</strong>, Callum Bruce, Ignazio Maria Viola: <strong>Porous plates at incidence</strong>, <span class="cv-venue"><strong>Theoretical and Computational Fluid Dynamics</strong></span>, 39, 19, DOI: <a href="https://link.springer.com/article/10.1007/s00162-025-00740-6" target="_blank" rel="noopener">10.1007/s00162-025-00740-6</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J22</span><span class="cv-pubyear">2025</span></span><div>Dheeraj Tripathi, <strong>Chandan Bose</strong>, Sirshendu Mondal, J Venkatramani: <strong>Effect of structural parameters on the synchronization characteristics in a stall-induced aeroelastic system</strong>, <span class="cv-venue"><strong>Journal of Fluids and Structures</strong></span>, Volume 133, 104246, DOI: <a href="https://doi.org/10.1016/j.jfluidstructs.2024.104246" target="_blank" rel="noopener">10.1016/j.jfluidstructs.2024.104246</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J21</span><span class="cv-pubyear">2024</span></span><div>Rohit Chawla, Aasifa Rounak, <strong>Chandan Bose, Vikram Pakrashi</strong>: <strong>Wake-induced response of vibro-impacting systems</strong>, <span class="cv-venue"><strong>Physics of Fluids</strong></span>, 36, 127148, Link: <a href="https://pubs.aip.org/aip/pof/article/36/12/127148/3325793" target="_blank" rel="noopener">journal page</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J20</span><span class="cv-pubyear">2024</span></span><div>Alex Cavanagh, <strong>Chandan Bose</strong>, Kiran Ramesh: <strong>Effect of sweep angle on three-dimensional vortex dynamics over plunging wings</strong>, <span class="cv-venue"><strong>Physics of Fluids</strong></span>, 36, 117115, Link: <a href="https://pubs.aip.org/aip/pof/article/36/11/117115/3319019" target="_blank" rel="noopener">journal page</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J19</span><span class="cv-pubyear">2024</span></span><div>Junlei Wang, Shenfang Li, Daniil Yurchenko, Hongjun Zhu, <strong>Chandan Bose</strong>: <strong>Effect of a fixed downstream cylinder on the flow-induced vibration of an elastically supported primary cylinder</strong>, <span class="cv-venue"><strong>Physics of Fluids</strong></span>, 36, 063602, Link: <a href="https://pubs.aip.org/aip/pof/article/36/6/063602/3295989" target="_blank" rel="noopener">journal page</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J18</span><span class="cv-pubyear">2024</span></span><div>Chhote Lal Shah, Dipanjan Majumdar, <strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Controlling the chaotic wake of a flapping foil by tuning its chordwise flexibility</strong>, <span class="cv-venue"><strong>Journal of Fluids and Structures</strong></span>, Volume 127, 104134, DOI: <a href="https://doi.org/10.1016/j.jfluidstructs.2024.104134" target="_blank" rel="noopener">10.1016/j.jfluidstructs.2024.104134</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J17</span><span class="cv-pubyear">2023</span></span><div>Abraham Thomas Chirathalattu*, Santhosh B, <strong>Chandan Bose</strong>, Rony Philip, Bipin Balaram: <strong>Passive Suppression of Vortex-Induced Vibrations Using a Nonlinear Energy Sink - Numerical and Analytical Perspective</strong>, <span class="cv-venue"><strong>Mechanical Systems and Signal Processing</strong></span>, Volume 182, 109556, DOI: <a href="https://doi.org/10.1016/j.ymssp.2022.109556" target="_blank" rel="noopener">10.1016/j.ymssp.2022.109556</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J16</span><span class="cv-pubyear">2022</span></span><div>Chhote Lal Shah, Dipanjan Majumdar, <strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Chordwise flexible aft-tail suppresses jet-switching by reinstating wake periodicity in a flapping foil</strong>, <span class="cv-venue"><strong>Journal of Fluid Mechanics</strong></span>, Volume 946 , A12, DOI: <a href="https://doi.org/10.1017/jfm.2022.591" target="_blank" rel="noopener">10.1017/jfm.2022.591</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J15</span><span class="cv-pubyear">2022</span></span><div>Dipanjan Majumdar, <strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Transition boundaries and an order-to-chaos map for the flow-field past a flapping foil</strong>, <span class="cv-venue"><strong>Journal of Fluid Mechanics</strong></span>, 942, A40, DOI: <a href="https://doi.org/10.1017/jfm.2022.385" target="_blank" rel="noopener">10.1017/jfm.2022.385</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J14</span><span class="cv-pubyear">2022</span></span><div>Sai Vishal Gali*, Ashwad Raaj*, <strong>Chandan Bose</strong>, Venkatramani Jagadish, Grigorios Dimitriadis: <strong>Numerical investigation of discontinuity-induced bifurcations in an aeroelastic system with coupled non-smooth nonlinearities</strong>, <span class="cv-venue"><strong>Nonlinear Dynamics</strong></span>, 108, 3025-3051, DOI: <a href="https://link.springer.com/article/10.1007/s11071-022-07352-3" target="_blank" rel="noopener">10.1007/s11071-022-07352-3</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J13</span><span class="cv-pubyear">2022</span></span><div>Dheeraj Tripathi*, R. Shreenivas*, <strong>Chandan Bose</strong>, Sirshendu Mondal, J Venkatramani: <strong>Experimental Investigation on the Synchronization Characteristics of a Pitch-Plunge Aeroelastic System Exhibiting Stall Flutter</strong>, <span class="cv-venue"><strong>Chaos</strong></span>, 32, 073114, DOI: <a href="https://doi.org/10.1063/5.0096213" target="_blank" rel="noopener">10.1063/5.0096213</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J12</span><span class="cv-pubyear">2022</span></span><div>Dheeraj Tripathi*, Sai Vishal*, <strong>Chandan Bose</strong>, J Venkatramani: <strong>Stall-induced fatigue damage analysis of nonlinear aeroelastic systems subjected to randomly fluctuating inflow</strong>, <span class="cv-venue"><strong>International Journal of Nonlinear Mechanics</strong></span>, 142, 104003, DOI: <a href="https://doi.org/10.1016/j.ijnonlinmec.2022.104003" target="_blank" rel="noopener">10.1016/j.ijnonlinmec.2022.104003</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J11</span><span class="cv-pubyear">2021</span></span><div>Sai Vishal Gali*, Ashwad Raaj*, <strong>Chandan Bose</strong>, Venkatramani Jagadish: <strong>Routes to Synchronization in a pitch-plunge aeroelastic system with coupled structural and aerodynamic nonlinearities</strong>, <span class="cv-venue"><strong>International Journal of Nonlinear Mechanics</strong></span>, Volume 135, 103766, DOI: <a href="https://doi.org/10.1016/j.ijnonlinmec.2021.103766" target="_blank" rel="noopener">10.1016/j.ijnonlinmec.2021.103766</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J10</span><span class="cv-pubyear">2021</span></span><div>Junlei Wang, Shanghao Gu, Abdessattar Abdelkefi, <strong>Chandan Bose</strong>: <strong>Enhancing Piezoelectric Energy Harvesting from the Flow-Induced Vibration of a Circular Cylinder Using Dual Splitters</strong>, <span class="cv-venue"><strong>Smart Materials and Structures</strong></span>, 30, 05LT01, DOI: <a href="https://doi.org/10.1088/1361-665X/abefb5" target="_blank" rel="noopener">10.1088/1361-665X/abefb5</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J9</span><span class="cv-pubyear">2021</span></span><div><strong>Chandan Bose</strong>, Sayan Gupta, Sunetra Sarkar: <strong>Dynamic interlinking between near and far-field wakes behind a pitching-plunging airfoil</strong>, <span class="cv-venue"><strong>Journal of Fluid Mechanics</strong></span>, 911, A31, DOI: <a href="https://doi.org/10.1017/jfm.2020.1030" target="_blank" rel="noopener">10.1017/jfm.2020.1030</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J8</span><span class="cv-pubyear">2020</span></span><div>Dipanjan Majumdar, <strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Effect of gusty inflow on the jet-switching characteristics of a plunging foil</strong>, <span class="cv-venue"><strong>Physics of Fluids</strong></span>, 32, 117105, DOI: <a href="https://doi.org/10.1063/5.0024084" target="_blank" rel="noopener">10.1063/5.0024084</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J7</span><span class="cv-pubyear">2020</span></span><div>Dipanjan Majumdar, <strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Capturing the Dynamical Transitions in the Flow-field of a Flapping Foil using Immersed Boundary Method</strong>, <span class="cv-venue"><strong>Journal of Fluids and Structures</strong></span>, Volume 95, Pages 102999, DOI: <a href="https://doi.org/10.1016/j.jfluidstructs.2020.102999" target="_blank" rel="noopener">10.1016/j.jfluidstructs.2020.102999</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J6</span><span class="cv-pubyear">2019</span></span><div><strong>Chandan Bose</strong>, Sayan Gupta, Sunetra Sarkar: <strong>Transition to chaos in the flow-induced vibration of a pitching-plunging airfoil at low Reynolds numbers : Ruelle-Takens-Newhouse scenario</strong>, <span class="cv-venue"><strong>International Journal of Non-Linear Mechanics</strong></span>, Volume 109, Pages 189 - 203, DOI: <a href="https://doi.org/10.1016/j.ijnonlinmec.2018.11.012" target="_blank" rel="noopener">10.1016/j.ijnonlinmec.2018.11.012</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J5</span><span class="cv-pubyear">2018</span></span><div><strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Investigating chaotic wake dynamics past a flapping airfoil and the role of vortex interactions behind the chaotic transition</strong>, <span class="cv-venue"><strong>Physics of Fluids</strong></span>, Volume 30, Issue 4, 047101, DOI: <a href="https://aip.scitation.org/doi/10.1063/1.5019442" target="_blank" rel="noopener">10.1063/1.5019442</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J4</span><span class="cv-pubyear">2018</span></span><div><strong>Chandan Bose</strong>, Sayan Gupta, Sunetra Sarkar: <strong>Dynamical behaviour of unsteady flow-field of an elastically mounted flapping airfoil</strong>, <span class="cv-venue"><strong>AIAA Journal</strong></span>, Volume 56, Issue 5, Pages 2062-2069, DOI: <a href="https://arc.aiaa.org/doi/full/10.2514/1.J056664" target="_blank" rel="noopener">10.2514/1.J056664</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J3</span><span class="cv-pubyear">2017</span></span><div><strong>Chandan Bose</strong>, Vikas Reddy, Sayan Gupta, Sunetra Sarkar: <strong>Transient and stable chaos in dipteran flight inspired flapping flight</strong>, <span class="cv-venue"><strong>Journal of Computational and Nonlinear Dynamics</strong></span>, Volume 13, Issue 2, 021014, DOI: <a href="https://asmedigitalcollection.asme.org/computationalnonlinear/article/doi/10.1115/1.4038447/473581/Transient-and-Stable-Chaos-in-Dipteran-Flight" target="_blank" rel="noopener">10.1115/1.4038447/473581/Transient-and-Stable-Chaos-in-Dipteran-Flight</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J2</span><span class="cv-pubyear">2017</span></span><div>S Krishna Kumar, <strong>Chandan Bose</strong>, Shaikh Faruque Ali, Sayan Gupta, Sunetra Sarkar: <strong>Investigations on a vortex induced vibration based energy harvester</strong>, <span class="cv-venue"><strong>Applied Physics Letters</strong></span>, Volume 111, Issue 24, 243903, DOI: <a href="https://aip.scitation.org/doi/10.1063/1.5001863" target="_blank" rel="noopener">10.1063/1.5001863</a>.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">J1</span><span class="cv-pubyear">2017</span></span><div>Sandeep Badrinath, <strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Identifying the route to chaos in the flow past a flapping airfoil</strong>, <span class="cv-venue"><strong>European Journal of Mechanics/ B-Fluids</strong></span>, Volume 66, Pages 38-59, Link: <a href="https://www.sciencedirect.com/science/article/pii/S0997754616300656" target="_blank" rel="noopener">journal page</a>.</div></li>
+</ol></div>
+<div class="cv-sub" id="cv-publications-book-chapters"><h4>Book Chapters<span class="cv-count">15</span></h4>
+<ol class="cv-pubs">
+<li><span class="cv-pubside"><span class="cv-pubno">B15</span><span class="cv-pubyear">2026</span></span><div>Hibah Saddal, Lucky Jayswal, <strong>Chandan Bose</strong>: <strong>Gust Response of Bio-Inspired Morphing Wing Sections</strong>, in book: <strong>Proceedings of the Cambridge Unsteady Flow Symposium 2026</strong>, <span class="cv-pill cv-pill-acc">Accepted</span></div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B14</span><span class="cv-pubyear">2026</span></span><div>Manu Aryal, Manabendra De, <strong>Chandan Bose</strong>: <strong>Aerodynamics of Bio-Inspired Vertical Axis Wind Turbine Rotors</strong>, in book: <strong>Advances in Fluid Mechanics and Fluid Power 2026</strong>, <span class="cv-pill cv-pill-acc">Accepted</span></div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B13</span><span class="cv-pubyear">2026</span></span><div>Shreyas Shrestha, Tushar Chourushi, <strong>Chandan Bose</strong>: <strong>Comparison of Viscosity Models for the Simulation of Non-Newtonian Flow in Lid-Driven Cavity</strong>, in book: <strong>Advances in Fluid Mechanics and Fluid Power 2026</strong>, <span class="cv-pill cv-pill-acc">Accepted</span></div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B12</span><span class="cv-pubyear">2026</span></span><div>Samim Khadka, S Harikrishnan, <strong>Chandan Bose</strong>: <strong>Wave-Structure Interaction of Tandem Floating Barges: An Overset Mesh Approach</strong>, in book: <strong>Advances in Fluid Mechanics and Fluid Power 2026</strong>, <span class="cv-pill cv-pill-acc">Accepted</span></div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B11</span><span class="cv-pubyear">2026</span></span><div>Haimi Jha, Hibah Saddal, <strong>Chandan Bose</strong>: <strong>Efficacy of the Weak Formulation of Sparse Nonlinear Identification in Predicting Multi-Frequency Vortex-Induced Vibrations</strong>, in book: <strong>Advances in Fluid Mechanics and Fluid Power 2026</strong>, <span class="cv-pill cv-pill-acc">Accepted</span></div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B10</span><span class="cv-pubyear">2025</span></span><div>Yabin Liu, <strong>Chandan Bose</strong>, Zhong-Nan Wang: <strong>Controlling Tip Leakage Flow with Permeable Tip Treatment</strong>, in book: <strong>Proceedings of the Cambridge Unsteady Flow Symposium 2024</strong>, ISBN: 978-3-031-69035-8, Pages: 289-304, DOI: <a href="https://doi.org/10.1007/978-3-031-69035-8_18" target="_blank" rel="noopener">10.1007/978-3-031-69035-8_18</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B9</span><span class="cv-pubyear">2022</span></span><div>Chhotelal Shah, Dipanjan Majumdar, Sunetra Sarkar, <strong>Chandan Bose</strong>: <strong>Wake dynamics of a flexible flapping filament at low Reynolds number</strong>, in book: <strong>Aerospace and Associated Technology</strong>, ISBN: 9781003324539, Routledge, DOI: <a href="https://doi.org/10.1201/9781003324539" target="_blank" rel="noopener">10.1201/9781003324539</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B8</span><span class="cv-pubyear">2022</span></span><div>Rik Mondal, <strong>Chandan Bose</strong>, Sirshendu Mondal: <strong>Synchronization Study on Vortex-Induced Vibrations Using Wake Oscillator Model</strong>, in book: <strong>Advances in Nonlinear Dynamics, Springer Nature</strong>, ISBN: 978-3-030-81162-4, Pages: 65–74, <br> DOI: <a href="https://doi.org/10.1007/978-3-030-81162-4_6" target="_blank" rel="noopener">10.1007/978-3-030-81162-4_6</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B7</span><span class="cv-pubyear">2022</span></span><div>Dheeraj Tripathi, Sai Vishal, <strong>Chandan Bose</strong>, J Venkatramani: <strong>Response Analysis of Coupled Non-Smooth Nonlinear Aeroelastic System Subjected to Stochastic Input Fluctuations</strong>, in book: <strong>Advances in Nonlinear Dynamics, Springer Nature</strong>, ISBN: 978-3-030-81162-4, Pages: 877–886, <br> DOI: <a href="https://doi.org/10.1007/978-3-030-81162-4_75" target="_blank" rel="noopener">10.1007/978-3-030-81162-4_75</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B6</span><span class="cv-pubyear">2021</span></span><div><strong>Chandan Bose</strong>, Sayan Gupta, Sunetra Sarkar: <strong>Transitional flow dynamics past a passively flapping airfoil in gusty flow</strong>, in book: <strong>Advances in Critical Flow Dynamics Involving Moving/Deformable Structures, Springer Nature</strong>, ISBN: 978-3-030-55594-8, Pages: 135-148, DOI: <a href="https://doi.org/10.1007/978-3-030-55594-8_14" target="_blank" rel="noopener">10.1007/978-3-030-55594-8_14</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B5</span><span class="cv-pubyear">2020</span></span><div>Dipanjan Majumdar, <strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Probing into the efficacy of discrete forcing Immersed Boundary Method in capturing the aperiodic transition in the wake of a flapping airfoil</strong>, in book: <strong>Recent Advances in Computational Mechanics and Simulations- Volume-II: Nano to Macro</strong>, <strong>Springer Nature</strong>, ISBN: 978-981-15-8315-5, Pages: 271-281, DOI: <a href="https://doi.org/10.1007/978-981-15-8315-5_24" target="_blank" rel="noopener">10.1007/978-981-15-8315-5_24</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B4</span><span class="cv-pubyear">2020</span></span><div><strong>Chandan Bose</strong>, Rajanya Chatterjee, Sayan Gupta, Sunetra Sarkar: <strong>Investigating fluid-structure interaction behavior of a chord-wise flexible filament in the wake of a bluff body using partitioned strong coupling approach</strong>, in book: <strong>Recent Advances in Computational Mechanics and Simulations- Volume-II: Nano to Macro</strong>, <strong>Springer Nature</strong>, ISBN: 978-981-15-8315-5, Pages: 453-463, DOI: <a href="https://doi.org/10.1007/978-981-15-8315-5_38" target="_blank" rel="noopener">10.1007/978-981-15-8315-5_38</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B3</span><span class="cv-pubyear">2020</span></span><div>Dipanjan Majumdar, <strong>Chandan Bose</strong>, Prerna Dhareshwar, Sunetra Sarkar: <strong>Fluid-body interactions in fish-like swimming</strong>, in book: <strong>Advanced Topics in Structural Vibrations, Lecture Notes in Mechnical Engineering, Springer Nature</strong>, ISBN: 978-981-15-5862-7, Pages: 509-519, DOI: <a href="https://doi.org/10.1007/978-981-15-5862-7_41" target="_blank" rel="noopener">10.1007/978-981-15-5862-7_41</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B2</span><span class="cv-pubyear">2020</span></span><div><strong>Chandan Bose</strong>, Sayan Gupta, Sunetra Sarkar: <strong>Fluid-structure interaction dynamics of a flexible foil in low Reynolds number flows</strong>, in book: <strong>Recent Advances in Theoretical, Applied, Computational and Experimental Mechanics</strong>, Eds. Singh B., Roy A., Maiti D., <strong>Springer Nature</strong>, ISBN: 978-981-15-1188-2, Pages: 449-459, DOI: <a href="https://doi.org/10.1007/978-981-15-1189-9_37" target="_blank" rel="noopener">10.1007/978-981-15-1189-9_37</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">B1</span><span class="cv-pubyear">2018</span></span><div><strong>Chandan Bose</strong>, S. Krishna Kumar, Sayan Gupta, Sunetra Sarkar: <strong>Interaction of a flexible splitter plate with vortex shedding past a rigid circular cylinder</strong>, in book: <strong>Recent Advances in Structural Engineering Volume 2</strong>, Eds. A. Rama Mohan Rao and K. Ramanjaneyulu, <strong>Springer Nature</strong>, ISBN: 978-981-13-0364-7, Pages: 841-852, DOI: <a href="https://doi.org/10.1007/978-981-13-0365-4_71" target="_blank" rel="noopener">10.1007/978-981-13-0365-4_71</a>,</div></li>
+</ol></div>
+<div class="cv-sub" id="cv-publications-scopus-indexed-proceedings"><h4>Scopus Indexed Proceedings<span class="cv-count">8</span></h4>
+<ol class="cv-pubs">
+<li><span class="cv-pubside"><span class="cv-pubno">P8</span><span class="cv-pubyear">2022</span></span><div>Marc L. Paturle, <strong>Chandan Bose</strong>, Ignazio M. Viola and Kiran Kumar Ramesh: <strong>Dynamic Detection of Flow Separation Using Integral Formulation of Unsteady Boundary Layer Equations, AIAA Aviation Forum 2022 Proceedings (AIAA 2022-4138)</strong>, American Institute of Aeronautics and Astronautics, DOI: <a href="https://doi.org/10.2514/6.2022-4138" target="_blank" rel="noopener">10.2514/6.2022-4138</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">P7</span><span class="cv-pubyear">2022</span></span><div><strong>Chandan Bose</strong>, Vincent E. Terrapon, Grigorios Dimitriadis: <strong>Influence of Leading-Edge Protuberances on the Flow Physics of Stall, AIAA Meeting Paper</strong> (AIAA 2022-1969) , DOI: <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2022-1969" target="_blank" rel="noopener">https://arc.aiaa.org/doi/abs/10.2514/6.2022-1969</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">P6</span><span class="cv-pubyear">2021</span></span><div>Dipanjan Majumdar, <strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Nonlinear Fluid-Elastic Behavior of a Flapping Wing With Low-Order Chord-Wise Flexibility, International Mechanical Engineering Congress and Exposition 2020 Proceedings (IMECE2020-23890)</strong>, American Society of Mechanical Engineers, Vol. 84546, p. V07AT07A028, DOI: <a href="https://doi.org/10.1115/IMECE2020-23890" target="_blank" rel="noopener">10.1115/IMECE2020-23890</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">P5</span><span class="cv-pubyear">2018</span></span><div><strong>Chandan Bose</strong>, Sunetra Sarkar, Sayan Gupta: <strong>Stochastic bifurcation analysis of an elastically mounted flapping airfoil in an inviscid fluid, MATEC Web of Conferences</strong>, 148, 08001, DOI: <a href="https://doi.org/10.1051/matecconf/201814808001" target="_blank" rel="noopener">10.1051/matecconf/201814808001</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">P4</span><span class="cv-pubyear">2017</span></span><div><strong>Chandan Bose</strong>, Sunetra Sarkar: <strong>Flow periodicity analysis past a flapping airfoil using proper orthogonal decomposition, AIAA Meeting Paper</strong> (AIAA 2017 - 3647) , DOI: <a href="https://doi.org/10.2514/6.2017-3647" target="_blank" rel="noopener">10.2514/6.2017-3647</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">P3</span><span class="cv-pubyear">2017</span></span><div><strong>Chandan Bose</strong>, Sayan Gupta &amp; Sunetra Sarkar: <strong>Quasi-periodic vortical signature of an elastically mounted flapping airfoil, AIAA Meeting Paper (AIAA 2017 - 3644)</strong>, DOI: <a href="https://doi.org/10.2514/6.2017-3644" target="_blank" rel="noopener">10.2514/6.2017-3644</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">P2</span><span class="cv-pubyear">2016</span></span><div><strong>Chandan Bose</strong>, Sayan Gupta, Sunetra Sarkar. <strong>Dynamical stability analysis of a fluid structure interaction system using high fidelity Naviers-Stokes solver, Procedia Engineering</strong>, 144 (C), 883-890, DOI: <a href="https://doi.org/10.1016/j.proeng.2016.05.107" target="_blank" rel="noopener">10.1016/j.proeng.2016.05.107</a>,</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno">P1</span><span class="cv-pubyear"></span></span><div><strong>Chandan Bose</strong>, Sunetra Sarkar. <strong>Flexible flapping wings can exhibit quasi-periodic motion!, Journal of Physics Conference Series</strong>, 759(1):012082, DOI: <a href="https://doi.org/10.1088/1742-6596/759/1/012082" target="_blank" rel="noopener">10.1088/1742-6596/759/1/012082</a>,</div></li>
+</ol></div>
+<div class="cv-sub" id="cv-publications-selected-international-conference-presentations-2025"><h4>Selected International Conference Presentations (2025)<span class="cv-count">10</span></h4>
+<ol class="cv-pubs">
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div>P. Singh, D. Choi, H. Wallace, G. Samal, W. Gilly, S. Bhamla, and <strong>C. Bose</strong>. <strong>Optimising Jet Impulse by Tuning the Wave Propagation in Bio-Inspired Flexible Nozzles</strong>, APS DFD Conference, Houston, Texas, November 23-25, 2025.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div>D. Choi, P. Singh, H. Wallace, G. Samal, W. Gilly, <strong>C. Bose</strong>, and S. Bhamla. <strong>Geometrical Effects of Free-End Nozzles on Wave Reflection in Self-Oscillating Flexible Nozzles</strong>, APS DFD Conference, Houston, Texas, November 23-25, 2025.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div>Doudou Huang, <strong>C. Bose</strong>, Ignazio Maria Viola. <strong>On the wake stability of permeable disks</strong>, APS DFD Conference, Houston, Texas, November 23-25, 2025.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div><strong>Chandan Bose</strong>, Debajyoti Kumar, Siddharth Sharma, Somnath Roy. <strong>Fluttery flight of butterfly swarms</strong>, UK Fluids Conference, Liverpool, UK, 2-4 Sep 2025.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div>Hibah Saddal, Lucky Jayswal, <strong>Chandan Bose</strong>. <strong>Gust Response Bioinspired Morphing Wings</strong>, UK Fluids Conference, Liverpool, UK, 2-4 Sep 2025.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div>P. Singh, D. Choi, H. Wallace, G. Samal, W. Gilly, S. Bhamla, and <strong>C. Bose</strong>. <strong>Computational Modelling and Bayesian optimisation of squid-inspired flexible nozzles</strong>, UK Fluids Conference, Liverpool, UK, 2-4 Sep 2025.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div>Hibah Saddal, Lucky Jayswal, <strong>Chandan Bose</strong>. <strong>Dynamical Behaviour and Gust Response of a Flapping Foil with Variable Flexibility</strong>, 2nd European Fluid Dynamics Conference (EFDC2), Dublin, Ireland, 26-29 August 2025.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div>Hibah Saddal, <strong>Chandan Bose</strong>. <strong>Fluid-structure interaction of bio-inspired flexible flaps and morphing foils</strong>, EuroMech Symposium 654 on Bioinspired Fluid-Structure Interaction, Vienna, Austria, 9-11 July 2025.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div>D. Choi, H. Wallace, G. Samal, P. Singh, W. Gilly, <strong>C. Bose</strong>, and S. Bhamla. <strong>Design optimisation of soft nozzle for rotary propulsors</strong>, EuroMech Symposium 654 on Bioinspired Fluid-Structure Interaction, Vienna, Austria, 9-11 July 2025.</div></li>
+<li><span class="cv-pubside"><span class="cv-pubno cv-pubno-blank"></span><span class="cv-pubyear">2025</span></span><div>Hibah Saddal, Gatien Polly, Diane Komaroff, Benjamin Thiria, Ramiro Godoy-Diana, <strong>Chandan Bose</strong>. <strong>Wave-Structure Interaction of Submerged Flexible Plates</strong>, XI International Conference on Computational Methods in Marine Engineering (Marine 2025), Edinburgh, Scotland, 23-25 June 2025.</div></li>
+</ol></div>
+            </section>
+
+            <section class="cv-section" id="cv-academic-service-outreach" aria-labelledby="cv-academic-service-outreach-h">
+               <h3 class="cv-h" id="cv-academic-service-outreach-h"><span class="cv-h-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>Academic Service &amp; Outreach</h3>
+               
+<div class="cv-sub" id="cv-academic-service-outreach-editorial-experience"><h4>Editorial Experience</h4>
+<ul class="cv-list">
+<li><span class="cv-when">March 2025 - Present</span><span class="cv-what">Editorial Board Member in Scientific Reports, Springer-Nature.</span></li>
+<li><span class="cv-when">May 2024 - Present</span><span class="cv-what">Editorial Board Member in Journal of Computational Sciences, Elsevier.</span></li>
+<li><span class="cv-when">September 2024 - Present</span><span class="cv-what">Editor in OpenFOAM Journal (flagship journal of the OpenFOAM community).</span></li>
+<li><span class="cv-when">Oct 2024 - Present</span><span class="cv-what">Guest Associate Editor in International Journal of Wind Engineering and Industrial Aerodynamics, Elsevier.</span></li>
+<li><span class="cv-when">Jan 2024 - Present</span><span class="cv-what">Editorial Board Member for Aerodynamics and Flight Mechanics, Frontiers in Aerospace Engineering.</span></li>
+<li><span class="cv-when">Jan 2024 - August 2024</span><span class="cv-what">Guest Editor of Frontiers in Physics, Special Issue: Physics in Fluid-Structure-Sound Interactions and Control.</span></li>
+<li><span class="cv-when">March 2023 - August 2023</span><span class="cv-what">Guest Editor of Frontiers in Energy Research, Special Issue: Fluid-Structure Interaction and Energy Harvesting in Ocean Engineering.</span></li>
+</ul></div>
+<div class="cv-sub" id="cv-academic-service-outreach-journal-reviewer"><h4>Journal Reviewer</h4>
+<p>Journal of Fluid Mechanics, Journal of Fluids and Structures, Physics of Fluids, Journal of Fluids Engineering, AIAA Journal, Aerospace Science and Technology, Nonlinear Dynamics, Mechanical Systems and Signal Processing, Nature Scientific Reports, Royal Society Proceedings B (Selected).</p></div>
+<div class="cv-sub" id="cv-academic-service-outreach-proposal-review-and-panel-membership"><h4>Proposal Review and Panel Membership</h4>
+<ul class="cv-list">
+<li><span class="cv-when">2025 - Present</span><span class="cv-what">Reviewed multiple EPSRC standard and new investigator award grant proposals.</span></li>
+<li><span class="cv-when">2026</span><span class="cv-what">Served as a reviewer for the Software Sustainability Institute report.</span></li>
+<li><span class="cv-when">2025</span><span class="cv-what">Served as a reviewer and panellist for STFC Research Software Maintenance Grant.</span></li>
+<li><span class="cv-when">2025</span><span class="cv-what">Served as a reviewer and panellist for EPSRC Impact Acceleration Account Proposals.</span></li>
+</ul></div>
+<div class="cv-sub" id="cv-academic-service-outreach-conference-organization"><h4>Conference Organization</h4>
+<ul class="cv-list">
+<li><span class="cv-when">June 2026</span><span class="cv-what">Scientific committee member of the 8th International Symposium on Computational Wind Engineering to be held in Canada, organised by Western University, <a href="https://cwe2026.com/committes/" target="_blank" rel="noopener">https://cwe2026.com/committes/</a>.</span></li>
+<li><span class="cv-when">January 2026</span><span class="cv-what">OpenFOAM Symposium 2026, held in IIT Bombay, India <a href="https://www.youtube.com/watch?v=An_hQIE4QNg" target="_blank" rel="noopener">https://www.youtube.com/watch?v=An_hQIE4QNg</a>.</span></li>
+<li><span class="cv-when">December 2025</span><span class="cv-what">Track Chair in the Heat And Mass Transfer Conference (IHMTC-2025), held in IIT Jodhpur, India <a href="https://events.iitj.ac.in/IHMTC2025/home.php" target="_blank" rel="noopener">https://events.iitj.ac.in/IHMTC2025/home.php</a>.</span></li>
+<li><span class="cv-when">December 2025</span><span class="cv-what">Co-organiser of the special session on the Bio-Inspired Fluid-Structure Interaction in the International Conference on Theoretical Applied Computational and Experimental Mechanics (ICTACEM 2025), held in IIT Kharagpur, India <a href="http://www.ae.iitkgp.ac.in/ictacem2025" target="_blank" rel="noopener">http://www.ae.iitkgp.ac.in/ictacem2025</a>.</span></li>
+<li><span class="cv-when">July 2025</span><span class="cv-what">Chair of the EuroMech Colloquium on Bio-Inspired Fluid-Structure Interaction, held in Vienna, Austria, <a href="https://654.euromech.org/about/" target="_blank" rel="noopener">https://654.euromech.org/about/</a>.</span></li>
+<li><span class="cv-when">June 2025</span><span class="cv-what">Chair of the 3<sup>rd</sup> Midlands Fluid Mechanics Meeting 2025, held at the University of Birmingham, <a href="https://midlands-fluids.github.io/mfmm2025.html" target="_blank" rel="noopener">https://midlands-fluids.github.io/mfmm2025.html</a>.</span></li>
+<li><span class="cv-when">June 2025</span><span class="cv-what">Organiser of the mini-symposium on Wave-Structure Interaction at the Marine2025 Conference, to be held Edinburgh, UK, <a href="https://marine2025.cimne.com/event/area/6db9d4b9-1d90-11ef-9389-000c29ddfc0c" target="_blank" rel="noopener">https://marine2025.cimne.com/event/area/6db9d4b9-1d90-11ef-9389-000c29ddfc0c</a>.</span></li>
+<li><span class="cv-when">September 2024</span><span class="cv-what">Organiser of the 1<sup>st</sup> Birmingham Fluids Day 2024, held at the University of Birmingham.</span></li>
+<li><span class="cv-when">September 2024</span><span class="cv-what">Co-organiser of the 2<sup>nd</sup> Midlands Fluid Mechanics Meeting 2024, held at the University of Leicester, <a href="https://midlands-fluids.github.io/mfmm2024.html" target="_blank" rel="noopener">https://midlands-fluids.github.io/mfmm2024.html</a>.</span></li>
+<li><span class="cv-when">July 2024</span><span class="cv-what">Co-organiser of the 9<sup>th</sup> Bluff-Body Aerodynamics and Applications 2024 conference, held at the University of Birmingham, <a href="https://uobevents.eventsair.com/bbaa-ix/" target="_blank" rel="noopener">https://uobevents.eventsair.com/bbaa-ix/</a> (successfully organised two mini-symposia on fluid-structure interaction and flow-induced energy harvesting).</span></li>
+<li><span class="cv-when">June 2024</span><span class="cv-what">Chair and organiser of the 1<sup>st</sup> UK-India OpenFOAM Symposium, held at IIT Kharagpur (300+ attendees).</span></li>
+<li><span class="cv-when">July 2023</span><span class="cv-what">Part of the organizing committee for the 18<sup>th</sup> OpenFOAM Workshop 2023, held at Genoa, Italy, <a href="https://openfoamworkshop.org/" target="_blank" rel="noopener">https://openfoamworkshop.org/</a>.</span></li>
+<li><span class="cv-when">January 2023 - December 2023</span><span class="cv-what">Co-organiser of the Intelligent and Bio-inspired Mechanics Seminar Series (online), <a href="http://ibim-conference.com/" target="_blank" rel="noopener">http://ibim-conference.com/</a>.</span></li>
+<li><span class="cv-when">July 2022</span><span class="cv-what">Part of the organising committee for the 17<sup>th</sup> OpenFOAM Workshop 2022, held at the University of Cambridge, UK.</span></li>
+</ul></div>
+<div class="cv-sub" id="cv-academic-service-outreach-invited-talks"><h4>Invited Talks</h4>
+<ul class="cv-list">
+<li><span class="cv-when">January 2026</span><span class="cv-what">Department of Aerospace Engineering, MIT-ADT University, Pune, India.</span></li>
+<li><span class="cv-when">December 2025</span><span class="cv-what">Fluid Mechanics and Fluid Power Conference, Nirma University, India (Keynote Talk).</span></li>
+<li><span class="cv-when">May 2025</span><span class="cv-what">Faculty of Natural, Mathematical &amp; Engineering Sciences, Department of Engineering, King&rsquo;s College London, UK.</span></li>
+<li><span class="cv-when">February 2025</span><span class="cv-what">Laboratoire Physique et mécanique des milieux Hétérogènes (PMMH) - CNRS - ESPCI Université PSL/Sorbonne Université/Université de Paris, France.</span></li>
+<li><span class="cv-when">December 2024</span><span class="cv-what">Fluid Mechanics and Fluid Power Conference, Aligarh Muslim University, India (Keynote Talk).</span></li>
+<li><span class="cv-when">November 2024</span><span class="cv-what">BIRD lab at the University of California, Davis, USA, <a href="https://engineering.ucdavis.edu/events/seminar-aerodynamics-and-fluid-structure-interaction-small-flyers-chandan-bose" target="_blank" rel="noopener">https://engineering.ucdavis.edu/events/seminar-aerodynamics-and-fluid-structure-interaction-small-flyers-chandan-bose</a>.</span></li>
+<li><span class="cv-when">November 2024</span><span class="cv-what">Animal Flight Lab Seminar at the Integrative Biology department at University of California Berkeley, USA.</span></li>
+<li><span class="cv-when">August 2024</span><span class="cv-what">International Simulation Olympiad Paanduv Applications, India (Keynote Talk), <a href="https://www.paanduvapplications.com/international-simulation-olympiad" target="_blank" rel="noopener">https://www.paanduvapplications.com/international-simulation-olympiad</a>.</span></li>
+<li><span class="cv-when">July 2024</span><span class="cv-what">Department of Aerospace Engineering, University of Bristol, UK.</span></li>
+<li><span class="cv-when">December 2023</span><span class="cv-what">Department of Mechanical Engineering, IIT Kharagpur, India.</span></li>
+<li><span class="cv-when">November 2023</span><span class="cv-what">University of Warwick Fluid Mechanics Seminar Series, UK.</span></li>
+<li><span class="cv-when">May 2023</span><span class="cv-what">University of Glasgow Aerospace Seminar Series, UK.</span></li>
+<li><span class="cv-when">March 2023</span><span class="cv-what">Intelligent and Bio-inspired Mechanics Seminar Series, <a href="http://ibim-conference.com/" target="_blank" rel="noopener">http://ibim-conference.com/</a> (online).</span></li>
+<li><span class="cv-when">February 2022</span><span class="cv-what">Department of Mechanical Engineering, IIT Bombay, India.</span></li>
+<li><span class="cv-when">February 2022</span><span class="cv-what">Department of Mechanical Engineering, Shiv Nadar University, India.</span></li>
+<li><span class="cv-when">July 2022</span><span class="cv-what">Institute for Energy Systems Seminar Series, School of Engineering, University of Edinburgh, UK.</span></li>
+<li><span class="cv-when">February 2021</span><span class="cv-what"><strong>Fluids Meeting</strong>, Department of Aerospace and Mechanical Engineering, University of Liège, Belgium.</span></li>
+<li><span class="cv-when">January 2021</span><span class="cv-what"><strong>Indian National Academy of Engineering Webinar Series</strong> (Online).</span></li>
+<li><span class="cv-when">October 2020</span><span class="cv-what"><strong>Interdisciplinary Seminar on Biolocomotion</strong>, Universität Rostock, Germany and Aix-Marseille Université, France (Online).</span></li>
+<li><span class="cv-when">August 2020</span><span class="cv-what"><strong>Mechanics Lecture Series</strong>, The Mechanics Discussions Forum (Online).</span></li>
+<li><span class="cv-when">January 2020</span><span class="cv-what">Mechanical Engineering Department, Jadavpur University, Kolkata, India.</span></li>
+<li><span class="cv-when">March 2019</span><span class="cv-what"><strong>AMSA Lecture Series</strong>, Applied Mechanics Student Association, IIT Madras, Chennai, India.</span></li>
+<li><span class="cv-when">September 2018</span><span class="cv-what">Dept. of Mechanical Engineering, National Institute of Engineering, Mysuru, India.</span></li>
+<li><span class="cv-when">February 2018</span><span class="cv-what"><strong>Open Seminar Series</strong>, Dept. of Physics, IIT Madras, Chennai, India.</span></li>
+</ul></div>
+<div class="cv-sub" id="cv-academic-service-outreach-workshops"><h4>Workshops</h4>
+<ul class="cv-list">
+<li><span class="cv-when">January 2026</span><span class="cv-what">Organised and served as a resource person in an in-person <strong>&lsquo;Advanced OpenFOAM workshop&rsquo;</strong> (student strength 25+) under the FOSSEE (Free/Libre and Open Source Software for Education) project at Indian Institute of Technology Bombay, funded by the Ministry of Education, Govt. of India.</span></li>
+<li><span class="cv-when">November 2025</span><span class="cv-what">Organised a one-week <strong>&lsquo;Online Industry Readiness Workshop on Computational Fluid Dynamics (CFD)&rsquo;</strong> (student strength 300+) under the FOSSEE (Free/Libre and Open Source Software for Education) project at Indian Institute of Technology Bombay, funded by the Ministry of Education, Govt. of India.</span></li>
+<li><span class="cv-when">October 2025</span><span class="cv-what">Organised and delivered a training on Open-Source Codes for High-Performance Computing (OpenFOAM) as part of the UKACM-GACM Autumn School 2025. Web link: Open-Source Codes for High-Performance Computing.</span></li>
+<li><span class="cv-when">February 2024</span><span class="cv-what">Served as a resource person in a six-day <strong>&lsquo;Tackling CFD and Heat Transfer Problems using OpenFOAM&rsquo;</strong> workshop (student strength 125+) organised by the FOSSEE (Free/Libre and Open Source Software for Education) team, Indian Institute of Technology Bombay, India.</span></li>
+<li><span class="cv-when">July 2022</span><span class="cv-what">Served as a resource person in the <strong>OpenFOAM Training Session, OpenFOAM Workshop 2022</strong>, University of Cambridge, UK.</span></li>
+<li><span class="cv-when">August 2021</span><span class="cv-what">Served as a resource person in the <strong>Networks and Dynamical Systems Workshop</strong>, Complex Systems and Dynamics, IIT Madras, India (Online).</span></li>
+<li><span class="cv-when">February 2021</span><span class="cv-what">Served as a resource person in a three-day <strong>&lsquo;Computational Fluid Dynamics using OpenFOAM&rsquo;</strong> workshop (student strength 125+) organised by the FOSSEE (Free/Libre and Open Source Software for Education) team, Indian Institute of Technology Bombay, India.</span></li>
+<li><span class="cv-when">December 2020</span><span class="cv-what">Served as a resource person in the <strong>High-Performance Computing (HPC) Workshop on Computational Fluid Dynamics (CFD)</strong> powered by National Supercomputing Mission (NSM), IIT Madras, India (Online).</span></li>
+<li><span class="cv-when">September 2018</span><span class="cv-what">Successfully conducted and served as a resource person in a two-day <strong>&lsquo;Introduction to CFD using OpenFOAM&rsquo;</strong> workshop (student strength 15) in the Dept. of Mechanical Engineering, National Institute of Engineering, Mysuru, India.</span></li>
+</ul></div>
+<div class="cv-sub" id="cv-academic-service-outreach-technical-committee-membership"><h4>Technical Committee Membership</h4>
+<ul class="cv-list">
+<li><strong>OpenFOAM Technical Committee for Documentation and Tutorials</strong>, January 2021 - Present, <a href="https://wiki.openfoam.com/Technical_Committee_for_Documentation_and_Tutorials" target="_blank" rel="noopener"><strong>Web Link</strong></a>.</li>
+<li><strong>AIAA Focussed Discussion Group - Massively Separated Flows</strong>, November 2022 - Present .</li>
+</ul></div>
+<div class="cv-sub" id="cv-academic-service-outreach-professional-membership"><h4>Professional Membership</h4>
+<ul class="cv-list">
+<li>Member, <strong>Royal Aeronautical Society (RAeS)</strong>, 2025 - Present.</li>
+<li>Early Career Member (ID. 61274227), <strong>The American Physical Society (APS)</strong>, 2021 - Present.</li>
+<li>Young Professional Member (ID. 762678), <strong>The American Institute of Aeronautics and Astronautics (AIAA)</strong>, 2021 - 2024.</li>
+<li>Early Career Member (ID. 102203454), <strong>The American Society of Mechanical Engineers (ASME)</strong>, 2021 - 2022.</li>
+<li>Student Member, <strong>Indian National Academy of Engineering</strong>, 2021 - 2025.</li>
+</ul></div>
+            </section>
+
+            <section class="cv-section" id="cv-teaching-experience" aria-labelledby="cv-teaching-experience-h">
+               <h3 class="cv-h" id="cv-teaching-experience-h"><span class="cv-h-icon"><i class="fa fa-university" aria-hidden="true"></i></span>Teaching Experience</h3>
+               
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">University of Birmingham</div><div class="cv-role">Assistant Professor of Aerospace Engineering</div></div><div class="cv-meta"></div></div><ul class="cv-list"><li>Lecturer and Module Lead of Advanced Aerodynamic and Aeroelastic Analysis (optional module - under development)</li><li>Lecturer and Module Lead of Aerodynamics and Propulsion (2026-2027)</li><li>Lecturer of Aerodynamics - Airframe Design and Flight Dynamics (2025-2026; 2024-2025; 2023-2024)</li><li>Advisor of Aerospace Group Project (2025-2026) - SkyAid: Fixed-Wing UAV Design for Sustainable Agriculture and Medical Logistics.</li><li>Advisor of Undergraduate Research Projects: 2025-2026 (9 projects); 2024-2025 (9 projects); 2023-2024 (5 projects).</li><li>Examiner of Aerospace Group Projects (2024-2025)</li></ul></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">University of Edinburgh</div><div class="cv-role">University Teacher in Mechanical Engineering</div></div><div class="cv-meta"></div></div><ul class="cv-list"><li>Lecturer and Course Organiser - MECE10004: Fluid Mechanics (Mechanical) 4 (Sem 1, 2022-2023)</li><li>Instructor - PGEE11186: IDCORE Offshore Engineering course (Sem 1, 2022-23 &amp; 2021-22)</li><li>Teaching Assistant - SCEE09004: Partial Differential Equations 3 course (Sem 1, 2021-2022)</li></ul></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">University of Liège</div><div class="cv-role">Assisted in conducting tutorial classes and Mentored two groups of master degree students for their course projects</div></div><div class="cv-meta"></div></div><ul class="cv-list"><li><strong>Aeroelasticity and Experimental Aerodynamics</strong>, Instructor: Prof. Grigorios Dimitriadis (Fall 2020)</li><li><strong>Turbulent Flows</strong>, Instructor: Prof. Vincent Terrapon (Fall 2020)</li></ul></div>
+<div class="cv-entry"><div class="cv-entry-head"><div><div class="cv-org">Indian Institute of Technology Madras</div><div class="cv-role">Assisted in conducting computational tutorial classes, experimental laboratory classes, formulating assignments <br> and grading exam papers</div></div><div class="cv-meta"></div></div><ul class="cv-list"><li><strong>AM5117: Analytical Methods in Engineering Mechanics</strong>, Instructor: Prof. Sayan Gupta (Jul-Nov, 2015)</li><li><strong>AM1100: Engineering Mechanics</strong>, Instructor: Prof. Sayan Gupta (Jan-May, 2016; Jan-May 2018)</li><li><strong>AM2540: Applied Mechanics Lab</strong>, Instructor: Dr. Shaikh Faruque Ali (Jul-Nov, 2016)</li><li><strong>AM5340: Stochastic Processes in Structural Mechanics</strong>, Instructor: Prof. Sayan Gupta (Jan-May, 2017)</li><li><strong>AM5600: Computational Methods in Mechanics</strong>, Instructor: Prof. Sayan Gupta (Jul-Nov, 2017)</li><li><strong>AM5810: Computational Lab</strong>, Instructor: Prof. Sayan Gupta (Jul-Nov, 2017), Dr. Ilaksh Adlakha (Jul-Nov, 2018)</li></ul></div>
+            </section>
+
+            <section class="cv-section" id="cv-student-supervision" aria-labelledby="cv-student-supervision-h">
+               <h3 class="cv-h" id="cv-student-supervision-h"><span class="cv-h-icon"><i class="fa fa-users" aria-hidden="true"></i></span>Student Supervision</h3>
+               
+<div class="cv-sub" id="cv-student-supervision-postdoctoral-researchers"><h4>Postdoctoral Researchers<span class="cv-count">1</span></h4>
+<ul class="cv-students">
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2026 &ndash; present</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/puyu-shi-a1a437167/" target="_blank" rel="noopener">Dr. Puyu Shi</a></p><p class="cv-thesis"><span class="cv-thesis-k">Project</span>Multiphysics Modelling of the EAF Process for Sustainable Steelmaking (IGNITE Project)</p><p class="cv-stu-meta">Post-Doctoral Research Associate, School of Metallurgy and Materials, University of Birmingham, co-advised with Prof. Hongbiao Dong.</p></li>
+</ul></div>
+<div class="cv-sub" id="cv-student-supervision-ph-d-students"><h4>Ph.D. Students (current)<span class="cv-count">7</span></h4>
+<ul class="cv-students">
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-primary">Primary advisor</span><span class="cv-stu-when">2026 &ndash; present</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/ethan-warman/" target="_blank" rel="noopener">Mr. Ethan Warman</a></p><p class="cv-thesis"><span class="cv-thesis-k">Ph.D. Thesis</span>Data-Driven Optimisation, Control, and Reduced-Order Modelling of Fluid-Structure Interaction Problems</p><p class="cv-stu-meta">Ph.D. Scholar, Aerospace Engineering, University of Birmingham.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2026 &ndash; present</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/lois-martin-409a73298/" target="_blank" rel="noopener">Ms. Lois Martin</a></p><p class="cv-thesis"><span class="cv-thesis-k">Ph.D. Thesis</span>Flow in Anisotropic Media: Directional Solidification and Defect Formation</p><p class="cv-stu-meta">Ph.D. Scholar, Aerospace Engineering, University of Birmingham, co-supervised with Prof. Nick Green and Dr. Nils Warnken.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2026 &ndash; present</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/harrison-buckner-9b742833a/" target="_blank" rel="noopener">Mr. Harrison Buckner</a></p><p class="cv-thesis"><span class="cv-thesis-k">Ph.D. Thesis</span>Design of Bio-Inspired Active Morphing Wingtip</p><p class="cv-stu-meta">Ph.D. Scholar, Aerospace Engineering, University of Birmingham, co-supervised with Dr. Jun Wu (primary supervisor).</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-primary">Primary advisor</span><span class="cv-stu-when">2025 &ndash; present</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/yukesh-karki-2b05bb1a4/" target="_blank" rel="noopener">Mr. Yukesh Karki</a></p><p class="cv-thesis"><span class="cv-thesis-k">Ph.D. Thesis</span>Fluid-Structure Interaction and Gust Response of Actively and Passively Morphing Wings</p><p class="cv-fund"><i class="fa fa-money" aria-hidden="true"></i> Funded by EPSRC DLA</p><p class="cv-stu-meta">Ph.D. Scholar, Aerospace Engineering, University of Birmingham.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-primary">Primary advisor</span><span class="cv-stu-when">2025 &ndash; present</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/a-shergill/" target="_blank" rel="noopener">Mr. Arjun Shergill</a></p><p class="cv-thesis"><span class="cv-thesis-k">Ph.D. Thesis</span>Development of a GPU-Accelerated Flow Solver for Bio-Inspired Flight</p><p class="cv-fund"><i class="fa fa-money" aria-hidden="true"></i> Funded by University of Birmingham</p><p class="cv-stu-meta">Ph.D. Scholar, Aerospace Engineering, University of Birmingham.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-primary">Primary advisor</span><span class="cv-stu-when">2024 &ndash; present</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/hibah-s-a58b87228/" target="_blank" rel="noopener">Ms. Hibah Saddal</a></p><p class="cv-thesis"><span class="cv-thesis-k">Ph.D. Thesis</span>Modelling and Simulation of Fluid-Structure Interaction Systems with Variable Flexibility</p><p class="cv-fund"><i class="fa fa-money" aria-hidden="true"></i> Funded by EPSRC DLA &ndash; <a href="https://gtr.ukri.org/projects?ref=studentship-2945177" target="_blank" rel="noopener">UKRI record</a></p><p class="cv-stu-meta">Ph.D. Scholar, Aerospace Engineering, University of Birmingham.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2022 &ndash; present</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/doudou-huang-3794922ba/" target="_blank" rel="noopener">Ms. Doudou Huang</a></p><p class="cv-thesis"><span class="cv-thesis-k">Ph.D. Thesis</span>Wake Dynamics of Porous Discs</p><p class="cv-fund"><i class="fa fa-money" aria-hidden="true"></i> Funded by EPSRC CDT in Wind and Marine Energy Systems and Structures</p><p class="cv-stu-meta">Ph.D. Scholar, School of Engineering, The University of Edinburgh, co-supervised with Prof. Ignazio Maria Viola.</p></li>
+</ul></div>
+<div class="cv-sub" id="cv-student-supervision-ph-d-graduates"><h4>Ph.D. Students (graduated)<span class="cv-count">2</span></h4>
+<ul class="cv-students">
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2020 &ndash; 2024</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/dheeraj-tripathi-798542253/" target="_blank" rel="noopener">Dr. Dheeraj Tripathi</a></p><p class="cv-thesis"><span class="cv-thesis-k">Ph.D. Thesis</span><a href="https://doi.org/10.13140/RG.2.2.15622.33608" target="_blank" rel="noopener">Experimental Investigation of Bifurcations and Synchronization in Stall-Induced Aeroelastic Systems</a></p><p class="cv-stu-meta">Ph.D., Dept. of Mechanical Engineering, Shiv Nadar University, India, co-supervised with Dr. Venkatramani Jagadish.</p><p class="cv-outcome"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <b>Now:</b> Post-Doctoral Researcher, University of Bristol<span class="cv-before">Post PhD: Post-Doctoral Researcher, American University of Sharjah</span></p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2020 &ndash; 2024</span></div><p class="cv-stu-name"><a class="cv-stu-link" href="https://www.linkedin.com/in/alex-cavanagh/" target="_blank" rel="noopener">Dr. Alex Cavanagh</a></p><p class="cv-thesis"><span class="cv-thesis-k">Ph.D. Thesis</span><a href="https://doi.org/10.5525/gla.thesis.86021" target="_blank" rel="noopener">Study of Vortex Stability in Swept Wing Configurations</a></p><p class="cv-stu-meta">Ph.D., Aerospace Engineering, The University of Glasgow, co-supervised with Dr. Kiran Ramesh.</p><p class="cv-outcome"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <b>Now:</b> Modelling &amp; Simulation Systems Engineer, Lockheed Martin<span class="cv-before">Post PhD: CFD Aerodynamics Engineer, Dynamique</span></p></li>
+</ul></div>
+<div class="cv-sub" id="cv-student-supervision-masters-students"><h4>Master&rsquo;s Students<span class="cv-count">10</span></h4>
+<ul class="cv-students">
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-primary">Primary advisor</span><span class="cv-stu-when">2026</span></div><p class="cv-stu-name">Ms. Lois Martin, Ms. Taran Jandu, Mr. Ayush Das, Mr. Derin Castaban, Mr. Daniel Butler, Mr. Rio Osman</p><p class="cv-thesis"><span class="cv-thesis-k">M.Eng. Group Project</span>SkyAid: Fixed-Wing UAV Design for Sustainable Agriculture and Medical Logistics</p><p class="cv-stu-meta">M.Eng. Students, Aerospace Engineering, School of Metallurgy and Materials, University of Birmingham.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2026</span></div><p class="cv-stu-name">Mr. Aman Shukla</p><p class="cv-thesis"><span class="cv-thesis-k">M.Tech. Thesis</span>CFD Simulation of Butterfly-Mimetic Flyers</p><p class="cv-stu-meta">M.Tech. Thesis, Department of Mechanical Engineering, IIT Kharagpur, India, co-supervised with Prof. Somnath Roy.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-primary">Primary advisor</span><span class="cv-stu-when">2024</span></div><p class="cv-stu-name">Ms.&nbsp;Hibah Saddal</p><p class="cv-thesis"><span class="cv-thesis-k">M.Sc. Thesis</span>Mathematical Modelling of Vortex-Induced Vibrations</p><p class="cv-stu-meta">M.Sc. Thesis, School of Mathematics, University of Birmingham.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2021 &ndash; 2022</span></div><p class="cv-stu-name">Mr. Callum Bruce</p><p class="cv-thesis"><span class="cv-thesis-k">MRes Thesis</span>Aerodynamics of porous flat plates</p><p class="cv-stu-meta">M.Res. Scholar, School of Engineering, The University of Edinburgh, co-supervised with Prof. Ignazio Maria Viola.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2021 &ndash; 2022</span></div><p class="cv-stu-name">Mr. Saiyed Shahrukh Khan</p><p class="cv-thesis"><span class="cv-thesis-k">M.Tech. Thesis</span>Drop impact dynamics on hydrophobic and hydrophilic surfaces</p><p class="cv-stu-meta">M.Tech. Student, Dept. of Mechanical Engineering, IIT Roper, India, co-supervised with Dr. Devranjan Samanta.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span></div><p class="cv-stu-name">Mr. Loic Martin</p><p class="cv-thesis"><span class="cv-thesis-k">Master’s Thesis</span>Flow dynamics of tandem rough cylinders</p><p class="cv-stu-meta">Master&rsquo;s Student (2020 - 2021), Department of Aerospace and Mechanical Engineering, University of Liege, Belgium, co-supervised with Dr. Thomas Andrianne.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2020 &ndash; 2021</span></div><p class="cv-stu-name">Mr. Vignesh S. P.</p><p class="cv-thesis"><span class="cv-thesis-k">M.Tech. Thesis</span>Aerodynamics Investigation of Whale-Inspired Wind Turbine Blades</p><p class="cv-stu-meta">M.Tech. Student, Dept. of Energy Engineering, College of Engineering Guindy, Anna University, India, co-supervised with Prof. R. Velraj.</p></li>
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span><span class="cv-stu-when">2020 &ndash; 2021</span></div><p class="cv-stu-name">Mr. Abraham Thomas Chirathalattu</p><p class="cv-thesis"><span class="cv-thesis-k">M.Tech. Thesis</span>Suppressing the Instability due to Fluid-Structure Interactions using a Nonlinear Energy Sink</p><p class="cv-stu-meta">M.Tech Student, Mechanical Engineering, Amrita School of Engineering, Coimbatore, India, co-supervised with Dr. Santhosh Balakrishnan and Dr. Bipin Balaram.</p></li>
+</ul>
+<ul class="cv-students">
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span></div><p class="cv-stu-name">Mr. Muhammad Najvan</p><p class="cv-thesis"><span class="cv-thesis-k">M.Tech. Thesis</span>Effect of thickness on the wake dynamics of flapping foils</p><p class="cv-stu-meta">M.Tech. Student (2020 - 2021), Mechanical Engineering, IIT Kanpur, India, co-supervised with Dr. Sachin Shinde.</p></li>
+</ul>
+<ul class="cv-students">
+<li class="cv-stu"><div class="cv-stu-top"><span class="cv-badge cv-badge-co">Co-advisor</span></div><p class="cv-stu-name">Mr. Brijesh K. Suman</p><p class="cv-thesis"><span class="cv-thesis-k">M.Tech. Thesis</span>Wake deflection and jet switching behind tandem airfoils</p><p class="cv-stu-meta">M.Tech. Student (2020 - 2021), Mechanical Engineering, IIT Kanpur, India, co-supervised with Dr. Sachin Shinde.</p></li>
+</ul></div>
+            </section>
+               <p class="cv-print-foot" id="cv-print-foot"></p>
+            </div>
+         </div>
+
+        </div>
+        </div>
+
+   <footer id="footer">
+         <div class="container-fluid">
+            <div class="row-fluid">
+               <div class="span12">
+                  <h5><b style="color:brown;"> @2026 Chandan Bose - All rights reserved! </b></h5>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+     
+      <!-- Javascript files -->
+      <script src="../js/jquery-1.9.1.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script> $('#main-carousel').carousel(); </script>
+      <script id="cv-script">
+   (function () {
+     document.documentElement.classList.add('cv-js');
+     var pubSec = document.getElementById('cv-publications');
+     var tabs = Array.prototype.slice.call(document.querySelectorAll('.cv-tab'));
+     function showTab(id) {
+       tabs.forEach(function (t) { var on = t.getAttribute('data-target') === id; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); });
+       Array.prototype.forEach.call(pubSec.querySelectorAll('.cv-sub'), function (s) { s.style.display = s.id === id ? '' : 'none'; });
+     }
+     if (pubSec && tabs.length) { tabs.forEach(function (t) { t.addEventListener('click', function () { var i = document.getElementById('cv-pubsearch'); if (i && i.value) { i.value = ''; i.dispatchEvent(new Event('input')); } showTab(t.getAttribute('data-target')); }); }); showTab(tabs[0].getAttribute('data-target')); }
+     // Publication search
+     var input = document.getElementById('cv-pubsearch'), hits = document.getElementById('cv-pubhits');
+     if (input) {
+       var items = Array.prototype.slice.call(document.querySelectorAll('#cv-publications .cv-pubs li'));
+       var subs = Array.prototype.slice.call(document.querySelectorAll('#cv-publications .cv-sub'));
+       input.addEventListener('input', function () {
+         var q = input.value.trim().toLowerCase(), n = 0;
+         items.forEach(function (li) { var ok = !q || li.textContent.toLowerCase().indexOf(q) !== -1; if (ok) { li.removeAttribute('hidden'); n++; } else { li.setAttribute('hidden', ''); } });
+         pubSec.classList.toggle('is-searching', !!q);
+         if (q) { subs.forEach(function (s) { var any = s.querySelector('.cv-pubs li:not([hidden])'); s.style.display = any ? '' : 'none'; }); }
+         else { var a = document.querySelector('.cv-tab.is-active'); if (a) showTab(a.getAttribute('data-target')); }
+         hits.textContent = q ? n + ' of ' + items.length : '';
+       });
+     }
+     // Highlight current section in the contents list
+     var links = Array.prototype.slice.call(document.querySelectorAll('.cv-toc a'));
+     if ('IntersectionObserver' in window && links.length) {
+       var map = {};
+       links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+       var obs = new IntersectionObserver(function (entries) {
+         entries.forEach(function (e) {
+           if (e.isIntersecting) { links.forEach(function (a) { a.classList.remove('is-active'); }); var a = map[e.target.id]; if (a) a.classList.add('is-active'); }
+         });
+       }, { rootMargin: '-20% 0px -70% 0px' });
+       document.querySelectorAll('.cv-section').forEach(function (s) { obs.observe(s); });
+     }
+   }());
+   </script>
+   <script id="cv-updated-script">
+   // "Last updated" date: the last GitHub commit that changed html/cv.html.
+   // Falls back to the date written in the page if GitHub cannot be reached.
+   (function () {
+     var el = document.getElementById('cv-updated-date');
+     if (!el || !window.fetch) return;
+     var api = 'https://api.github.com/repos/chandanbose/chandanbose.github.io/commits?path=html/cv.html&sha=master&per_page=1';
+     function show(d) {
+       if (isNaN(d)) return;
+       el.setAttribute('datetime', d.toISOString().slice(0, 10));
+       el.textContent = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+     }
+     var key = 'cv-updated-cache';
+     try {
+       var c = JSON.parse(sessionStorage.getItem(key) || 'null');
+       if (c && Date.now() - c.t < 3600e3) { show(new Date(c.d)); return; }
+     } catch (e) {}
+     fetch(api, { headers: { 'Accept': 'application/vnd.github+json' } })
+       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+       .then(function (list) {
+         var d = list && list[0] && list[0].commit && (list[0].commit.committer || list[0].commit.author).date;
+         if (!d) throw new Error('no commits');
+         show(new Date(d));
+         try { sessionStorage.setItem(key, JSON.stringify({ t: Date.now(), d: d })); } catch (e) {}
+       })
+       .catch(function () { /* keep the built-in date */ });
+   }());
+   </script>
+   <script id="cv-pdf-script">
+   // "Download PDF" builds the PDF from this page: it opens the browser's print window,
+   // where visitors choose "Save as PDF". All publication tabs are shown in the PDF.
+   (function () {
+     var btn = document.getElementById('cv-pdf-btn');
+     if (!btn || !window.print) return;
+     var title0 = document.title;
+     function fileTitle() {
+       var t = document.getElementById('cv-updated-date');
+       var iso = t ? t.getAttribute('datetime') : '';
+       return 'CV_Chandan_Bose' + (iso ? '_' + iso : '');
+     }
+     function before() {
+       var s = document.getElementById('cv-pubsearch');
+       if (s && s.value) { s.value = ''; s.dispatchEvent(new Event('input')); }
+       var t = document.getElementById('cv-updated-date'), f = document.getElementById('cv-print-foot');
+       if (f) f.textContent = 'Curriculum Vitae of Dr Chandan Bose \u2014 ' + location.href.split('#')[0].split('?')[0] + (t ? ' \u2014 last updated ' + t.textContent : '');
+       document.title = fileTitle();
+     }
+     function after() { document.title = title0; }
+     window.addEventListener('beforeprint', before);
+     window.addEventListener('afterprint', after);
+     btn.addEventListener('click', function (e) { e.preventDefault(); before(); window.print(); setTimeout(after, 1000); });
+     if (/[?&#]print\b/.test(location.search + location.hash)) { window.addEventListener('load', function () { setTimeout(function () { before(); window.print(); }, 600); }); }
+   }());
+   </script>
+</body>
+</html>
+

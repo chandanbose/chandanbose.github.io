@@ -17,6 +17,17 @@
    <link href="../css/animate.css" rel="stylesheet">
    <link href="../css/style.css" rel="stylesheet">
       <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style id="pi-cv-tab-styles">
+      .pi-cv-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 10px 18px; padding: 12px 14px; border: 1px solid #e6dada; border-left: 5px solid brown; border-radius: 8px; background: linear-gradient(135deg, #f3eded 0%, #ffffff 100%); }
+      .pi-cv-tab { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 999px; border: 1px solid #cdb9b9; background: #fff; color: #5a1a1a !important; font-size: 15px; font-weight: bold; text-decoration: none !important; transition: background .15s, transform .15s, box-shadow .15s; }
+      .pi-cv-tab:hover, .pi-cv-tab:focus { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(165,42,42,.15); border-color: brown; }
+      .pi-cv-tab-main { background: brown; border-color: brown; color: #fff !important; font-size: 16px; }
+      .pi-cv-tab-main:hover, .pi-cv-tab-main:focus { background: #7d1f1f; border-color: #7d1f1f; }
+      .pi-cv-arrow { transition: transform .15s; }
+      .pi-cv-tab-main:hover .pi-cv-arrow { transform: translateX(3px); }
+      @media (max-width: 480px) { .pi-cv-tab { flex: 1 1 100%; justify-content: center; } }
+   </style>
 </head>
    
    <body>
@@ -164,7 +175,13 @@
          </div>
       </div>
    </div>
-
+   <!-- CV tab (links to cv.html) -->
+   <nav class="pi-cv-tabs" aria-label="Curriculum vitae">
+      <a class="pi-cv-tab pi-cv-tab-main" href="cv.html" target="_blank" rel="noopener" title="Opens the CV in a new tab"><i class="fa fa-id-card-o" aria-hidden="true"></i> Curriculum Vitae <span class="pi-cv-arrow">&rarr;</span></a>
+      <!--a class="pi-cv-tab" href="files/CV_Chandan_Bose.pdf" download><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF</a-->
+      <a class="pi-cv-tab" href="https://www.birmingham.ac.uk/staff/profiles/metallurgy/bose-chandan" target="_blank" rel="noopener"><i class="fa fa-university" aria-hidden="true"></i> University profile</a>
+   </nav>
+   <hr size="5" noshade>
          
    <!--div class="row-fluid">
       <div class="span12">
@@ -748,7 +765,7 @@
          <div class="container-fluid">
             <div class="row-fluid">
                <div class="span12">
-                  <h5><b style="color:Tomato;"> @2025 Chandan Bose - All rights reserved! </b></h5>
+                  <h5><b style="color:Tomato;"> @2026 Chandan Bose - All rights reserved! </b></h5>
                </div>
             </div>
          </div>
