@@ -17,7 +17,62 @@
    <link href="../css/animate.css" rel="stylesheet">
    <link href="../css/style.css" rel="stylesheet">
       <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
-   </head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style id="op-styles">
+      .op-page { --op-accent: brown; --op-green: #2e7d32; --op-green-dark: #1b5e20; --op-ink: #1f2a37; --op-muted: #5b6673; --op-line: #e4e8ec; --op-soft: #f6f8fa; color: var(--op-ink); }
+      .op-page p { font-size: 16px; line-height: 1.6; margin: 0 0 12px; }
+      .op-page h4 { font-size: 18px; line-height: 1.3; margin: 0 0 6px; color: var(--op-ink); }
+      .op-h { font-size: 24px; margin: 0 0 10px; color: var(--op-accent); }
+      .op-hero { margin: 18px 0 30px; padding: 34px 36px; border-radius: 10px; color: #1f1f1f;
+         background: linear-gradient(135deg, #b0b0b0 0%, #dcdcdc 50%, #ffffff 100%); border: 1px solid #d0d0d0; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+      .op-hero h2 { margin: 0 0 10px; font-size: 34px; line-height: 1.15; color: #1a1a1a; }
+      .op-hero .op-lead { max-width: 760px; font-size: 18px; color: #333; margin-bottom: 20px; }
+      .op-eyebrow { margin: 0 0 6px !important; font-size: 13px !important; letter-spacing: .12em; text-transform: uppercase; color: #555 !important; font-weight: bold; }
+      .op-jump { display: flex; flex-wrap: wrap; gap: 10px; }
+      .op-jump a { display: inline-block; padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,.75); border: 1px solid #9a9a9a; color: #1f1f1f; font-weight: bold; font-size: 15px; text-decoration: none; transition: background .15s; }
+      .op-jump a:hover, .op-jump a:focus { background: #fff; border-color: #555; color: #000; text-decoration: none; }
+      .op-section { margin: 0 0 30px; scroll-margin-top: 20px; }
+      .op-intro { color: var(--op-muted); }
+      .op-values { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+      .op-value { padding: 20px 18px; background: #fff; border: 1px solid var(--op-line); border-top: 4px solid var(--op-accent); border-radius: 8px; transition: transform .15s, box-shadow .15s; }
+      .op-value:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0,0,0,.08); }
+      .op-value p { font-size: 15px; color: var(--op-muted); margin: 0; }
+      .op-icon { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; margin-bottom: 10px; border-radius: 50%; background: #f5e4e4; color: var(--op-accent); font-size: 20px; flex-shrink: 0; }
+      .op-card { padding: 26px 28px; background: #fff; border: 1px solid var(--op-line); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+      .op-card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+      .op-card-head .op-icon { margin: 0; }
+      .op-card-head .op-h { margin: 0; }
+      .op-label { margin: 6px 0 8px !important; font-size: 13px !important; letter-spacing: .08em; text-transform: uppercase; font-weight: bold; color: var(--op-muted); }
+      .op-tags { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+      .op-tags li { padding: 5px 12px; border-radius: 999px; background: var(--op-soft); border: 1px solid var(--op-line); font-size: 14px; color: var(--op-ink); }
+      .op-callout { position: relative; padding: 20px 22px; border-radius: 8px; background: #eef7ef; border-left: 5px solid var(--op-green); }
+      .op-callout h4 { color: var(--op-green-dark); }
+      .op-deadline { margin: 0 !important; padding: 10px 14px; background: #fff; border: 1px dashed var(--op-green); border-radius: 6px; font-size: 15px !important; }
+      .op-deadline .fa { color: var(--op-green); margin-right: 4px; }
+      .op-badge { display: inline-block; margin-bottom: 8px; padding: 3px 10px; border-radius: 999px; background: var(--op-green); color: #fff; font-size: 12px; font-weight: bold; letter-spacing: .04em; text-transform: uppercase; }
+      .op-badge-soft { background: #e3eef9; color: #1f5f8b; }
+      .op-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .op-position { display: flex; flex-direction: column; align-items: flex-start; padding: 20px 22px; border-radius: 8px; border: 1px solid #cfe5d1; background: #f7fbf7; }
+      .op-position h4 { margin-bottom: 14px; }
+      .op-position p:last-child { margin-bottom: 0; }
+      .op-position-alt { border-color: #d6e4f2; background: #f6f9fd; }
+      .op-btn { display: inline-block; margin-top: auto; padding: 9px 18px; border-radius: 6px; background: var(--op-green); color: #fff !important; font-weight: bold; font-size: 15px; text-decoration: none !important; transition: background .15s; }
+      .op-btn:hover, .op-btn:focus { background: var(--op-green-dark); }
+      .op-btn-lg { padding: 12px 24px; font-size: 17px; }
+      .op-apply { padding: 26px 28px; border-radius: 10px; background: var(--op-soft); border: 1px solid var(--op-line); }
+      .op-steps { list-style: none; margin: 6px 0 20px; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+      .op-steps li { display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: #fff; border-radius: 8px; border: 1px solid var(--op-line); }
+      .op-steps p { font-size: 15px; color: var(--op-muted); margin: 0; }
+      .op-step-n { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--op-accent); color: #fff; font-weight: bold; flex-shrink: 0; }
+      .op-cta { margin: 0 !important; text-align: center; }
+      @media (max-width: 979px) { .op-values { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+      @media (max-width: 767px) {
+         .op-hero { padding: 24px 20px; } .op-hero h2 { font-size: 27px; } .op-hero .op-lead { font-size: 16px; }
+         .op-values, .op-grid, .op-steps { grid-template-columns: 1fr; }
+         .op-card, .op-apply { padding: 20px 18px; }
+      }
+   </style>
+</head>
    
    <body>
       <div class="container">
@@ -102,115 +157,134 @@
          <!-- <br/> -->
 
         <div class="row-fluid">
-        <div class="span12">
-                   
-        <hr size="5" noshade>
-        
-        <h3 style="color: tomato;"> BioFSI Lab Research Culture </h3>
+        <div class="span12 op-page">
 
-        <h5>
-            At BioFSI Lab, our research culture is anchored in four core principles. We champion innovation and discovery, 
-            pushing the frontiers of fluid-structure interaction, computational mechanics, and bio-inspired engineering through 
-            rigorous, curiosity-driven inquiry. We believe impactful science is inherently collaborative, fostering a team 
-            environment where ideas are openly exchanged across disciplines and career stages. Through structured mentorship 
-            and growth, we support the technical, intellectual, and professional development of every member - from undergraduate 
-            researchers to postdoctoral scholars - equipping them with both deep expertise and transferable skills. Above all, 
-            we uphold integrity and inclusion, cultivating a respectful, diverse, and ethically grounded research environment 
-            where excellence and equity advance together.
-        </h5>
+         <!-- Hero -->
+         <section class="op-hero" aria-labelledby="op-title">
+            <p class="op-eyebrow">Opportunities</p>
+            <h2 id="op-title">Join the BioFSI Lab</h2>
+            <p class="op-lead">We are looking for curious, motivated researchers to work on bio-inspired fluid mechanics, fluid&ndash;structure interaction and GPU-accelerated computational modelling at the University of Birmingham.</p>
+            <nav class="op-jump" aria-label="On this page">
+               <a href="#op-postdoc"><i class="fa fa-flask" aria-hidden="true"></i> Postdoctoral fellowships</a>
+               <a href="#op-phd"><i class="fa fa-graduation-cap" aria-hidden="true"></i> PhD positions</a>
+               <a href="#op-apply"><i class="fa fa-envelope-o" aria-hidden="true"></i> How to apply</a>
+            </nav>
+         </section>
 
-         <hr size="5" noshade>
-        
-        <!--div style="text-align: center;">
-            <img width="600px" src="../pictures/images/BioFSILab/biofsilab-opening-BW.png" alt="" title="BioFSILab-opening">
-        </div-->
-        
-        <br/>
-            
-        <div class="well" id="acad">    
-         <h3 style="color:tomato;"> Open Post-Doctoral Positions in BioFSI Laboratory: </h3>
-         <p>
-            <h5> Prospective postdoctoral scholars from around the world are warmly invited to get in touch to explore postdoctoral fellowship opportunities in the UK. I am happy to discuss potential projects, supervise competitive applications, and advise on suitable schemes such as the Royal Society Newton International Fellowship, Marie Skłodowska-Curie Actions (MSCA) Individual Fellowships, 
-               Royal Society University Research Fellowship, Royal Academy of Engineering Research Fellowships, and various university-specific schemes. If you are motivated to pursue high-impact research in bio-inspired fluid mechanics, Fluid-Structure Interactions, or GPU-accelerated computational modelling, please feel free to contact me to discuss possibilities and eligibility.</h5>
-         </p>
-         <h4><b style="color:green;"> Royal Society Newton International Fellowship 2027: Outstanding early-career researchers based outside the UK are invited to contact me regarding potential fellowship opportunities in computational fluid dynamics, fluid-structure interaction, and multiphysics modelling at the University of Birmingham.</b></h4>
-         </div>
+         <!-- Research culture -->
+         <section class="op-section" aria-labelledby="op-culture">
+            <h3 class="op-h" id="op-culture">Our Research Culture</h3>
+            <p class="op-intro">Our research culture rests on four core principles.</p>
+            <div class="op-values">
+               <div class="op-value">
+                  <span class="op-icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></span>
+                  <h4>Innovation &amp; Discovery</h4>
+                  <p>Pushing the frontiers of fluid&ndash;structure interaction, computational mechanics and bio-inspired engineering through rigorous, curiosity-driven inquiry.</p>
+               </div>
+               <div class="op-value">
+                  <span class="op-icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                  <h4>Collaboration</h4>
+                  <p>Impactful science is collaborative. Ideas are exchanged openly across disciplines and career stages.</p>
+               </div>
+               <div class="op-value">
+                  <span class="op-icon"><i class="fa fa-line-chart" aria-hidden="true"></i></span>
+                  <h4>Mentorship &amp; Growth</h4>
+                  <p>Structured support for the technical, intellectual and professional development of every member, from undergraduate researchers to postdoctoral scholars.</p>
+               </div>
+               <div class="op-value">
+                  <span class="op-icon"><i class="fa fa-balance-scale" aria-hidden="true"></i></span>
+                  <h4>Integrity &amp; Inclusion</h4>
+                  <p>A respectful, diverse and ethically grounded environment where excellence and equity advance together.</p>
+               </div>
+            </div>
+         </section>
 
-          <div class="well" id="acad">
-         <h3 style="color:tomato;"> Open PhD Positions in BioFSI Laboratory: </h3>
-         <p>
-            <h5>
-               Dr. Bose is looking to supervise PhD projects in the following areas: Unsteady Aerodynamics, Aeroelasticity, Fluid-Structure Interactions, Bio-Inspired Engineering, Vortex Dynamics, Computational Fluid Dynamics.
-            </h5>
-         </p>
-         <h4>UK/EU (settled) candidates:</h4>
-         <p>
-            <h5> PhD Position 1: <b style="color:green;">Propeller-Wing Wake Interactions for Urban Air Mobility Systems</b> - <a href="https://www.findaphd.com/phds/project/propeller-wing-wake-interactions-for-urban-air-mobility-systems/?p193733">Application Link</a>.</h5>
-         </p>
-         
-         <h4>International candidates:</h4>
-         <p>
-            <h5>
-                We warmly welcome international candidates to explore our open PhD positions, enquire about national scholarship pathways, 
-                and discuss opportunities for self-sponsored doctoral study within our research group.
-            </h5>
-         </p>
-         </div>
-          <!--h4>Recently closed positions:</h4>
+         <!-- Postdoc -->
+         <section class="op-section op-card" id="op-postdoc" aria-labelledby="op-postdoc-h">
+            <div class="op-card-head">
+               <span class="op-icon"><i class="fa fa-flask" aria-hidden="true"></i></span>
+               <h3 class="op-h" id="op-postdoc-h">Postdoctoral Fellowships</h3>
+            </div>
+            <p>Prospective postdoctoral scholars from around the world are warmly invited to get in touch to explore fellowship opportunities in the UK. I am happy to discuss potential projects, supervise competitive applications and advise on suitable schemes. If you are motivated to pursue high-impact research in bio-inspired fluid mechanics, fluid&ndash;structure interactions or GPU-accelerated computational modelling, please contact me to discuss possibilities and eligibility.</p>
+            <p class="op-label">Schemes I can support</p>
+            <ul class="op-tags">
+               <li>Royal Society Newton International Fellowship</li>
+               <li>MSCA Postdoctoral Fellowships</li>
+               <li>Royal Society University Research Fellowship</li>
+               <li>Royal Academy of Engineering Research Fellowships</li>
+               <li>University-specific schemes</li>
+            </ul>
+            <div class="op-callout">
+               <span class="op-badge">Now inviting enquiries</span>
+               <h4>Royal Society Newton International Fellowship 2027</h4>
+               <p>Outstanding early-career researchers based outside the UK are invited to contact me about fellowship opportunities in computational fluid dynamics, fluid&ndash;structure interaction and multiphysics modelling at the University of Birmingham.</p>
+               <p class="op-deadline"><i class="fa fa-calendar" aria-hidden="true"></i> The Royal Society call is expected to close in <b>March 2027</b> (exact dates to be confirmed). Please get in touch early so there is time to develop a strong application.</p>
+            </div>
+         </section>
+
+         <!-- PhD -->
+         <section class="op-section op-card" id="op-phd" aria-labelledby="op-phd-h">
+            <div class="op-card-head">
+               <span class="op-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+               <h3 class="op-h" id="op-phd-h">PhD Positions</h3>
+            </div>
+            <p>Dr. Bose is looking to supervise PhD projects in the following areas:</p>
+            <ul class="op-tags">
+               <li>Unsteady Aerodynamics</li>
+               <li>Aeroelasticity</li>
+               <li>Fluid&ndash;Structure Interactions</li>
+               <li>Bio-Inspired Engineering</li>
+               <li>Vortex Dynamics</li>
+               <li>Computational Fluid Dynamics</li>
+            </ul>
+            <div class="op-grid">
+               <div class="op-position">
+                  <span class="op-badge op-badge-open">Open</span>
+                  <p class="op-label">UK/EU (settled) candidates</p>
+                  <h4>Propeller-Wing Wake Interactions for Urban Air Mobility Systems</h4>
+                  <a class="op-btn" href="https://www.findaphd.com/phds/project/propeller-wing-wake-interactions-for-urban-air-mobility-systems/?p193733">Apply on FindAPhD <i class="fa fa-external-link" aria-hidden="true"></i></a>
+               </div>
+               <div class="op-position op-position-alt">
+                  <span class="op-badge op-badge-soft">Enquiries welcome</span>
+                  <p class="op-label">International candidates</p>
+                  <h4>Scholarship pathways &amp; self-funded study</h4>
+                  <p>We warmly welcome international candidates to explore our open PhD positions, enquire about national scholarship pathways and discuss self-sponsored doctoral study within the group.</p>
+               </div>
+            </div>
+            <!--h4>Recently closed positions:</h4>
          <p>
             <h5> PhD Position: <b style="color:green;">The Chaotic Voice: Nonlinear Fluid-Structure Interaction in Abnormal Phonation</b> - <a href="">Application Closed</a>.</h5>
          </p>
          <p>
             <h5> PhD Position: <b style="color:green;">Computational and Mechanistic Modelling of Porosity Effects in Eye Fluid Mechanics - Implications for Glaucoma</b> - <a href="">Application Closed</a>.</h5>
          </p-->
+         </section>
 
-        <!--p>
-                        <span style="font-size: 14px"> 
-                          
-                           Before joining the University of Birmingham, Dr. Bose played a pivotal role as a senior postdoctoral research associate contributing to an ERC project <a href="https://voilab.eng.ed.ac.uk/dandidrone"> Dandidrone</a> at the <a href="https://voilab.eng.ed.ac.uk/people">Vortex Interaction Laboratory</a>, University of Edinburgh. His work revolved around deciphering the intricate fluid-structure interaction dynamics inherent in dandelion seed propulsion, 
-                           culminating in its application to the development of microdrones. Additionally, he also served as an adjunct lecturer and taught fluid dynamics at the School of Engineering, University of Edinburgh. 
+         <!-- How to apply -->
+         <section class="op-section op-apply" id="op-apply" aria-labelledby="op-apply-h">
+            <h3 class="op-h" id="op-apply-h">How to Apply</h3>
+            <ol class="op-steps">
+               <li><span class="op-step-n">1</span><div><h4>Get in touch</h4><p>Email a short note about your interests and the position or scheme you have in mind.</p></div></li>
+               <li><span class="op-step-n">2</span><div><h4>Send your documents</h4><p>Attach your CV and a short statement of your research interests.</p></div></li>
+               <li><span class="op-step-n">3</span><div><h4>Discuss &amp; develop</h4><p>We will discuss fit and eligibility, and shape a project or fellowship application together.</p></div></li>
+            </ol>
+            <p class="op-cta"><a class="op-btn op-btn-lg" href="mailto:c.bose@bham.ac.uk?subject=BioFSILab%20position%20enquiry"><i class="fa fa-envelope" aria-hidden="true"></i> Email c.bose@bham.ac.uk</a></p>
+         </section>
 
-                        </span>  
-        </p-->
-         </div>
-         </div>
+        </div>
+        </div>
 
    <footer id="footer">
          <div class="container-fluid">
             <div class="row-fluid">
                <div class="span12">
-                  <h5><b style="color:Tomato;"> @2025 Chandan Bose - All rights reserved! </b></h5>
+                  <h5><b style="color:brown;"> @2025 Chandan Bose - All rights reserved! </b></h5>
                </div>
             </div>
          </div>
       </footer>
    </div>
      
-<script>
-  const slides = document.querySelectorAll(".gallery-slide");
-  let index = 0;
-
-  function showSlide(i) {
-    slides.forEach(s => s.classList.remove("active"));
-    slides[i].classList.add("active");
-  }
-
-  function nextSlide() {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-  }
-
-  function prevSlide() {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
-  }
-
-  document.querySelector(".gallery-btn.next").addEventListener("click", nextSlide);
-  document.querySelector(".gallery-btn.prev").addEventListener("click", prevSlide);
-
-  // Optional autoplay
-  setInterval(nextSlide, 3000);
-</script>
       <!-- Javascript files -->
       <script src="../js/jquery-1.9.1.min.js"></script>
       <script src="../js/bootstrap.min.js"></script>

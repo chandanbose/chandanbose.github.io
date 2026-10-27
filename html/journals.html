@@ -24,7 +24,7 @@
          .btncls{
             background-color:#B80C4D;
             border: #2e6da4;
-            font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             font-size: 15px;
             color: #fff;
             letter-spacing: 1px;
@@ -38,7 +38,7 @@
          .btncls:hover{
             background-color:#F773A5;
             border: #2e6da4;
-            font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             font-size: 15px;
             color: #000;
             letter-spacing: 1px;
@@ -54,7 +54,29 @@
             display:inline-block;
          }
       </style>
-   </head>
+   <style id="gs-snapshot-styles">
+      .gs-snapshot { margin: 10px 0 24px; padding: 18px 22px; border: 1px solid #d9dfe5; border-left: 6px solid #4285f4; border-radius: 6px; background: #f7f9fc; }
+      .gs-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+      .gs-head h4 { margin: 0; color: #1a3d7c; font-size: 19px; }
+      .gs-profile { font-weight: bold; }
+      .gs-body { display: flex; gap: 28px; align-items: flex-end; flex-wrap: wrap; }
+      .gs-stats { display: flex; gap: 14px; flex: 1 1 360px; }
+      .gs-stat { flex: 1; min-width: 100px; padding: 12px 10px; background: #fff; border: 1px solid #e3e7ec; border-radius: 6px; text-align: center; }
+      .gs-num { display: block; font-size: 32px; line-height: 1.1; font-weight: bold; color: #1a3d7c; }
+      .gs-label { display: block; margin-top: 4px; font-size: 15px; font-weight: bold; color: #333; }
+      .gs-since { display: block; margin-top: 4px; font-size: 13px; color: #666; }
+      .gs-chart { flex: 1 1 280px; margin: 0; }
+      .gs-bars { display: flex; align-items: flex-end; gap: 6px; height: 120px; padding-top: 16px; border-bottom: 1px solid #c9d1da; }
+      .gs-bar { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; min-width: 0; }
+      .gs-bar-fill { flex-shrink: 0; width: 100%; max-width: 28px; background: #4285f4; border-radius: 3px 3px 0 0; min-height: 2px; }
+      .gs-bar-val { font-size: 11px; color: #444; margin-bottom: 2px; }
+      .gs-years { display: flex; gap: 6px; margin-top: 4px; }
+      .gs-years span { flex: 1; text-align: center; font-size: 11px; color: #555; min-width: 0; }
+      .gs-chart figcaption { margin-top: 4px; font-size: 12px; color: #666; text-align: center; }
+      .gs-updated { margin: 12px 0 0; font-size: 12px; color: #777; text-align: right; }
+      @media (max-width: 560px) { .gs-stats { flex-wrap: wrap; } .gs-num { font-size: 26px; } .gs-bar-val { display: none; } }
+   </style>
+</head>
    
    <body>
       <div class="container">
@@ -145,6 +167,27 @@
                   <div class="page-header">
                      <h3> Journal Publications </h3>
                   </div>
+
+                  <!-- BEGIN GOOGLE SCHOLAR SNAPSHOT: numbers come from data/scholar.json, refreshed weekly by a GitHub Action -->
+                  <section class="gs-snapshot" id="gs-snapshot" aria-labelledby="gs-title">
+                     <div class="gs-head">
+                        <h4 id="gs-title"><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar Snapshot</h4>
+                        <a class="gs-profile" href="https://scholar.google.com/citations?user=pj618AMAAAAJ&amp;hl=en">View profile &rarr;</a>
+                     </div>
+                     <div class="gs-body">
+                        <div class="gs-stats">
+                           <div class="gs-stat"><span class="gs-num" data-gs="citations.all">718</span><span class="gs-label">Citations</span><span class="gs-since"><span data-gs="since_label">Since 2021</span>: <b data-gs="citations.since">640</b></span></div>
+                           <div class="gs-stat"><span class="gs-num" data-gs="h_index.all">15</span><span class="gs-label">h-index</span><span class="gs-since"><span data-gs="since_label">Since 2021</span>: <b data-gs="h_index.since">15</b></span></div>
+                           <div class="gs-stat"><span class="gs-num" data-gs="i10_index.all">20</span><span class="gs-label">i10-index</span><span class="gs-since"><span data-gs="since_label">Since 2021</span>: <b data-gs="i10_index.since">17</b></span></div>
+                        </div>
+                        <figure class="gs-chart">
+                           <div class="gs-bars" id="gs-bars" role="img" aria-label="Citations per year"></div>
+                           <figcaption>Citations per year</figcaption>
+                        </figure>
+                     </div>
+                     <p class="gs-updated">Source: Google Scholar &middot; last updated <span data-gs="updated">27 Oct 2026</span></p>
+                  </section>
+                  <!-- END GOOGLE SCHOLAR SNAPSHOT -->
                   <!--div class="">
                      <h4> Preprints and author copies of the published articles are made available on request! </h4>
                   </div>
@@ -153,8 +196,6 @@
                      <div class="span12">
                      <h5 style="color:green;"> Preprints and the author copies of the published articles can be made available on request for academic purposes.</h5>
                      <br>
-                     <span><a href="https://www.researchgate.net/profile/Chandan_Bose3" aria-hidden='true' title='ResearchGate'><i class="ai ai-researchgate-square ai-4x"></i></a></span>
-                     <span><a href="https://scholar.google.com/citations?user=pj618AMAAAAJ&hl=en" aria-hidden='true' title='Google Scholar'><i class="ai ai-google-scholar-square ai-4x"></i></a></span>
                      <h5 style="color:green;"> - Supervised Student</h5>
                      <h5 style="color:tomato;"> - Contributing Author (*Corresponding Author)</h5>
                   </div>
@@ -1258,6 +1299,58 @@
       </script>
       <script src="../js/togglesection.js"></script>
 
-   </body>
+   
+<script id="gs-snapshot-script">
+(function () {
+  'use strict';
+  var root = document.getElementById('gs-snapshot');
+  if (!root) return;
+  // Fallback values, used if data/scholar.json cannot be loaded (e.g. when the page is opened from disk).
+  var fallback = {"updated":"2026-10-27","since_label":"Since 2021","citations":{"all":718,"since":640},"h_index":{"all":15,"since":15},"i10_index":{"all":20,"since":17},
+    "per_year":[{"year":2018,"citations":14},{"year":2019,"citations":26},{"year":2020,"citations":30},{"year":2021,"citations":61},{"year":2022,"citations":79},{"year":2023,"citations":96},{"year":2024,"citations":135},{"year":2025,"citations":148},{"year":2026,"citations":121}]};
+  function get(o, path) { return path.split('.').reduce(function (v, k) { return v == null ? v : v[k]; }, o); }
+  function fmtDate(iso) {
+    var d = new Date(iso + 'T00:00:00');
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+  function render(data) {
+    Array.prototype.forEach.call(root.querySelectorAll('[data-gs]'), function (el) {
+      var key = el.getAttribute('data-gs'), v = get(data, key);
+      if (v == null) return;
+      el.textContent = key === 'updated' ? fmtDate(v) : (typeof v === 'number' ? v.toLocaleString('en-GB') : v);
+    });
+    var years = (data.per_year || []).slice(-10);
+    var bars = document.getElementById('gs-bars');
+    if (!bars || !years.length) return;
+    var max = Math.max.apply(null, years.map(function (y) { return y.citations; })) || 1;
+    bars.innerHTML = '';
+    var labels = document.createElement('div');
+    labels.className = 'gs-years';
+    years.forEach(function (y) {
+      var col = document.createElement('div');
+      col.className = 'gs-bar';
+      col.title = y.year + ': ' + y.citations + ' citations';
+      col.innerHTML = '<span class="gs-bar-val">' + y.citations + '</span><span class="gs-bar-fill" style="height:' + Math.max(2, Math.round(y.citations / max * 88)) + 'px"></span>';
+      bars.appendChild(col);
+      var lab = document.createElement('span');
+      lab.textContent = "'" + String(y.year).slice(-2);
+      labels.appendChild(lab);
+    });
+    bars.setAttribute('aria-label', 'Citations per year: ' + years.map(function (y) { return y.year + ' ' + y.citations; }).join(', '));
+    var old = bars.parentNode.querySelector('.gs-years');
+    if (old) old.remove();
+    bars.parentNode.insertBefore(labels, bars.nextSibling);
+  }
+  render(fallback);
+  if (window.fetch) {
+    fetch('data/scholar.json', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(render)
+      .catch(function () { /* keep fallback values */ });
+  }
+}());
+</script>
+</body>
 </html>
 

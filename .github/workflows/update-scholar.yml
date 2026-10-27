@@ -1,0 +1,149 @@
+# Refreshes the Google Scholar snapshot on html/journals.html.
+# Place this file at: .github/workflows/update-scholar.yml (in the root of the
+# chandanbose.github.io repository). It runs every Monday and can also be run
+# by hand from the repository's "Actions" tab ("Run workflow").
+#
+# Google Scholar has no official API and sometimes blocks automated requests.
+# If that happens, the job keeps the last good numbers and tries again next week.
+# For a more reliable fallback, add a free SerpApi key as a repository secret
+# named SERPAPI_KEY (Settings > Secrets and variables > Actions).
+
+name: Update Google Scholar stats
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Fetch Google Scholar stats
+        env:
+          SCHOLAR_USER: pj618AMAAAAJ
+          OUT_FILE: html/data/scholar.json
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: |
+          python - <<'PY'
+          import datetime, json, os, re, sys
+          import requests
+          from bs4 import BeautifulSoup
+
+          USER = os.environ["SCHOLAR_USER"]
+          OUT = os.environ["OUT_FILE"]
+          PROFILE = f"https://scholar.google.com/citations?user={USER}&hl=en"
+
+          def from_scholar():
+              headers = {
+                  "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+                  "Accept-Language": "en-GB,en;q=0.9",
+              }
+              r = requests.get(PROFILE, headers=headers, timeout=30)
+              r.raise_for_status()
+              soup = BeautifulSoup(r.text, "html.parser")
+              cells = [td.get_text(strip=True) for td in soup.select("#gsc_rsb_st td.gsc_rsb_std")]
+              if len(cells) != 6:
+                  raise RuntimeError("citation table not found (Scholar may have shown a CAPTCHA)")
+              heads = [th.get_text(strip=True) for th in soup.select("#gsc_rsb_st th")]
+              since_label = heads[-1] if heads else "Since recent"
+              nums = [int(c.replace(",", "")) for c in cells]
+              years = [int(y.get_text(strip=True)) for y in soup.select(".gsc_g_t")]
+              per_year = {y: 0 for y in years}
+              for a in soup.select(".gsc_g_a"):
+                  m = re.search(r"z-index:\s*(\d+)", a.get("style", ""))
+                  if not m:
+                      continue
+                  idx = len(years) - int(m.group(1))   # z-index 1 = most recent year
+                  if 0 <= idx < len(years):
+                      per_year[years[idx]] = int(a.get_text(strip=True).replace(",", ""))
+              return {
+                  "since_label": since_label,
+                  "citations": {"all": nums[0], "since": nums[1]},
+                  "h_index": {"all": nums[2], "since": nums[3]},
+                  "i10_index": {"all": nums[4], "since": nums[5]},
+                  "per_year": [{"year": y, "citations": per_year[y]} for y in years],
+              }
+
+          def from_serpapi():
+              key = os.environ.get("SERPAPI_KEY")
+              if not key:
+                  raise RuntimeError("no SERPAPI_KEY secret set")
+              r = requests.get("https://serpapi.com/search.json", timeout=60, params={
+                  "engine": "google_scholar_author", "author_id": USER, "hl": "en", "api_key": key})
+              r.raise_for_status()
+              cited = r.json()["cited_by"]
+              table = {k: v for row in cited["table"] for k, v in row.items()}
+              since_key = next(k for k in table["citations"] if k != "all")
+              label = "Since " + since_key.split("_")[-1]
+              pick = lambda name: {"all": table[name]["all"], "since": table[name][since_key]}
+              return {
+                  "since_label": label,
+                  "citations": pick("citations"),
+                  "h_index": pick("h_index"),
+                  "i10_index": pick("i10_index"),
+                  "per_year": [{"year": g["year"], "citations": g["citations"]} for g in cited.get("graph", [])],
+              }
+
+          try:
+              with open(OUT, encoding="utf-8") as f:
+                  old = json.load(f)
+          except FileNotFoundError:
+              old = {}
+
+          data = None
+          for source in (from_scholar, from_serpapi):
+              try:
+                  data = source()
+                  print(f"Fetched stats via {source.__name__}")
+                  break
+              except Exception as exc:
+                  print(f"::warning::{source.__name__} failed: {exc}")
+
+          if data is None:
+              print("::warning::Could not fetch new stats; keeping the previous values.")
+              sys.exit(0)
+
+          # Sanity check: citation counts should never drop sharply.
+          old_all = old.get("citations", {}).get("all", 0)
+          if data["citations"]["all"] <= 0 or data["citations"]["all"] < 0.8 * old_all:
+              print(f"::warning::Implausible result ({data['citations']['all']} vs {old_all}); not saving.")
+              sys.exit(0)
+
+          stats_keys = ("since_label", "citations", "h_index", "i10_index", "per_year")
+          if all(old.get(k) == data[k] for k in stats_keys):
+              print("No change in stats.")
+              sys.exit(0)
+
+          out = {"profile_url": PROFILE, "updated": datetime.date.today().isoformat(), **data}
+          os.makedirs(os.path.dirname(OUT), exist_ok=True)
+          with open(OUT, "w", encoding="utf-8") as f:
+              json.dump(out, f, indent=2)
+              f.write("\n")
+          print(json.dumps(out, indent=2))
+          PY
+
+      - name: Commit updated stats
+        run: |
+          if git diff --quiet -- html/data/scholar.json; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898733+github-actions[bot]@users.noreply.github.com"
+          git add html/data/scholar.json
+          git commit -m "Update Google Scholar stats"
+          git push

@@ -1,0 +1,19 @@
+{
+  "profile_url": "https://scholar.google.com/citations?user=pj618AMAAAAJ&hl=en",
+  "updated": "2026-10-27",
+  "since_label": "Since 2021",
+  "citations": {"all": 718, "since": 640},
+  "h_index": {"all": 15, "since": 15},
+  "i10_index": {"all": 20, "since": 17},
+  "per_year": [
+    {"year": 2018, "citations": 14},
+    {"year": 2019, "citations": 26},
+    {"year": 2020, "citations": 30},
+    {"year": 2021, "citations": 61},
+    {"year": 2022, "citations": 79},
+    {"year": 2023, "citations": 96},
+    {"year": 2024, "citations": 135},
+    {"year": 2025, "citations": 148},
+    {"year": 2026, "citations": 121}
+  ]
+}

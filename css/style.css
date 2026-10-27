@@ -11,7 +11,7 @@
 }
 
 body {
-	font-family: 'Open Sans', serif;
+	font-family: 'Times New Roman', Times, serif;
 	line-height: 1.5;
 }
 
@@ -405,4 +405,9 @@ p.excerpt{
 
 .gallery-btn:hover {
   background: rgba(0,0,0,0.6);
+}
+
+/* Site typeface: Times New Roman for all text (icon fonts keep their own) */
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, b, strong, em, td, th, button, .btn, input, select, textarea {
+	font-family: 'Times New Roman', Times, serif;
 }

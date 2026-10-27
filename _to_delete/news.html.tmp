@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+      <meta charset="utf-8">
+      <title> Dr. Chandan Bose </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Personal Website - Dr. Chandan Bose">
+      <meta name="author" content="Dr. Chandan Bose">
+      <meta name="keywords" content="Chandan Bose">
+   <link rel="icon" href="../pictures/images/BioFSI_Lab_Logo.png">
+      
+   <!-- Le styles -->
+   <link href="../css/bootstrap.min.css" rel="stylesheet">
+   <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+   <link href="../css/theme.css" rel="stylesheet">
+   <link href="../css/animate.css" rel="stylesheet">
+   <link href="../css/style.css" rel="stylesheet">
+      <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <style>
+         .btncls{
+            background-color:#B80C4D;
+            border: #2e6da4;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            color: #fff;
+            letter-spacing: 1px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: normal;
+            border-radius: 4px;
+            line-height: 1.5;
+            text-decoration:none;
+            }
+         .btncls:hover{
+            background-color:#F773A5;
+            border: #2e6da4;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            color: #000;
+            letter-spacing: 1px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: normal;
+            border-radius: 4px;
+            line-height: 1.5;
+            text-decoration:none;
+            }
+      
+         div button{
+            display:inline-block;
+         }
+      </style>
+   <style id="nw-styles">
+      .nw-page { --nw-accent: #df154e; --nw-blue: #1548df; --nw-ink: #1f2a37; --nw-muted: #5b6673; --nw-line: #e4e8ec; --nw-soft: #f4f7fd; color: var(--nw-ink); margin-top: 18px; }
+      .nw-hero { margin: 0 0 28px; padding: 30px 34px; border-radius: 10px; color: #1f1f1f; background: linear-gradient(135deg, #b0b0b0 0%, #dcdcdc 50%, #ffffff 100%); border: 1px solid #d0d0d0; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+      .nw-hero h2 { margin: 0 0 6px; font-size: 34px; line-height: 1.15; color: #1a1a1a; }
+      .nw-hero p { margin: 0; font-size: 18px; color: #333; }
+      .nw-hero .nw-eyebrow { margin-bottom: 6px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: bold; color: #555; }
+      .nw-section { margin: 0 0 30px; }
+      .nw-h { margin: 0 0 14px; font-size: 24px; color: var(--nw-accent); }
+      .nw-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .nw-card { display: flex; flex-direction: column; overflow: hidden; background: #fff; border: 1px solid var(--nw-line); border-radius: 10px; color: inherit; text-decoration: none !important; box-shadow: 0 2px 8px rgba(0,0,0,.04); transition: transform .15s, box-shadow .15s; }
+      .nw-card:hover, .nw-card:focus { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.10); color: inherit; }
+      .nw-card-img { display: block; aspect-ratio: 16 / 9; background: #0d1b2a; overflow: hidden; }
+      .nw-card-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+      .nw-card:hover .nw-card-img img { transform: scale(1.04); }
+      .nw-card-body { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 18px; flex: 1; }
+      .nw-tag { align-self: flex-start; padding: 3px 10px; border-radius: 999px; background: #fde7ee; color: var(--nw-accent); font-size: 12px; font-weight: bold; letter-spacing: .04em; text-transform: uppercase; }
+      .nw-card-title { font-size: 20px; font-weight: bold; line-height: 1.25; color: var(--nw-ink); }
+      .nw-card-desc { font-size: 15px; line-height: 1.5; color: var(--nw-muted); }
+      .nw-more { margin-top: auto; padding-top: 6px; font-size: 15px; font-weight: bold; color: var(--nw-blue); }
+      .nw-year { margin: 0 0 14px; border: 1px solid var(--nw-line); border-radius: 10px; background: #fff; overflow: hidden; }
+      .nw-year-btn { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 20px; border: 0; background: var(--nw-soft); text-align: left; cursor: pointer; font-size: 16px; color: var(--nw-ink); }
+      .nw-year-btn:hover, .nw-year-btn:focus { background: #e9effc; }
+      .nw-year-label { font-size: 22px; font-weight: bold; color: var(--nw-blue); }
+      .nw-count { padding: 2px 10px; border-radius: 999px; background: #fff; border: 1px solid var(--nw-line); font-size: 13px; color: var(--nw-muted); }
+      .nw-year-btn .fa { margin-left: auto; color: var(--nw-muted); transition: transform .2s; }
+      .nw-year.is-open .nw-year-btn .fa { transform: rotate(180deg); }
+      .nw-list { list-style: none; margin: 0; padding: 18px 22px 6px 22px; position: relative; }
+      .nw-list[hidden] { display: none; }
+      .nw-item { position: relative; display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 18px; padding: 0 0 16px 22px; }
+      .nw-item::before { content: ""; position: absolute; left: 4px; top: 6px; bottom: -6px; width: 2px; background: var(--nw-line); }
+      .nw-item:last-child::before { bottom: 12px; }
+      .nw-item::after { content: ""; position: absolute; left: 0; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--nw-accent); box-shadow: 0 0 0 3px #fde7ee; }
+      .nw-date { font-size: 14px; font-weight: bold; color: var(--nw-blue); white-space: nowrap; padding-top: 1px; }
+      .nw-item p { margin: 0; font-size: 16px; line-height: 1.55; color: var(--nw-ink); }
+      .nw-item strong { color: var(--nw-blue); }
+      .nw-cards-single { grid-template-columns: 1fr; }
+      .nw-cards-single .nw-card { flex-direction: row; }
+      .nw-cards-single .nw-card-img { flex: 0 0 50%; aspect-ratio: auto; min-height: 240px; }
+      .nw-cards-single .nw-card-body { padding: 22px 24px; justify-content: center; }
+      .nw-cards-single .nw-more { margin-top: 8px; }
+      @media (max-width: 767px) {
+         .nw-hero { padding: 22px 20px; } .nw-hero h2 { font-size: 27px; } .nw-hero p { font-size: 16px; }
+         .nw-cards { grid-template-columns: 1fr; }
+         .nw-cards-single .nw-card { flex-direction: column; } .nw-cards-single .nw-card-img { min-height: 0; aspect-ratio: 16 / 9; }
+         .nw-list { padding: 16px 16px 4px; }
+         .nw-item { grid-template-columns: 1fr; gap: 2px; }
+      }
+   </style>
+</head>
+   
+   <body>
+      <div class="container">
+         <a href="#">
+            <img width="1000px" src="../pictures/images/cover-BioFSILab-2026-1.png" class="img-responsive animated pulse">
+         </a>
+
+         <br/>
+
+      <div class="container">
+         <section id="intro">
+                        <ul class="nav_ul">
+                           <li class="active"><a href="home.html">Home</a></li>
+                           <li><a href="BioFSILab.html">Team</a>
+                           <!--ul>
+                              <li><a href="biography.html"> Dr Chandan Bose </a></li>
+                              <li><a href="BioFSILab.html">BioFSILab Members</a></li>
+                           </ul-->
+                           </li>
+                           <li><a href="research_themes.html">Research</a>
+                           <!--ul>
+                              <li><a href="academic_projects.html">Ongoing Research</a></li>
+                              <li><a href="funded_projects.html">Grants</a></li>
+                              <li><a href="collaborators.html">Collaborators</a></li>
+                           </ul-->
+                           </li>
+                           <li><a href="journals.html">Publications</a>
+                           <!--ul>
+                              <li><a href="journals.html">Journal Articles</a></li>
+                              <li><a href="proceedings.html">Proceedings</a></li>
+                                 <li><a href="chapters.html">Book Chapters</a></li>
+                                 <li><a href="conferences.html">Conference Presentations</a></li>
+                           </ul-->
+                           </li>
+                           <li><a href="open_positions.html">Positions</a></li>
+                           <li><a href="news.html">News</a></li>
+                           <!--li><a href="awards.html">Recognitions</a>
+                           <ul>
+                              <li><a href="awards.html">Awards/ Honors</a></li>
+                              <li><a href="reviewer.html">Academic Service</a></li>
+                              <li><a href="invited.html">Invited Talks</a></li>
+                           </ul>
+                           </li-->
+                           <!--li><a href="course_teaching.html">Teaching</a>
+                           <ul>
+                              <li><a href="course_teaching.html">Assisting Courses</a></li>
+                              <li><a href="mentoring.html">Mentoring</a></li>
+                              <li><a href="codes.html">Codes/ Tutorials</a></li>
+                           </ul>
+                           </li>
+                           <li><a href="media.html">Miscellaneous</a>
+                              <ul>
+                                 <li><a href="media.html">Media</a></li>
+                                 <li><a href="gallery.html">Gallery</a></li>
+                              </ul>
+                           </li-->
+                        </ul>
+         </section>
+      </div>
+
+        <!-- <br/>
+        <br/> -->
+
+      <div class="nw-page">
+         <header class="nw-hero">
+            <p class="nw-eyebrow">BioFSI Lab</p>
+            <h2>News &amp; Highlights</h2>
+            <p>Awards, talks, events and milestones from the group.</p>
+         </header>
+
+         <section class="nw-section" aria-labelledby="nw-hl">
+            <h3 class="nw-h" id="nw-hl">Highlights</h3>
+            <div class="nw-cards nw-cards-single">
+               <a class="nw-card" href="https://www.birmingham.ac.uk/news/2025/university-of-birmingham-researchers-win-national-image-prize" target="_blank" rel="noopener">
+                  <span class="nw-card-img"><img src="../pictures/images/news/archer2-winning-image.webp" alt="ARCHER2 prize-winning simulation image of a morphing wing"></span>
+                  <span class="nw-card-body">
+                     <span class="nw-tag">Award &middot; Nov 2025</span>
+                     <span class="nw-card-title">National Image Award</span>
+                     <span class="nw-card-desc">By Miss Hibah Saddal and Dr Chandan Bose for their research on morphing wings.</span>
+                     <span class="nw-more">Read the story <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                  </span>
+               </a>
+            </div>
+         </section>
+
+         <section class="nw-section" aria-labelledby="nw-all">
+            <h3 class="nw-h" id="nw-all">All News</h3>
+            <div class="nw-year is-open">
+               <button type="button" class="nw-year-btn" aria-expanded="true" aria-controls="nw-2026">
+                  <span class="nw-year-label">2026</span><span class="nw-count">5 updates</span><i class="fa fa-chevron-down" aria-hidden="true"></i>
+               </button>
+               <ol class="nw-list" id="nw-2026">
+                  <li class="nw-item"><span class="nw-date">Nov 2026</span><p>BioFSILab will present its latest research at the <a href="https://dfd-meeting.aps.org/" target="_blank" rel="noopener">79th APS Division of Fluid Dynamics Annual Meeting</a> in Orlando, USA (22&ndash;24 November), including butterfly flight aerodynamics, passively morphing foils in gusty flows and data-driven modelling of vortex-induced vibrations.</p></li>
+                  <li class="nw-item"><span class="nw-date">Aug 2026</span><p>Our paper <a href="https://doi.org/10.1017/jfm.2026.11850" target="_blank" rel="noopener">&ldquo;Effect of transverse gust on free-falling plates&rdquo;</a> has been published in the <strong>Journal of Fluid Mechanics</strong>, in collaboration with the University of Edinburgh.</p></li>
+                  <li class="nw-item"><span class="nw-date">Jul 2026</span><p>Our work on <a href="https://doi.org/10.1016/j.cma.2026.119241" target="_blank" rel="noopener">GPU-optimised integration of immersed-boundary and overset-mesh methods for moving-boundary problems</a> has been published in <strong>Computer Methods in Applied Mechanics and Engineering</strong>, with collaborators at IIT Kharagpur.</p></li>
+                  <li class="nw-item"><span class="nw-date">Jun 2026</span><p>New preprint with Georgia Tech: <a href="https://doi.org/10.48550/arXiv.2606.19252" target="_blank" rel="noopener">multi-objective Bayesian optimisation of rigid and flexible nozzles for energy-efficient pulsed-jet propulsion</a>.</p></li>
+                  <li class="nw-item"><span class="nw-date">May 2026</span><p>Doudou Huang&rsquo;s paper on the <a href="https://doi.org/10.1017/jfm.2026.11514" target="_blank" rel="noopener">wake dynamics of permeable disks across the transition from steady to chaotic flow</a> has been published in the <strong>Journal of Fluid Mechanics</strong>, and our collaborative preprint <a href="https://doi.org/10.48550/arXiv.2605.03239" target="_blank" rel="noopener">&ldquo;Squid funnels time their elastic recoil to amplify pulsed jets&rdquo;</a> is now on arXiv.</p></li>
+               </ol>
+            </div>
+            <div class="nw-year">
+               <button type="button" class="nw-year-btn" aria-expanded="false" aria-controls="nw-2025">
+                  <span class="nw-year-label">2025</span><span class="nw-count">5 updates</span><i class="fa fa-chevron-down" aria-hidden="true"></i>
+               </button>
+               <ol class="nw-list" id="nw-2025" hidden>
+                  <li class="nw-item"><span class="nw-date">Dec 2025</span><p>Dr. Chandan Bose, Miss. Hibah Saddal, and Mr. Arjun Shergill will present the group's research on fluid-structure interaction and GPU-accelerated computing in the <a href="https://www.sc.stfc.ac.uk/ciuk-2025/" target="_blank" rel="noopener">CoSeC Annual Conference and CIUK2025 conference 2025</a> in Manchester, UK.</p></li>
+                  <li class="nw-item"><span class="nw-date">Nov 2025</span><p>Dr. Chandan Bose has been awarded the <a href="https://www.cosec.ac.uk/what-is-cosec/cosec-fellowship-programme/cosec-2025-fellows/" target="_blank" rel="noopener">Computational Science Centre for Research Communities (CoSeC) Fellowship 2025</a>, STFC, UK.</p></li>
+                  <li class="nw-item"><span class="nw-date">Nov 2025</span><p>Mr. Paras Singh and Miss. Doudou Huang represented BioFSILab at the <a href="https://dfd-meeting.aps.org/" target="_blank" rel="noopener">American Physical Society Division of Fluid Mechanics Annual Meeting 2025</a>.</p></li>
+                  <li class="nw-item"><span class="nw-date">Nov 2025</span><p>Miss. Hibah Saddal and Dr. Chandan Bose have been awarded the <a href="https://www.birmingham.ac.uk/news/2025/university-of-birmingham-researchers-win-national-image-prize" target="_blank" rel="noopener">national image prize</a> by EPCC ARCHER2 for their research on morphing wings.</p></li>
+                  <li class="nw-item"><span class="nw-date">Nov 2025</span><p>A total of nine simulation images and videos featuring the research carried out in BioFSILab have been featured in the <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">EPCC ARCHER2 Image and Video Contest 2025</a>.</p></li>
+               </ol>
+            </div>
+            <div class="nw-year">
+               <button type="button" class="nw-year-btn" aria-expanded="false" aria-controls="nw-2024">
+                  <span class="nw-year-label">2024</span><span class="nw-count">9 updates</span><i class="fa fa-chevron-down" aria-hidden="true"></i>
+               </button>
+               <ol class="nw-list" id="nw-2024" hidden>
+                  <li class="nw-item"><span class="nw-date">July 2024</span><p>Dr. Chandan Bose has been selected as a Guest Associate Editor in the <strong>“Journal of Computational Sciences, Elsevier”</strong>.</p></li>
+                  <li class="nw-item"><span class="nw-date">July 2024</span><p>Dr. Chandan Bose is organising two mini-symposia on <strong>“Fluid-Structure Interaction”</strong> and <strong>“Flow Energy Harvesting”</strong> as co-chair with Prof. Grigorios Dimitriadis and Prof. Grzegorz Litak in the <a href="https://uobevents.eventsair.com/bbaa-ix/" target="_blank" rel="noopener">Bluff Body Aerodynamics and Applications IX conference</a> at the University of Birmingham during 29 July to 2 August 2024.</p></li>
+                  <li class="nw-item"><span class="nw-date">July 2024</span><p>Dr. Chandan Bose received EuroMech funding to organise the <strong>Euromech Colloquium 654 on “Bioinspired fluid-structure interaction”</strong> as co-chair with Prof. Manuel Garcia-Villalba. Prof. Marco de Tullio, Prof. Oscar Flores, and Prof. Ramiro Godoy-Diana are also on the organizing team. The Colloquium will be held in Vienna (Austria) from 9 to 11 July 2025.</p></li>
+                  <!--<li class="nw-item"><span class="nw-date">July 2024</span><p>BioFSILab recently hosted Dr. Shūji Ōtomo from the Tokyo University of Agriculture and Technology and Dr. Li Juan from the King's College London for a research visit discussing future UK-Japan collaborations on vortex-dominated flow physics!</p></li>-->
+                  <li class="nw-item"><span class="nw-date">July 2024</span><p>Dr. Chandan Bose visited the University of Bristol and delivered an invited seminar at the Department of Aerospace Engineering.</p></li>
+                  <li class="nw-item"><span class="nw-date">June 2024</span><p>Dr. Chandan Bose earned the <strong>Fellowship of Higher Education Academy</strong> and <strong>PgCert in Academic Practice</strong> from the University of Edinburgh.</p></li>
+                  <li class="nw-item"><span class="nw-date">June 2024</span><p>Ms. Hibah Saddal from Applied Mathematics joined the BioFSI Lab for doing her master's thesis on <strong>Mathematical Modelling of Vortex-Induced Vibrations</strong>.</p></li>
+                  <li class="nw-item"><span class="nw-date">June 2024</span><p>The first group of UG researchers from the BioFSI Lab successfully defended their UG Projects.</p></li>
+                  <li class="nw-item"><span class="nw-date">June 2024</span><p>Dr. Chandan Bose delivered keynote presentations in the five-day workshop on "Fluid-Structure Interaction" at ISM (IIT) Dhanbad.</p></li>
+                  <li class="nw-item"><span class="nw-date">June 2024</span><p>Dr. Chandan Bose co-chaired the First UK-Indian OpenFOAM Symposium with Prof. Somnath Roy at IIT Kharagpur.</p></li>
+               </ol>
+            </div>
+         </section>
+      </div>
+
+<div class="well" id="acad">
+   <p>
+      <h5>Office Address: Room No. 1B27, Met & Mat Building (G6), School of Metallurgy and Materials, University of Birmingham, Edgbaston, Birmingham, B15 2TT, United Kingdom.</h5>
+   </p>
+</div>
+<div class="container">
+   <a href="#">
+   <img src="../pictures/images/UoB.jpeg" width="1000px" class="img-responsive animated pulse">
+   </a>
+</div>
+            
+<div class="row-fluid">
+   <div class="span12">
+      <footer id="footer">
+         <div class="container-fluid">
+            <div class="row-fluid">
+               <div class="span12">
+                  <h5><b style="color:Tomato;"> @2024 Chandan Bose - All rights reserved! </b></h5>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+</div>
+</div>
+
+      <!-- Javascript files -->
+   <script src="../js/jquery-1.9.1.min.js"></script>
+   <script src="../js/bootstrap.min.js"></script>
+      <script> $('#main-carousel').carousel(); </script>
+   <script src="../js/slideshow.js"></script>
+   <script src="../js/togglesection.js"></script>
+      <script id="nw-script">
+   (function () {
+     Array.prototype.forEach.call(document.querySelectorAll('.nw-year-btn'), function (btn) {
+       btn.addEventListener('click', function () {
+         var list = document.getElementById(btn.getAttribute('aria-controls'));
+         var open = btn.getAttribute('aria-expanded') === 'true';
+         btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+         btn.parentNode.classList.toggle('is-open', !open);
+         if (open) list.setAttribute('hidden', ''); else list.removeAttribute('hidden');
+       });
+     });
+   }());
+   </script>
+</body>
+</html>
