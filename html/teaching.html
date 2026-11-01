@@ -1,91 +1,420 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    
    <head>
       <meta charset="utf-8">
-      <title> Dr. Chandan Bose </title>
+      <title>Teaching | Dr Chandan Bose</title>
+      <!-- BEGIN SEO / link previews -->
+      <meta name="description" content="Dr Chandan Bose teaches aerodynamics, aeroelasticity and fluid mechanics at the University of Birmingham and runs OpenFOAM and CFD workshops.">
+      <link rel="canonical" href="https://chandanbose.com/html/teaching.html">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="BioFSI Lab – Dr Chandan Bose">
+      <meta property="og:title" content="Teaching | Dr Chandan Bose">
+      <meta property="og:description" content="Dr Chandan Bose teaches aerodynamics, aeroelasticity and fluid mechanics at the University of Birmingham and runs OpenFOAM and CFD workshops.">
+      <meta property="og:url" content="https://chandanbose.com/html/teaching.html">
+      <meta property="og:image" content="https://chandanbose.com/pictures/images/social-preview.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:image:alt" content="Simulations of bio-inspired flows from the BioFSI Lab: butterfly swarm, squid-inspired nozzle, morphing wings and vortex wakes">
+      <meta property="og:locale" content="en_GB">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:creator" content="@cbose1991">
+      <meta name="twitter:title" content="Teaching | Dr Chandan Bose">
+      <meta name="twitter:description" content="Dr Chandan Bose teaches aerodynamics, aeroelasticity and fluid mechanics at the University of Birmingham and runs OpenFOAM and CFD workshops.">
+      <meta name="twitter:image" content="https://chandanbose.com/pictures/images/social-preview.jpg">
+      <meta name="twitter:image:alt" content="Simulations of bio-inspired flows from the BioFSI Lab: butterfly swarm, squid-inspired nozzle, morphing wings and vortex wakes">
+      <!-- END SEO / link previews -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Personal Website - Dr. Chandan Bose">
-      <meta name="author" content="Dr. Chandan Bose">
+<meta name="author" content="Dr. Chandan Bose">
       <meta name="keywords" content="Chandan Bose">
-   <link rel="icon" href="../pictures/images/CB_logo.png">
+   <link rel="icon" href="../pictures/images/BioFSI_Lab_Logo.png">
       
-      <!-- Le styles -->
-      <link href="../css/bootstrap.min.css" rel="stylesheet">
-      <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
-      <link href="../css/theme.css" rel="stylesheet">
-      <link href="../css/animate.css" rel="stylesheet">
-      <link href="../css/style.css" rel="stylesheet">
+   <!-- Le styles -->
+   <link href="../css/bootstrap.min.css" rel="stylesheet">
+   <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+   <link href="../css/theme.css" rel="stylesheet">
+   <link href="../css/animate.css" rel="stylesheet">
+   <link href="../css/style.css" rel="stylesheet">
       <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+   
+   <!-- Research theme styles are scoped to preserve the existing team layout. -->
+   <style id="research-theme-styles">
+      .research-themes { max-width: 1000px; margin: 24px auto 40px; padding: 0 10px; box-sizing: border-box; font-family: 'Times New Roman', Times, serif; color: #333; }
+
+
+      .research-themes a { color: #1e40af; }
+      .research-themes a:focus-visible { outline: 2px solid #1e3a8a; outline-offset: 3px; }
+      .research-themes h3 { font-size: 22px; line-height: 1.35; margin: 26px 0 10px; font-weight: 600; }
+      .research-themes .theme-rule { border: 0; height: 2px; background: #1e3a8a; margin: 0 0 12px; }
+      .research-themes .research-theme-table { width: 100%; table-layout: fixed; border-spacing: 10px; border-collapse: separate; }
+      .research-themes .theme-image-cell { width: 35%; vertical-align: top; }
+      .research-themes .theme-copy-cell { vertical-align: top; }
+      .research-themes .theme-image { display: block; width: 100%; height: auto; aspect-ratio: 32 / 23; object-fit: cover; border-radius: 3px; background: #eef2f4; }
+      .research-themes .theme-image-note { font-size: 11px; line-height: 1.4; color: #666; margin: 6px 0 0; }
+      .research-themes .theme-description { font-size: 14px; line-height: 1.75; margin: 0 0 12px; }
+      .research-themes .theme-reference-title { color: #1e3a8a; font-size: 14px; margin: 16px 0 8px; }
+      .research-themes .theme-references { margin: 0; padding: 0; list-style: none; }
+      .research-themes .theme-references li { font-size: 13px; line-height: 1.65; padding-left: 22px; text-indent: -22px; margin: 0 0 12px; overflow-wrap: anywhere; }
+      .research-themes .theme-status { font-size: 13px; line-height: 1.65; color: #666; font-style: italic; }
+      .research-themes .theme-top { font-size: 12px; text-align: right; margin: 4px 10px 22px; }
+      @media (max-width: 680px) {
+         .research-themes { padding: 0 8px; }
+         .research-themes h3 { font-size: 20px; }
+         .research-themes .research-theme-table, .research-themes .research-theme-table tbody, .research-themes .research-theme-table tr, .research-themes .research-theme-table td { display: block; width: 100%; box-sizing: border-box; }
+         .research-themes .theme-image-cell { padding: 0 0 16px; }
+         .research-themes .theme-image { max-width: 440px; }
+         .research-themes .theme-copy-cell { padding: 0; }
+      }
+
+      /* Research-theme tabs; each link also works as an anchor without JavaScript. */
+      .research-themes #research-themes-title { color: #1e3a8a; font-size: 28px; line-height: 1.25; margin: 0 0 18px; padding-bottom: 12px; border-bottom: 2px solid #1e3a8a; }
+      .research-themes .research-index { margin: 0 0 30px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+      .research-themes .research-index li { display: flex; margin: 0; padding: 0; font-size: 14px; min-width: 0; }
+      .research-themes .research-index a { display: flex; align-items: center; justify-content: center; flex: 1; box-sizing: border-box; min-height: 48px; padding: 11px 14px; border: 1px solid #d9dfe5; border-radius: 6px; background: #f5f7f9; color: #334155; font-weight: 600; line-height: 1.45; text-align: center; text-decoration: none; overflow-wrap: anywhere; transition: background-color .18s ease, color .18s ease, border-color .18s ease; }
+      .research-themes .research-index a:hover { background: #edf1fa; border-color: #7b93c9; color: #1e40af; text-decoration: none; }
+      .research-themes .research-index a[aria-current="location"] { background: #1e3a8a; border-color: #1e3a8a; color: #fff; }
+      .research-themes .research-index a:focus-visible { outline: 3px solid #1e40af; outline-offset: 3px; }
+
+      .research-themes .research-theme { scroll-margin-top: 20px; }
+      @media (max-width: 680px) {
+         .research-themes #research-themes-title { font-size: 25px; }
+         .research-themes .research-index { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+         .research-themes .research-index li:nth-child(n+10) { grid-column: 1 / -1; }
+         .research-themes .research-index a { font-size: 13px; padding: 10px; }
+      }
+      @media print {
+         .research-themes .research-index, .research-themes .theme-top { display: none; }
+
+      }
+   </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style id="page-extra-styles">
+      .research-themes .fund-intro { font-size: 15px; line-height: 1.7; margin: 0 0 20px; }
+      .research-themes .fund-count { display: inline-block; margin-left: 6px; padding: 0 8px; border-radius: 999px; background: #edf1fa; color: #1e3a8a; font-size: 12px; }
+      .research-themes .fund-tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 0; }
+      .research-themes .co-tabs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .research-themes .fund-tabs a[aria-current="location"] .fund-count { background: rgba(255,255,255,.25); color: #fff; }
+      .research-themes nav { margin-bottom: 26px; }
+      .research-themes .fund-group { margin: 34px 0 14px; padding: 10px 14px; font-size: 22px; line-height: 1.3; color: #fff; background: #1e3a8a; border-radius: 6px; scroll-margin-top: 20px; }
+      .research-themes .te-prev { scroll-margin-top: 20px; }
+      .research-themes .te-prev > summary { list-style: none; cursor: pointer; }
+      .research-themes .te-prev > summary::-webkit-details-marker { display: none; }
+      .research-themes .te-prev > summary .fund-group { position: relative; padding-right: 44px; }
+      .research-themes .te-prev > summary .fund-group::after { content: "\25B8"; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); transition: transform .2s; }
+      .research-themes .te-prev[open] > summary .fund-group::after { transform: translateY(-50%) rotate(90deg); }
+      .research-themes .te-prev > summary:hover .fund-group { background: #1e40af; }
+      .research-themes .te-prev > summary:focus-visible { outline: 3px solid #1e40af; outline-offset: 3px; border-radius: 6px; }
+      .research-themes .te-prev-hint { font-size: 14px; font-weight: normal; opacity: .8; }
+      .research-themes .te-prev[open] .te-prev-hint { display: none; }
+      .research-themes .fund-group-intro { font-size: 14px; line-height: 1.7; margin: 0 0 12px; color: #444; }
+      .research-themes .fund-project { font-size: 15px; line-height: 1.55; margin: 0 0 6px; color: #333; }
+      .research-themes .fund-label { display: block; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; color: #1e3a8a; margin-bottom: 2px; }
+      .research-themes .fund-hpc-wrap { margin: 10px 0 4px; }
+      .research-themes .fund-hpc { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.5; }
+      .research-themes .fund-hpc th { text-align: left; padding: 9px 10px; background: #edf1fa; color: #1e3a8a; font-weight: 600; border-bottom: 2px solid #1e3a8a; }
+      .research-themes .fund-hpc td { padding: 9px 10px; vertical-align: top; border-bottom: 1px solid #e4e8ec; }
+      .research-themes .fund-hpc tbody tr:nth-child(even) td { background: #fafafa; }
+      .research-themes .fund-hpc tbody tr:hover td { background: #f4f7fc; }
+      .research-themes .te-table td:first-child { width: 46%; font-weight: 600; }
+      .research-themes .te-table td:last-child { width: 22%; }
+      .research-themes #workshops + .fund-group-intro + .fund-hpc-wrap td:first-child { width: 12%; font-weight: 600; white-space: nowrap; color: #1e3a8a; }
+      .research-themes .te-when { display: inline-block; margin-left: 8px; padding: 1px 10px; border-radius: 999px; background: #eef0f2; border: 1px solid #dde1e5; color: #555; font-size: 13px; font-weight: 600; vertical-align: 3px; }
+      .research-themes .te-inst h3 { margin-top: 18px; }
+      .research-themes .te-quote { margin: 0 0 16px; padding: 10px 16px; border-left: 4px solid #1e3a8a; background: #f6f8fc; font-size: 17px; font-style: italic; color: #444; }
+      .research-themes .te-quote cite { font-style: normal; font-size: 14px; color: #666; }
+      .research-themes .te-more { font-size: 14px; margin: 14px 0 0; }
+      .research-themes .co-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: -10px 0 6px; }
+      .research-themes .co-filters-label { font-size: 13px; font-weight: 600; color: #666; }
+      .research-themes .co-filter { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; border: 1px solid #d9dfe5; background: #fff; color: #334155; font-size: 13px; font-weight: 600; cursor: pointer; }
+      .research-themes .co-filter:hover { border-color: #7b93c9; color: #1e40af; }
+      .research-themes .co-filter.is-active { background: #1e3a8a; border-color: #1e3a8a; color: #fff; }
+      .research-themes .co-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+      .research-themes .co-card { padding: 14px 16px; border: 1px solid #e4e8ec; border-left: 4px solid #1e3a8a; border-radius: 6px; background: #fff; transition: opacity .2s, box-shadow .2s; }
+      .research-themes .co-card.is-dim { opacity: .3; }
+      .research-themes .co-card.is-hit { box-shadow: 0 6px 16px rgba(30,58,138,.15); }
+      .research-themes .co-name { margin: 0 0 2px; font-size: 17px; line-height: 1.35; font-weight: 600; }
+      .research-themes .co-name a { color: #1f2a37; text-decoration: none; }
+      .research-themes .co-name a:hover { color: #1e3a8a; text-decoration: underline; }
+      .research-themes .co-aff { margin: 0 0 8px; font-size: 14px; color: #666; }
+      .research-themes .co-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+      .research-themes .co-tag { padding: 1px 9px; border-radius: 999px; background: #edf1fa; color: #1e40af; font-size: 12px; font-weight: 600; }
+      .research-themes .co-tag .fa { margin-right: 2px; }
+      .research-themes .co-items { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #333; }
+      .research-themes .co-items li { margin: 0 0 3px; }
+      .research-themes .co-others { columns: 2; column-gap: 28px; margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+      .research-themes .co-others li { break-inside: avoid; margin-bottom: 4px; }
+      @media (max-width: 680px) {
+         .research-themes .fund-tabs, .research-themes .co-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+         .research-themes .fund-group { font-size: 19px; }
+         .research-themes .co-grid { grid-template-columns: 1fr; }
+         .research-themes .co-others { columns: 1; }
+         .research-themes .fund-hpc thead { display: none; }
+         .research-themes .fund-hpc, .research-themes .fund-hpc tbody, .research-themes .fund-hpc tr, .research-themes .fund-hpc td { display: block; width: 100% !important; box-sizing: border-box; }
+         .research-themes .fund-hpc tr { margin: 0 0 10px; border: 1px solid #e4e8ec; border-left: 4px solid #1e3a8a; border-radius: 6px; overflow: hidden; }
+         .research-themes .fund-hpc td { border: 0; padding: 3px 12px; white-space: normal !important; }
+         .research-themes .fund-hpc td:first-child { padding-top: 9px; }
+         .research-themes .fund-hpc td:last-child { padding-bottom: 9px; }
+         .research-themes .fund-hpc td:not(:first-child)::before { content: attr(data-label) ": "; font-weight: 600; color: #1e3a8a; }
+         .research-themes .fund-hpc tbody tr:nth-child(even) td { background: transparent; }
+      }
+      @media print { .research-themes nav, .research-themes .co-filters { display: none; } }
+   </style>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+   <style id="sv-feature-styles">
+      .research-themes .sv-feature { display: flex; margin: 0 0 30px; border: 1px solid #d9dfe5; border-radius: 10px; overflow: hidden; background: #fff; color: inherit; text-decoration: none !important; box-shadow: 0 2px 8px rgba(0,0,0,.05); transition: transform .15s, box-shadow .15s; }
+      .research-themes .sv-feature:hover, .research-themes .sv-feature:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.10); }
+      .sv-feature-img { flex: 0 0 46%; position: relative; min-height: 260px; background: #000; }
+      .sv-feature-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .sv-feature-body { display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 22px 24px; }
+      .sv-feature-tag { align-self: flex-start; padding: 3px 10px; border-radius: 999px; background: #e3e9f6; color: #1e3a8a; font-size: 12px; font-weight: bold; letter-spacing: .04em; text-transform: uppercase; }
+      .sv-feature-title { font-size: 21px; font-weight: bold; line-height: 1.25; color: #1f2a37; }
+      .sv-feature-desc { font-size: 15px; line-height: 1.6; color: #4b5563; }
+      .sv-feature-desc a { color: #1e40af; text-decoration: underline; }
+      .research-themes .sv-feature-wide { flex-direction: column; }
+      .sv-feature-wide .sv-feature-img { flex: none; min-height: 0; aspect-ratio: 800 / 263; }
+      .sv-feature-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+      .sv-feature-stats > * { padding: 6px 12px; border-radius: 8px; background: #f3f6fc; border: 1px solid #dbe3f3; font-size: 14px; color: #334155; }
+      .sv-feature-stats a { color: #334155; text-decoration: none; }
+      .sv-feature-stats a:hover, .sv-feature-stats a:focus-visible { border-color: #1e3a8a; background: #e3e9f6; }
+      .sv-feature-title, .sv-feature-more { text-decoration: none; }
+      .research-themes .sv-feature-title { color: #1f2a37; }
+      .sv-feature-title:hover, .sv-feature-more:hover { text-decoration: underline; }
+      .sv-feature-stats b { font-size: 18px; color: #1e3a8a; margin-right: 4px; }
+      .sv-feature-more { margin-top: 4px; font-size: 15px; font-weight: bold; color: #1e40af; }
+      @media (max-width: 680px) { .research-themes .sv-feature { flex-direction: column; } .sv-feature-img { flex: none; min-height: 0; aspect-ratio: 16 / 9; } }
+      .sv-feature-video { position: relative; aspect-ratio: 16 / 9; background: #000; }
+      .sv-feature-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+   </style>
 </head>
    
    <body>
       <div class="container">
          <a href="#">
-         <img src="../pictures/images/cover_final_2.gif" class="img-responsive animated pulse">
+            <img width="1000px" src="../pictures/images/cover-BioFSILab-2026-1.png" class="img-responsive animated pulse">
          </a>
+         <!--header class="jumbotron subhead" id="overview">
+            <h1> Dr. Chandan Bose </h1-->
+            <!--p class="lead"> Postdoctoral Research Associate </p>
+            <h> University of LiÃ¨ge </h -->
+         <!--/header-->
+         <!--div class="masthead">
+            <div class="navbar">
+               <div class="navbar-inner">
+                  <div class="container">
+                     <ul class="nav">
+                        <li class="active"><a href="home.html">Home</a></li>
+                        <li><a href="biography.html">Profile</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="awards.html">Recognitions</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div-->
 
          <div class="container">
             <section id="intro">
                            <ul class="nav_ul">
                               <li class="active"><a href="home.html">Home</a></li>
-                              <li><a href="biography.html">Profile</a></li>
-                              <li><a href="research.html">Research</a>
-                              <ul>
-                                 <li><a href="academic_projects.html">Academic Projects</a></li>
-                                 <li><a href="funded_projects.html">Funded Projects</a></li>
-                                 <li><a href="collaborators.html">Collaborators</a></li>
-                              </ul>
+                           <li><a href="BioFSILab.html">People</a>
+                           <!--ul>
+                              <li><a href="biography.html"> Dr Chandan Bose </a></li>
+                              <li><a href="BioFSILab.html">BioFSILab Members</a></li>
+                           </ul-->
+                           </li>
+                           <li><a href="research_themes.html">Research</a>
+                           <!--ul>
+                              <li><a href="academic_projects.html">Ongoing Research</a></li>
+                              <li><a href="funded_projects.html">Grants</a></li>
+                              <li><a href="collaborators.html">Collaborators</a></li>
+                           </ul-->
                               </li>
-                              <li><a href="publications.html">Publications</a>
+                           <li><a href="funded_projects.html">Projects</a></li>
+                           <li><a href="journals.html">Publications</a>
                               <ul>
+                                 <li><a href="journals.html">Journal Articles</a></li>
+                                 <li><a href="conferences.html">Conference Publications</a></li>
+                              </ul>
+                              <!--ul>
                                  <li><a href="journals.html">Journal Articles</a></li>
                                  <li><a href="proceedings.html">Proceedings</a></li>
                                  <li><a href="chapters.html">Book Chapters</a></li>
                                  <li><a href="conferences.html">Conference Presentations</a></li>
-                              </ul>
+                              </ul-->
                               </li>
-                              <li><a href="recognision.html">Recognitions</a>
+                           <li><a href="fluid_art.html">Fluid Art</a></li>
+                           <li><a href="collaborators.html">Collaborators</a></li>
+                           <li><a href="teaching.html">Teaching</a></li>
+                           <li><a href="reviewer.html">Community</a></li>
+                           <li><a href="news.html">News</a></li>
+                           <li><a href="press.html">Press</a></li>
+                           <li><a href="open_positions.html">Positions</a></li>
+                           <!--li><a href="awards.html">Recognitions</a>
                               <ul>
                                  <li><a href="awards.html">Awards/ Honors</a></li>
                                  <li><a href="reviewer.html">Academic Service</a></li>
                                  <li><a href="invited.html">Invited Talks</a></li>
                               </ul>
-                              </li>
-                              <li><a href="teaching.html">Teaching</a>
+                              </li-->
+                              <!--li><a href="course_teaching.html">Teaching</a>
                               <ul>
                                  <li><a href="course_teaching.html">Assisting Courses</a></li>
                                  <li><a href="mentoring.html">Mentoring</a></li>
                                  <li><a href="codes.html">Codes/ Tutorials</a></li>
                               </ul>
                               </li>
-                              <li><a href="gallery.html">Gallery</a></li>
+                              <li><a href="media.html">Miscellaneous</a>
+                                 <ul>
+                                    <li><a href="media.html">Media</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                 </ul>
+                              </li>
+                           </ul-->
                            </ul>
             </section>
          </div>
 
-      <br/>
-      
-   <div class="well" id="acad">
-      <!--img src="../pictures/images/teaching.png" class="img-responsive animated pulse"-->
-      <h4>"If you want to master something, teach it!" - Richard Feynman</h4>
-   </div>
+         <!-- <br/> -->
+         <!-- <br/> -->
+         <!-- <br/> -->
 
-<footer id="footer">
-         <div class="container-fluid">
-            <div class="row-fluid">
-               <div class="span12">
-                  <h5><b style="color:Tomato;"> @2026 Chandan Bose - All rights reserved! </b></h5>
+
+         <!-- BEGIN TEACHING -->
+         <section id="research-themes" class="research-themes" aria-labelledby="research-themes-title">
+            <h2 id="research-themes-title">Teaching</h2>
+            <blockquote class="te-quote">&ldquo;If you want to master something, teach it!&rdquo; <cite>&mdash; Richard Feynman</cite></blockquote>
+            <p class="fund-intro">Dr Chandan Bose teaches aerodynamics, aeroelasticity and fluid mechanics at the University of Birmingham, and has taught at the University of Edinburgh, the University of Li&egrave;ge and IIT Madras. He is a Fellow of the Higher Education Academy and regularly runs training on open-source computational fluid dynamics with OpenFOAM.</p>
+            <nav aria-label="Teaching"><ul class="research-index fund-tabs"><li><a href="#qualifications">Teaching Qualifications</a></li><li><a href="#current-teaching">Current Teaching</a></li><li><a href="#previous-teaching">Previous Teaching</a></li><li><a href="#workshops">Workshops &amp; Training <span class="fund-count">9</span></a></li></ul></nav>
+
+            <h2 class="fund-group" id="qualifications">Teaching Qualifications</h2>
+            <div class="co-grid te-quals">
+               <article class="co-card"><h4 class="co-name">Fellow of the Higher Education Academy (FHEA)</h4><p class="co-aff">Advance HE, UK &middot; 2024</p></article>
+               <article class="co-card"><h4 class="co-name">Postgraduate Certificate in Academic Practice (PgCert)</h4><p class="co-aff">Institute for Academic Development, The University of Edinburgh &middot; 2024</p></article>
+            </div>
+            <p class="theme-top"><a href="#research-themes">Back to teaching ↑</a></p>
+
+            <h2 class="fund-group" id="current-teaching">Current Teaching</h2>
+            <section class="research-theme te-inst" id="birmingham" aria-labelledby="birmingham-title">
+               <h3 id="birmingham-title">University of Birmingham, UK <span class="te-when">2023 &ndash; present</span></h3>
+               <hr class="theme-rule">
+               <p class="fund-project"><span class="fund-label">Role</span>Assistant Professor of Aerospace Engineering</p>
+               <div class="fund-hpc-wrap"><table class="fund-hpc te-table"><thead><tr><th scope="col">Course / activity</th><th scope="col">Role</th><th scope="col">Period</th></tr></thead><tbody><tr><td data-label="Course / activity">Advanced Aerodynamic and Aeroelastic Analysis</td><td data-label="Role">Lecturer and Module Lead (optional module)</td><td data-label="Period">Under development</td></tr><tr><td data-label="Course / activity">Aerodynamics and Propulsion</td><td data-label="Role">Lecturer and Module Lead</td><td data-label="Period">2026&ndash;27</td></tr><tr><td data-label="Course / activity">Aerodynamics &ndash; Airframe Design and Flight Dynamics</td><td data-label="Role">Lecturer</td><td data-label="Period">2023&ndash;24, 2024&ndash;25, 2025&ndash;26</td></tr><tr><td data-label="Course / activity">Aerospace Group Project &ndash; <em>AURA: Design of a Fixed-Wing Air-Quality &amp; Urban Reconnaissance Unmanned Aircraft</em></td><td data-label="Role">Advisor</td><td data-label="Period">2026&ndash;27</td></tr><tr><td data-label="Course / activity">Aerospace Group Project &ndash; <em>SkyAid: Fixed-Wing UAV Design for Sustainable Agriculture and Medical Logistics</em></td><td data-label="Role">Advisor</td><td data-label="Period">2025&ndash;26</td></tr><tr><td data-label="Course / activity">Undergraduate Research Projects</td><td data-label="Role">Advisor (5, 9, 9 and 8 projects)</td><td data-label="Period">2023&ndash;24, 2024&ndash;25, 2025&ndash;26, 2026&ndash;27</td></tr><tr><td data-label="Course / activity">Aerospace Group Projects</td><td data-label="Role">Examiner</td><td data-label="Period">2024&ndash;25</td></tr></tbody></table></div>
+            </section>
+            <p class="theme-top"><a href="#research-themes">Back to teaching ↑</a></p>
+
+            <details class="te-prev" id="previous-teaching">
+               <summary><h2 class="fund-group">Previous Teaching <span class="te-prev-hint">(click to show)</span></h2></summary>
+            <section class="research-theme te-inst" id="edinburgh" aria-labelledby="edinburgh-title">
+               <h3 id="edinburgh-title">University of Edinburgh, UK <span class="te-when">2021 &ndash; 2023</span></h3>
+               <hr class="theme-rule">
+               <p class="fund-project"><span class="fund-label">Role</span>University Teacher (Adjunct Lecturer) in Mechanical Engineering</p>
+               <div class="fund-hpc-wrap"><table class="fund-hpc te-table"><thead><tr><th scope="col">Course / activity</th><th scope="col">Role</th><th scope="col">Period</th></tr></thead><tbody><tr><td data-label="Course / activity"><a href="http://www.drps.ed.ac.uk/22-23/dpt/cxmece10004.htm" target="_blank" rel="noopener">MECE10004: Fluid Mechanics (Mechanical) 4</a></td><td data-label="Role">Lecturer and Course Organiser</td><td data-label="Period">Semester 1, 2022&ndash;23</td></tr><tr><td data-label="Course / activity">PGEE11186: IDCORE Offshore Engineering</td><td data-label="Role">Instructor</td><td data-label="Period">Semester 1, 2021&ndash;22 and 2022&ndash;23</td></tr><tr><td data-label="Course / activity">SCEE09004: Partial Differential Equations 3</td><td data-label="Role">Teaching Assistant</td><td data-label="Period">Semester 1, 2021&ndash;22</td></tr></tbody></table></div>
+            </section>
+            <section class="research-theme te-inst" id="liege" aria-labelledby="liege-title">
+               <h3 id="liege-title">University of Li&egrave;ge, Belgium <span class="te-when">2020</span></h3>
+               <hr class="theme-rule">
+               <p class="fund-project"><span class="fund-label">Role</span>Tutorials and mentoring of two groups of Master&rsquo;s students on their course projects</p>
+               <div class="fund-hpc-wrap"><table class="fund-hpc te-table"><thead><tr><th scope="col">Course / activity</th><th scope="col">Role</th><th scope="col">Period</th></tr></thead><tbody><tr><td data-label="Course / activity"><a href="http://www.ltas-aea.ulg.ac.be/cms/index.php?page=education" target="_blank" rel="noopener">Aeroelasticity and Experimental Aerodynamics</a></td><td data-label="Role">Teaching Assistant (instructor: Prof. Grigorios Dimitriadis)</td><td data-label="Period">Fall 2020</td></tr><tr><td data-label="Course / activity">Turbulent Flows</td><td data-label="Role">Teaching Assistant (instructor: Prof. Vincent Terrapon)</td><td data-label="Period">Fall 2020</td></tr></tbody></table></div>
+            </section>
+            <section class="research-theme te-inst" id="iit-madras" aria-labelledby="iit-madras-title">
+               <h3 id="iit-madras-title">Indian Institute of Technology Madras, India <span class="te-when">2015 &ndash; 2018</span></h3>
+               <hr class="theme-rule">
+               <p class="fund-project"><span class="fund-label">Role</span>Teaching Assistant: computational tutorials, laboratory classes, assignments and exam marking</p>
+               <div class="fund-hpc-wrap"><table class="fund-hpc te-table"><thead><tr><th scope="col">Course / activity</th><th scope="col">Role</th><th scope="col">Period</th></tr></thead><tbody><tr><td data-label="Course / activity">AM5117: Analytical Methods in Engineering Mechanics</td><td data-label="Role">Teaching Assistant (Prof. Sayan Gupta)</td><td data-label="Period">Jul&ndash;Nov 2015</td></tr><tr><td data-label="Course / activity">AM1100: Engineering Mechanics</td><td data-label="Role">Teaching Assistant (Prof. Sayan Gupta)</td><td data-label="Period">Jan&ndash;May 2016, Jan&ndash;May 2018</td></tr><tr><td data-label="Course / activity">AM2540: Applied Mechanics Lab</td><td data-label="Role">Teaching Assistant (Dr. Shaikh Faruque Ali)</td><td data-label="Period">Jul&ndash;Nov 2016</td></tr><tr><td data-label="Course / activity">AM5340: Stochastic Processes in Structural Mechanics</td><td data-label="Role">Teaching Assistant (Prof. Sayan Gupta)</td><td data-label="Period">Jan&ndash;May 2017</td></tr><tr><td data-label="Course / activity">AM5600: Computational Methods in Mechanics</td><td data-label="Role">Teaching Assistant (Prof. Sayan Gupta)</td><td data-label="Period">Jul&ndash;Nov 2017</td></tr><tr><td data-label="Course / activity">AM5810: Computational Lab</td><td data-label="Role">Teaching Assistant (Prof. Sayan Gupta; Dr. Ilaksh Adlakha)</td><td data-label="Period">Jul&ndash;Nov 2017, Jul&ndash;Nov 2018</td></tr></tbody></table></div>
+            </section>
+            <p class="theme-top"><a href="#research-themes">Back to teaching ↑</a></p>
+            </details>
+
+            <h2 class="fund-group" id="workshops">Workshops &amp; Training</h2>
+            <p class="fund-group-intro">Hands-on training in computational fluid dynamics, OpenFOAM and high-performance computing for students and early-career researchers.</p>
+            <div class="sv-feature sv-feature-wide">
+               <span class="sv-feature-video"><iframe src="https://www.youtube-nocookie.com/embed/frlJUoqUp0c" title="OpenFOAM: coding and compiling your own solver, with hands-on tutorial (UKACM &amp; GACM Autumn School 2025)" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
+               <span class="sv-feature-body">
+                  <span class="sv-feature-tag">Highlight &middot; Autumn school</span>
+                  <a class="sv-feature-title" href="https://www.ukacm-gacm-school.net/content/openfoam" target="_blank" rel="noopener">UKACM &amp; GACM Autumn School 2025: Open-Source Codes for High-Performance Computing</a>
+                  <span class="sv-feature-desc">Dr Chandan Bose organised and taught the OpenFOAM day of this free, online autumn school run by the UK Association for Computational Mechanics (UKACM) and the German Association for Computational Mechanics (GACM), 29 September &ndash; 2 October 2025. Together with Dr Emad Tandis (Aston University), Prof. Philip Cardiff (University College Dublin) and Dr Ivan Batistic (University of Zagreb), he led sessions on computational fluid and solid dynamics with OpenFOAM, from a first CFD simulation and custom solver development to stress analysis of flexible structures and full fluid-structure interaction simulations with the solids4foam toolbox.</span>
+                  <span class="sv-feature-stats"><a href="https://www.ukacm-gacm-school.net/schedule" target="_blank" rel="noopener"><b>4</b> days online</a><a href="https://www.ukacm-gacm-school.net/content" target="_blank" rel="noopener"><b>3</b> open-source code tracks</a><a href="https://www.ukacm-gacm-school.net/speakers/openfoam" target="_blank" rel="noopener"><b>4</b> OpenFOAM day speakers</a></span>
+                  <a class="sv-feature-more" href="https://youtu.be/frlJUoqUp0c" target="_blank" rel="noopener">Watch the tutorial on coding and compiling your own OpenFOAM solver on YouTube &rarr;</a>
+               </span>
+            </div>
+            <div class="fund-hpc-wrap"><table class="fund-hpc te-table"><thead><tr><th scope="col">Date</th><th scope="col">Workshop</th><th scope="col">Organiser and role</th></tr></thead><tbody><tr><td data-label="Date"><span class="te-date">Jan 2026</span></td><td data-label="Workshop">Advanced OpenFOAM Workshop (in person, 25+ participants)</td><td data-label="Organiser and role">FOSSEE, IIT Bombay &mdash; organiser and resource person</td></tr><tr><td data-label="Date"><span class="te-date">Nov 2025</span></td><td data-label="Workshop">Online Industry Readiness Workshop on Computational Fluid Dynamics (one week, 300+ participants)</td><td data-label="Organiser and role">FOSSEE, IIT Bombay &mdash; organiser</td></tr><tr><td data-label="Date"><span class="te-date">Oct 2025</span></td><td data-label="Workshop">Open-Source Codes for High-Performance Computing (OpenFOAM)</td><td data-label="Organiser and role">UKACM&ndash;GACM Autumn School 2025 &mdash; organiser and trainer</td></tr><tr><td data-label="Date"><span class="te-date">Feb 2024</span></td><td data-label="Workshop">Tackling CFD and Heat Transfer Problems using OpenFOAM (six days, 125+ participants)</td><td data-label="Organiser and role">FOSSEE, IIT Bombay &mdash; resource person</td></tr><tr><td data-label="Date"><span class="te-date">Jul 2022</span></td><td data-label="Workshop">OpenFOAM Training Session, OpenFOAM Workshop 2022</td><td data-label="Organiser and role">University of Cambridge &mdash; resource person</td></tr><tr><td data-label="Date"><span class="te-date">Aug 2021</span></td><td data-label="Workshop">Networks and Dynamical Systems Workshop (online)</td><td data-label="Organiser and role">Complex Systems and Dynamics, IIT Madras &mdash; resource person</td></tr><tr><td data-label="Date"><span class="te-date">Feb 2021</span></td><td data-label="Workshop">Computational Fluid Dynamics using OpenFOAM (three days, 125+ participants)</td><td data-label="Organiser and role">FOSSEE, IIT Bombay &mdash; resource person</td></tr><tr><td data-label="Date"><span class="te-date">Dec 2020</span></td><td data-label="Workshop">HPC Workshop on Computational Fluid Dynamics (online)</td><td data-label="Organiser and role">National Supercomputing Mission, IIT Madras &mdash; resource person</td></tr><tr><td data-label="Date"><span class="te-date">Sep 2018</span></td><td data-label="Workshop">Introduction to CFD using OpenFOAM (two days, 15 participants)</td><td data-label="Organiser and role">National Institute of Engineering, Mysuru &mdash; organiser and resource person</td></tr></tbody></table></div>
+            <p class="te-more">Research students supervised by Dr Bose are listed on the <a href="BioFSILab.html">People</a> page.</p>
+            <p class="theme-top"><a href="#research-themes">Back to teaching ↑</a></p>
+         </section>
+         <!-- END TEACHING -->
+
+
+   <footer id="footer">
+         <div class="site-footer">
+            <div class="site-footer-cols">
+               <div class="site-footer-col">
+                  <p class="site-footer-title">BioFSILab</p>
+                  <address>Bio-Inspired Fluid&ndash;Structure Interaction Laboratory<br><b>Office:</b> Room No. 1B27, Met &amp; Mat Building (G6)<br>Aerospace Engineering, School of Metallurgy and Materials<br>University of Birmingham, Edgbaston, Birmingham, B15 2TT, United Kingdom</address>
+               </div>
+               <div class="site-footer-col">
+                  <p class="site-footer-title">Contact</p>
+                  <p><a href="mailto:c.bose@bham.ac.uk"><i class="fa fa-envelope" aria-hidden="true"></i> c.bose@bham.ac.uk</a><br><a href="mailto:cb.ju.1991@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> cb.ju.1991@gmail.com</a></p>
+               </div>
+               <div class="site-footer-col">
+                  <p class="site-footer-title">Follow</p>
+                  <ul class="site-footer-social">
+                     <li><a href="https://www.linkedin.com/in/cbose1991/" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     <li><a href="https://github.com/BioFSILab" aria-label="GitHub" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                     <li><a href="https://scholar.google.com/citations?user=pj618AMAAAAJ&amp;hl=en" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a></li>
+                     <li><a href="https://twitter.com/cbose1991" aria-label="X (Twitter)" title="X (Twitter)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.researchgate.net/profile/Chandan_Bose3" aria-label="ResearchGate" title="ResearchGate"><i class="ai ai-researchgate" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.youtube.com/channel/UCV1hlegAWgRIZiY8fJZVQgw" aria-label="OpenFOAM Tutorials on YouTube" title="OpenFOAM Tutorials on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                  </ul>
                </div>
             </div>
+            <p class="site-footer-copy">&copy; <span class="footer-year">2026</span> Chandan Bose &middot; All rights reserved</p>
          </div>
+         <script>(function(){var y=new Date().getFullYear();Array.prototype.forEach.call(document.querySelectorAll('.footer-year'),function(e){e.textContent=y;});}());</script>
       </footer>
-      </div>
-
+   </div>
+     
       <!-- Javascript files -->
       <script src="../js/jquery-1.9.1.min.js"></script>
       <script src="../js/bootstrap.min.js"></script>
       <script> $('#main-carousel').carousel(); </script>
-   </body>
+
+<script id="research-theme-tabs">
+(function () {
+  'use strict';
+  var root = document.getElementById('research-themes');
+  if (!root) return;
+  var links = root.querySelectorAll('.research-index a[href^="#"]');
+  function highlightCurrentLink() {
+    var hash = window.location.hash;
+    Array.prototype.forEach.call(links, function (link) {
+      if (link.getAttribute('href') === hash) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+  // Native anchor navigation keeps every description visible and supports
+  // direct links, keyboard navigation and the browser Back/Forward buttons.
+  function openPrevious() {
+    var d = document.getElementById('previous-teaching');
+    if (d && window.location.hash === '#previous-teaching') { d.open = true; }
+  }
+  highlightCurrentLink();
+  openPrevious();
+  window.addEventListener('hashchange', function () { highlightCurrentLink(); openPrevious(); });
+  Array.prototype.forEach.call(links, function (link) {
+    if (link.getAttribute('href') === '#previous-teaching') {
+      link.addEventListener('click', function () { var d = document.getElementById('previous-teaching'); if (d) d.open = true; });
+    }
+  });
+}());
+</script>
+
+      <script src="../js/mobile-menu.js"></script>
+</body>
 </html>
 

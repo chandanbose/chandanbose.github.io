@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+      <meta charset="utf-8">
+      <title>Fluid Art | BioFSI Lab</title>
+      <!-- BEGIN SEO / link previews -->
+      <meta name="description" content="Fluid art from the BioFSI Lab: award-winning posters, flow-visualisation videos and a gallery of simulation images of vortices, wakes and bio-inspired flows.">
+      <link rel="canonical" href="https://chandanbose.com/html/fluid_art.html">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="BioFSI Lab – Dr Chandan Bose">
+      <meta property="og:title" content="Fluid Art | BioFSI Lab">
+      <meta property="og:description" content="Fluid art from the BioFSI Lab: award-winning posters, flow-visualisation videos and a gallery of simulation images of vortices, wakes and bio-inspired flows.">
+      <meta property="og:url" content="https://chandanbose.com/html/fluid_art.html">
+      <meta property="og:image" content="https://chandanbose.com/pictures/images/social-preview.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:image:alt" content="Simulations of bio-inspired flows from the BioFSI Lab: butterfly swarm, squid-inspired nozzle, morphing wings and vortex wakes">
+      <meta property="og:locale" content="en_GB">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:creator" content="@cbose1991">
+      <meta name="twitter:title" content="Fluid Art | BioFSI Lab">
+      <meta name="twitter:description" content="Fluid art from the BioFSI Lab: award-winning posters, flow-visualisation videos and a gallery of simulation images of vortices, wakes and bio-inspired flows.">
+      <meta name="twitter:image" content="https://chandanbose.com/pictures/images/social-preview.jpg">
+      <meta name="twitter:image:alt" content="Simulations of bio-inspired flows from the BioFSI Lab: butterfly swarm, squid-inspired nozzle, morphing wings and vortex wakes">
+      <!-- END SEO / link previews -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Dr. Chandan Bose">
+      <meta name="keywords" content="Chandan Bose">
+   <link rel="icon" href="../pictures/images/BioFSI_Lab_Logo.png">
+      
+   <!-- Le styles -->
+   <link href="../css/bootstrap.min.css" rel="stylesheet">
+   <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+   <link href="../css/theme.css" rel="stylesheet">
+   <link href="../css/animate.css" rel="stylesheet">
+   <link href="../css/style.css" rel="stylesheet">
+      <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+   
+   <!-- Research theme styles are scoped to preserve the existing team layout. -->
+   <style id="research-theme-styles">
+      .research-themes { max-width: 1000px; margin: 24px auto 40px; padding: 0 10px; box-sizing: border-box; font-family: 'Times New Roman', Times, serif; color: #333; }
+
+
+      .research-themes a { color: #1e40af; }
+      .research-themes a:focus-visible { outline: 2px solid #1e3a8a; outline-offset: 3px; }
+      .research-themes h3 { font-size: 22px; line-height: 1.35; margin: 26px 0 10px; font-weight: 600; }
+      .research-themes .theme-rule { border: 0; height: 2px; background: #1e3a8a; margin: 0 0 12px; }
+      .research-themes .research-theme-table { width: 100%; table-layout: fixed; border-spacing: 10px; border-collapse: separate; }
+      .research-themes .theme-image-cell { width: 35%; vertical-align: top; }
+      .research-themes .theme-copy-cell { vertical-align: top; }
+      .research-themes .theme-image { display: block; width: 100%; height: auto; aspect-ratio: 32 / 23; object-fit: cover; border-radius: 3px; background: #eef2f4; }
+      .research-themes .theme-image-note { font-size: 11px; line-height: 1.4; color: #666; margin: 6px 0 0; }
+      .research-themes .theme-description { font-size: 14px; line-height: 1.75; margin: 0 0 12px; }
+      .research-themes .theme-reference-title { color: #1e3a8a; font-size: 14px; margin: 16px 0 8px; }
+      .research-themes .theme-references { margin: 0; padding: 0; list-style: none; }
+      .research-themes .theme-references li { font-size: 13px; line-height: 1.65; padding-left: 22px; text-indent: -22px; margin: 0 0 12px; overflow-wrap: anywhere; }
+      .research-themes .theme-status { font-size: 13px; line-height: 1.65; color: #666; font-style: italic; }
+      .research-themes .theme-top { font-size: 12px; text-align: right; margin: 4px 10px 22px; }
+      @media (max-width: 680px) {
+         .research-themes { padding: 0 8px; }
+         .research-themes h3 { font-size: 20px; }
+         .research-themes .research-theme-table, .research-themes .research-theme-table tbody, .research-themes .research-theme-table tr, .research-themes .research-theme-table td { display: block; width: 100%; box-sizing: border-box; }
+         .research-themes .theme-image-cell { padding: 0 0 16px; }
+         .research-themes .theme-image { max-width: 440px; }
+         .research-themes .theme-copy-cell { padding: 0; }
+      }
+
+      /* Research-theme tabs; each link also works as an anchor without JavaScript. */
+      .research-themes #research-themes-title { color: #1e3a8a; font-size: 28px; line-height: 1.25; margin: 0 0 18px; padding-bottom: 12px; border-bottom: 2px solid #1e3a8a; }
+      .research-themes .research-index { margin: 0 0 30px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+      .research-themes .research-index li { display: flex; margin: 0; padding: 0; font-size: 14px; min-width: 0; }
+      .research-themes .research-index a { display: flex; align-items: center; justify-content: center; flex: 1; box-sizing: border-box; min-height: 48px; padding: 11px 14px; border: 1px solid #d9dfe5; border-radius: 6px; background: #f5f7f9; color: #334155; font-weight: 600; line-height: 1.45; text-align: center; text-decoration: none; overflow-wrap: anywhere; transition: background-color .18s ease, color .18s ease, border-color .18s ease; }
+      .research-themes .research-index a:hover { background: #edf1fa; border-color: #7b93c9; color: #1e40af; text-decoration: none; }
+      .research-themes .research-index a[aria-current="location"] { background: #1e3a8a; border-color: #1e3a8a; color: #fff; }
+      .research-themes .research-index a:focus-visible { outline: 3px solid #1e40af; outline-offset: 3px; }
+
+      .research-themes .research-theme { scroll-margin-top: 20px; }
+      @media (max-width: 680px) {
+         .research-themes #research-themes-title { font-size: 25px; }
+         .research-themes .research-index { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+         .research-themes .research-index li:nth-child(n+10) { grid-column: 1 / -1; }
+         .research-themes .research-index a { font-size: 13px; padding: 10px; }
+      }
+      @media print {
+         .research-themes .research-index, .research-themes .theme-top { display: none; }
+
+      }
+   </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+   <style id="fluid-art-styles">
+      .fluid-art .fa-intro { font-size: 17px; line-height: 1.6; color: #444; margin: -6px 0 22px; }
+      .fluid-art .fa-title { display: block; font-weight: bold; font-size: 16px; line-height: 1.35; color: #1f2a37; }
+      .fluid-art .fa-meta { display: block; margin-top: 4px; font-size: 13px; line-height: 1.5; color: #5b6673; }
+      .fluid-art figure { margin: 0; }
+      .fluid-art figcaption { padding: 10px 2px 0; }
+      /* Posters */
+      .fa-poster-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 6px 0 10px; }
+      .fa-poster-open { position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: 8px; overflow: hidden; background: #0b0f17; cursor: zoom-in; aspect-ratio: 3 / 4; }
+      .fa-poster-open img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .3s; }
+      .fa-poster-open:hover img, .fa-poster-open:focus-visible img { transform: scale(1.03); }
+      .fa-zoom { position: absolute; right: 10px; bottom: 10px; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.9); color: #1e3a8a; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+      /* Videos */
+      .fa-video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 6px 0 10px; }
+      .fa-yt, .fa-video iframe { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 8px; overflow: hidden; }
+      .fa-local-video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; background: #000; object-fit: contain; }
+      .fa-yt { padding: 0; cursor: pointer; background: #000 center / cover no-repeat; }
+      .fa-play { position: absolute; left: 50%; top: 50%; width: 68px; height: 48px; margin: -24px 0 0 -34px; border-radius: 12px; background: rgba(204,0,0,.9); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 22px; transition: background .2s, transform .2s; }
+      .fa-yt:hover .fa-play, .fa-yt:focus-visible .fa-play { background: #f00; transform: scale(1.08); }
+      .fluid-art .fa-more { margin: 8px 0 0; font-weight: bold; }
+      /* Slideshow */
+      .fa-slideshow { position: relative; border-radius: 10px; overflow: hidden; background: #000; margin: 6px 0 10px; }
+      .fa-slides { position: relative; aspect-ratio: 16 / 9; }
+      .fa-slide { position: absolute; inset: 0; display: flex; flex-direction: column; opacity: 0; transition: opacity .7s ease; }
+      .fa-slide.is-active { opacity: 1; }
+      .fa-slide[hidden] { display: flex; visibility: hidden; }
+      .fa-slide img { flex: 1; min-height: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
+      .fa-slide figcaption { position: absolute; left: 0; right: 0; bottom: 0; line-height: 1.45; padding: 40px 70px 46px 18px; background: linear-gradient(transparent, rgba(0,0,0,.75)); color: #fff; font-size: 15px; }
+      .fa-slide figcaption a { color: #c7d7ff; }
+      .fa-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(255,255,255,.18); color: #fff; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+      .fa-nav:hover, .fa-nav:focus-visible { background: rgba(255,255,255,.35); }
+      .fa-prev { left: 12px; } .fa-next { right: 12px; }
+      .fa-controls { position: absolute; left: 0; right: 0; bottom: 12px; display: flex; justify-content: center; align-items: center; gap: 14px; }
+      .fa-dots { display: flex; gap: 7px; }
+      .fa-dots button { width: 10px; height: 10px; padding: 0; border: 1px solid rgba(255,255,255,.8); border-radius: 50%; background: transparent; cursor: pointer; }
+      .fa-dots button[aria-current="true"] { background: #fff; }
+      .fa-pause { width: 28px; height: 28px; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; background: transparent; color: #fff; font-size: 11px; cursor: pointer; }
+      .fa-slideshow button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+      /* Lightbox */
+      .fa-lightbox { position: fixed; inset: 0; margin: auto; width: fit-content; height: fit-content; max-width: min(92vw, 1000px); max-height: 92vh; padding: 14px; border: 0; border-radius: 10px; background: #111; color: #eee; }
+      .fa-lightbox::backdrop { background: rgba(0,0,0,.8); }
+      .fa-lightbox img { display: block; max-width: 100%; max-height: calc(92vh - 90px); margin: 0 auto; }
+      .fa-lightbox-cap { margin: 10px 0 0; text-align: center; font-size: 15px; }
+      .fa-lightbox-close { position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: rgba(255,255,255,.15); color: #fff; font-size: 18px; cursor: pointer; }
+      @media (max-width: 900px) { .fa-poster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+      @media (max-width: 680px) {
+         .fa-poster-grid, .fa-video-grid { grid-template-columns: 1fr; }
+         .fa-slides { aspect-ratio: 4 / 3; }
+         .fa-slide figcaption { font-size: 13px; padding: 26px 12px 42px; }
+         .fluid-art .research-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      }
+      @media (prefers-reduced-motion: reduce) { .fa-slide { transition: none; } .fa-poster-open img { transition: none; } }
+   </style>
+</head>
+   
+   <body>
+      <div class="container">
+         <a href="#">
+            <img width="1000px" src="../pictures/images/cover-BioFSILab-2026-1.png" class="img-responsive animated pulse">
+         </a>
+         <!--header class="jumbotron subhead" id="overview">
+            <h1> Dr. Chandan Bose </h1-->
+            <!--p class="lead"> Postdoctoral Research Associate </p>
+            <h> University of LiÃ¨ge </h -->
+         <!--/header-->
+         <!--div class="masthead">
+            <div class="navbar">
+               <div class="navbar-inner">
+                  <div class="container">
+                     <ul class="nav">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="biography.html">Profile</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="awards.html">Recognitions</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div-->
+
+         <div class="container">
+            <section id="intro">
+                           <ul class="nav_ul">
+                              <li><a href="home.html">Home</a></li>
+                           <li><a href="BioFSILab.html">People</a>
+                           <!--ul>
+                              <li><a href="biography.html"> Dr Chandan Bose </a></li>
+                              <li><a href="BioFSILab.html">BioFSILab Members</a></li>
+                           </ul-->
+                           </li>
+                           <li><a href="research_themes.html">Research</a>
+                           <!--ul>
+                              <li><a href="academic_projects.html">Ongoing Research</a></li>
+                              <li><a href="funded_projects.html">Grants</a></li>
+                              <li><a href="collaborators.html">Collaborators</a></li>
+                           </ul-->
+                              </li>
+                           <li><a href="funded_projects.html">Projects</a></li>
+                           <li><a href="journals.html">Publications</a>
+                              <ul>
+                                 <li><a href="journals.html">Journal Articles</a></li>
+                                 <li><a href="conferences.html">Conference Publications</a></li>
+                              </ul>
+                              <!--ul>
+                                 <li><a href="journals.html">Journal Articles</a></li>
+                                 <li><a href="proceedings.html">Proceedings</a></li>
+                                 <li><a href="chapters.html">Book Chapters</a></li>
+                                 <li><a href="conferences.html">Conference Presentations</a></li>
+                              </ul-->
+                              </li>
+                           <li class="active"><a href="fluid_art.html">Fluid Art</a></li>
+                           <li><a href="collaborators.html">Collaborators</a></li>
+                           <li><a href="teaching.html">Teaching</a></li>
+                           <li><a href="reviewer.html">Community</a></li>
+                           <li><a href="news.html">News</a></li>
+                           <li><a href="press.html">Press</a></li>
+                           <li><a href="open_positions.html">Positions</a></li>
+                           <!--li><a href="awards.html">Recognitions</a>
+                              <ul>
+                                 <li><a href="awards.html">Awards/ Honors</a></li>
+                                 <li><a href="reviewer.html">Academic Service</a></li>
+                                 <li><a href="invited.html">Invited Talks</a></li>
+                              </ul>
+                              </li-->
+                              <!--li><a href="course_teaching.html">Teaching</a>
+                              <ul>
+                                 <li><a href="course_teaching.html">Assisting Courses</a></li>
+                                 <li><a href="mentoring.html">Mentoring</a></li>
+                                 <li><a href="codes.html">Codes/ Tutorials</a></li>
+                              </ul>
+                              </li>
+                              <li><a href="media.html">Miscellaneous</a>
+                                 <ul>
+                                    <li><a href="media.html">Media</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                 </ul>
+                              </li>
+                           </ul-->
+                           </ul>
+            </section>
+         </div>
+
+         <!-- <br/> -->
+         <!-- <br/> -->
+         <!-- <br/> -->
+
+
+         <!-- BEGIN FLUID ART: add posters, videos (YouTube IDs) and slides by copying an existing item. -->
+         <section id="research-themes" class="research-themes fluid-art" aria-labelledby="research-themes-title">
+            <h2 id="research-themes-title">Fluid Art</h2>
+            <p class="fa-intro">Flow visualisation sits where science meets art. These posters, videos and images come from BioFSILab&rsquo;s simulations of vortices, wakes and bio-inspired flows.</p>
+            <nav aria-label="Fluid art sections"><ul class="research-index">
+               <li><a href="#gallery">Image Gallery</a></li>
+               <li><a href="#posters">Posters</a></li>
+               <li><a href="#videos">Videos</a></li>
+            </ul></nav>
+
+            <section class="research-theme" id="gallery" aria-labelledby="gallery-title">
+               <h3 id="gallery-title">Image Gallery</h3>
+               <hr class="theme-rule">
+               <div class="fa-slideshow" aria-roledescription="carousel" aria-label="Simulation image gallery">
+                  <div class="fa-slides" aria-live="polite">
+                  <figure class="fa-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 12">
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2024-porous-disc-vortex-ring.webp" alt="Separated vortex ring above a three-dimensional porous disc" loading="eager" decoding="async">
+                     <figcaption><strong>Separated vortex ring above a three-dimensional porous disc</strong><br>Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2024-image-comp/" target="_blank" rel="noopener">ARCHER2 2024 &middot; Winning Early Career entry</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="2 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2025-reverse-karman-morphing-wing.webp" alt="Formation of a reverse Karman vortex street in the wake of a morphing wing" loading="lazy" decoding="async">
+                     <figcaption><strong>Formation of a reverse K&aacute;rm&aacute;n vortex street in the wake of a morphing wing</strong><br>Hibah Saddal and Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">ARCHER2 2025 &middot; Winning Image</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="3 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2026-wake-deflection-flexible-te.webp" alt="Chaos in the vortex street: wake deflection by a partially flexible trailing edge" loading="lazy" decoding="async">
+                     <figcaption><strong>Chaos in the vortex street: wake deflection by a partially flexible trailing edge</strong><br>Hibah Saddal &middot; <a href="https://www.archer2.ac.uk/about/gallery/2026-image-comp/" target="_blank" rel="noopener">ARCHER2 2026</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="4 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2026-graded-flexibility-vortical-gust.webp" alt="Bending with the vortex: morphing response of a foil with graded chordwise flexibility to a vortical gust" loading="lazy" decoding="async">
+                     <figcaption><strong>Bending with the vortex: morphing response of a foil with graded chordwise flexibility to a vortical gust</strong><br>Hibah Saddal &middot; <a href="https://www.archer2.ac.uk/about/gallery/2026-image-comp/" target="_blank" rel="noopener">ARCHER2 2026</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="5 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2025-swept-wings-vortex-evolution.webp" alt="Comparison of vortex evolution over pitching forward and backward swept wings" loading="lazy" decoding="async">
+                     <figcaption><strong>Comparison of vortex evolution over pitching forward and backward swept wings</strong><br>Ethan Warman, Lois Martin and Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">ARCHER2 2025</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="6 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2025-forward-swept-wing-vortices.webp" alt="Vortices in motion: the hidden dynamics of a pitching forward swept wing" loading="lazy" decoding="async">
+                     <figcaption><strong>Vortices in motion: the hidden dynamics of a pitching forward swept wing</strong><br>Ethan Warman, Lois Martin and Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">ARCHER2 2025</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="7 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2025-squid-flexible-nozzle.webp" alt="Squid-inspired flexible nozzle for underwater propulsion" loading="lazy" decoding="async">
+                     <figcaption><strong>Squid-inspired flexible nozzle for underwater propulsion</strong><br>Paras Singh, Daehyun Choi, Gourav Samal, Halley Wallace, Saad Bhamla and Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">ARCHER2 2025</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="8 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2025-bioinspired-vawt-wake.webp" alt="Wake dynamics of bio-inspired vertical-axis wind turbine rotors" loading="lazy" decoding="async">
+                     <figcaption><strong>Wake dynamics of bio-inspired vertical-axis wind turbine rotors</strong><br>Manu Aryal, Manabendra M. De and Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">ARCHER2 2025</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="9 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2025-covert-flap-lev.webp" alt="Unsteady evolution of leading-edge vortices from a covert-inspired flexible flap" loading="lazy" decoding="async">
+                     <figcaption><strong>Unsteady evolution of leading-edge vortices from a covert-inspired flexible flap</strong><br>Hibah Saddal and Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">ARCHER2 2025</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="10 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2025-multiple-covert-flaps.webp" alt="Vortex shedding induced by multiple covert-inspired flaps" loading="lazy" decoding="async">
+                     <figcaption><strong>Vortex shedding induced by multiple covert-inspired flaps</strong><br>Hibah Saddal and Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">ARCHER2 2025</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="11 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2025-falcon-owl-gust.webp" alt="Flow around a peregrine falcon and barn owl during gust encounters" loading="lazy" decoding="async">
+                     <figcaption><strong>Flow around a peregrine falcon and barn owl during gust encounters</strong><br>Hibah Saddal, Lucky Jayswal and Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">ARCHER2 2025</a></figcaption>
+                  </figure>
+                  <figure class="fa-slide" role="group" aria-roledescription="slide" aria-label="12 of 12" hidden>
+                     <img src="../pictures/images/fluid-art/archer2/archer2-2025-deflected-wake-flexible-aerofoil.webp" alt="Deflected wake of a partially trailing-edge flexible aerofoil" loading="lazy" decoding="async">
+                     <figcaption><strong>Deflected wake of a partially trailing-edge flexible aerofoil</strong><br>Hibah Saddal and Chandan Bose &middot; <a href="https://www.archer2.ac.uk/about/gallery/2025-image-comp/" target="_blank" rel="noopener">ARCHER2 2025</a></figcaption>
+                  </figure>
+                  </div>
+                  <button type="button" class="fa-nav fa-prev" aria-label="Previous image"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                  <button type="button" class="fa-nav fa-next" aria-label="Next image"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                  <div class="fa-controls">
+                     <div class="fa-dots" role="group" aria-label="Choose image"></div>
+                     <button type="button" class="fa-pause" aria-label="Pause slideshow"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                  </div>
+               </div>
+               <p class="theme-top"><a href="#research-themes">Back to top &uarr;</a></p>
+            </section>
+
+            <section class="research-theme" id="posters" aria-labelledby="posters-title">
+               <h3 id="posters-title">Posters</h3>
+               <hr class="theme-rule">
+               <div class="fa-poster-grid">
+               <figure class="fa-poster">
+                  <button type="button" class="fa-poster-open" data-full="../pictures/images/fluid-art/gfm-2026-shergill-butterfly-wakes.webp" data-caption="Wing-Wake Interactions across Different Butterfly Species" aria-label="Enlarge: Wing-Wake Interactions across Different Butterfly Species">
+                     <img src="../pictures/images/fluid-art/gfm-2026-shergill-butterfly-wakes.webp" alt="Poster showing the wake of a Swallowtail-inspired butterfly wing at different phases of the flapping cycle" loading="lazy" decoding="async">
+                     <span class="fa-zoom" aria-hidden="true"><i class="fa fa-search-plus"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Wing-Wake Interactions across Different Butterfly Species</span><span class="fa-meta">Gallery of Fluid Motion poster, 2026 &middot; Arjun Shergill, Siddharth D. Sharma, Somnath Roy and Chandan Bose</span></figcaption>
+               </figure>
+               <figure class="fa-poster">
+                  <button type="button" class="fa-poster-open" data-full="../pictures/images/fluid-art/gfm-2026-karki-owl-wing.webp" data-caption="Wake Dynamics of an Actively Deforming Owl Wing" aria-label="Enlarge: Wake Dynamics of an Actively Deforming Owl Wing">
+                     <img src="../pictures/images/fluid-art/gfm-2026-karki-owl-wing.webp" alt="Poster showing vortex structures shed by an actively deforming owl-inspired wing during the downstroke and upstroke" loading="lazy" decoding="async">
+                     <span class="fa-zoom" aria-hidden="true"><i class="fa fa-search-plus"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Wake Dynamics of an Actively Deforming Owl Wing</span><span class="fa-meta">Gallery of Fluid Motion poster, 2026 &middot; Yukesh Karki and Chandan Bose</span></figcaption>
+               </figure>
+               <figure class="fa-poster">
+                  <button type="button" class="fa-poster-open" data-full="../pictures/images/fluid-art/gfm-2026-saddal-morphing-foils.webp" data-caption="Vortical Gust Interaction of Morphing Foils with Graded Chordwise Flexibility" aria-label="Enlarge: Vortical Gust Interaction of Morphing Foils with Graded Chordwise Flexibility">
+                     <img src="../pictures/images/fluid-art/gfm-2026-saddal-morphing-foils.webp" alt="Poster showing a vortex ring interacting with a flexible morphing foil, in glowing blue" loading="lazy" decoding="async">
+                     <span class="fa-zoom" aria-hidden="true"><i class="fa fa-search-plus"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Vortical Gust Interaction of Morphing Foils with Graded Chordwise Flexibility</span><span class="fa-meta">Gallery of Fluid Motion poster, 2026 &middot; Hibah Saddal and Chandan Bose</span></figcaption>
+               </figure>
+               <figure class="fa-poster">
+                  <button type="button" class="fa-poster-open" data-full="../pictures/images/fluid-art/gfm-poster-chaotic-manifolds.webp" data-caption="Chaotic Manifolds behind a Flapping Foil" aria-label="Enlarge: Chaotic Manifolds behind a Flapping Foil">
+                     <img src="../pictures/images/fluid-art/gfm-poster-chaotic-manifolds.webp" alt="Poster titled Chaotic Manifolds behind a Flapping Foil, showing ordered and chaotic vortex wakes behind a flapping foil" loading="lazy" decoding="async">
+                     <span class="fa-zoom" aria-hidden="true"><i class="fa fa-search-plus"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Chaotic Manifolds behind a Flapping Foil</span><span class="fa-meta">Gallery of Fluid Motion poster &middot; Chandan Bose, Sayan Gupta and Sunetra Sarkar, IIT Madras</span></figcaption>
+               </figure>
+               <figure class="fa-poster">
+                  <button type="button" class="fa-poster-open" data-full="../pictures/images/fluid-art/openfoam-journal-cover-2021.webp" data-caption="OpenFOAM Journal Cover, 2021" aria-label="Enlarge: OpenFOAM Journal Cover, 2021">
+                     <img src="../pictures/images/fluid-art/openfoam-journal-cover-2021.webp" alt="Cover of the OpenFOAM Journal featuring a flapping-foil wake simulation" loading="lazy" decoding="async">
+                     <span class="fa-zoom" aria-hidden="true"><i class="fa fa-search-plus"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">OpenFOAM Journal Cover, 2021</span><span class="fa-meta">Simulation featured on the cover of the OpenFOAM Journal, 2021</span></figcaption>
+               </figure>
+               <figure class="fa-poster">
+                  <button type="button" class="fa-poster-open" data-full="../pictures/images/fluid-art/openfoam-journal-cover-vol2-2022.webp" data-caption="OpenFOAM Journal Cover, Vol. 2 (2022)" aria-label="Enlarge: OpenFOAM Journal Cover, Vol. 2 (2022)">
+                     <img src="../pictures/images/fluid-art/openfoam-journal-cover-vol2-2022.webp" alt="Cover of the OpenFOAM Journal Vol. 2 (2022), showing streamlines of the recirculating wake behind a disk" loading="lazy" decoding="async">
+                     <span class="fa-zoom" aria-hidden="true"><i class="fa fa-search-plus"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">OpenFOAM Journal Cover, Vol. 2 (2022)</span><span class="fa-meta">Wake streamlines behind a disk on the cover of the <a href="https://journal.openfoam.com/index.php/ofj/issue/view/2" target="_blank" rel="noopener">OpenFOAM Journal, Vol. 2</a></span></figcaption>
+               </figure>
+               </div>
+               <p class="theme-top"><a href="#research-themes">Back to top &uarr;</a></p>
+            </section>
+
+            <section class="research-theme" id="videos" aria-labelledby="videos-title">
+               <h3 id="videos-title">Videos</h3>
+               <hr class="theme-rule">
+               <div class="fa-video-grid">
+               <figure class="fa-video">
+                  <video class="fa-local-video" autoplay muted loop playsinline preload="metadata" poster="../pictures/images/fluid-art/basic2026-butterfly-afterlife-poster.jpg" aria-label="The Aerodynamic Afterlife of a Butterfly's Wingbeat: vortex structures shed by a flapping butterfly">
+                     <source src="../pictures/images/fluid-art/basic2026-butterfly-afterlife.webm" type="video/webm">
+                     <source src="../pictures/images/fluid-art/basic2026-butterfly-afterlife.mp4" type="video/mp4">
+                  </video>
+                  <figcaption><span class="fa-title">The Aerodynamic Afterlife of a Butterfly&rsquo;s Wingbeat</span><span class="fa-meta">BASIC 2026 &middot; <strong>1st place, Best Video</strong> and 3rd place, Best Image (simulation category) &middot; Arjun Shergill and Chandan Bose, with support from Prof. Somnath Roy&rsquo;s group, IIT Kharagpur &middot; <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7475844649635479553/" target="_blank" rel="noopener">Read more</a></span></figcaption>
+               </figure>
+               <figure class="fa-video">
+                  <button type="button" class="fa-yt" data-yt="udwPrIiRMqQ" aria-label="Play video: Squid-Inspired Flexible Nozzle for Underwater Propulsion" style="background-image: url('https://i.ytimg.com/vi/udwPrIiRMqQ/hqdefault.jpg');">
+                     <span class="fa-play" aria-hidden="true"><i class="fa fa-play"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Squid-Inspired Flexible Nozzle for Underwater Propulsion</span><span class="fa-meta">APS DFD 2025 Gallery of Fluid Motion (V029) &middot; Paras Singh, Daehyun Choi, Halley J. Wallace, Gourav Samal, William Gilly, Saad Bhamla and Chandan Bose &middot; <a href="https://gfm.aps.org/meetings/dfd-2025/692e39eaa7f805227b16ff22" target="_blank" rel="noopener">Gallery entry</a> &middot; <a href="https://www.youtube.com/watch?v=udwPrIiRMqQ" target="_blank" rel="noopener">Watch on YouTube</a></span></figcaption>
+               </figure>
+               <figure class="fa-video">
+                  <button type="button" class="fa-yt" data-yt="4W8ahDmvPpM" aria-label="Play video: Transition from Order to Chaos in the Wake of a Flapping Airfoil" style="background-image: url('https://i.ytimg.com/vi/4W8ahDmvPpM/hqdefault.jpg');">
+                     <span class="fa-play" aria-hidden="true"><i class="fa fa-play"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Transition from Order to Chaos in the Wake of a Flapping Airfoil</span><span class="fa-meta">Gallery of Fluid Motion video &middot; <a href="https://www.youtube.com/watch?v=4W8ahDmvPpM" target="_blank" rel="noopener">Watch on YouTube</a></span></figcaption>
+               </figure>
+               <figure class="fa-video">
+                  <button type="button" class="fa-yt" data-yt="C0qfObGcraw" aria-label="Play video: Vortices in Motion: the Hidden Dynamics of a Pitching Forward Swept Wing" style="background-image: url('https://i.ytimg.com/vi/C0qfObGcraw/hqdefault.jpg');">
+                     <span class="fa-play" aria-hidden="true"><i class="fa fa-play"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Vortices in Motion: the Hidden Dynamics of a Pitching Forward Swept Wing</span><span class="fa-meta">ARCHER2 Image &amp; Video Competition 2025 &middot; Ethan Warman, Lois Martin and Chandan Bose &middot; <a href="https://www.youtube.com/watch?v=C0qfObGcraw" target="_blank" rel="noopener">Watch on YouTube</a></span></figcaption>
+               </figure>
+               <figure class="fa-video">
+                  <button type="button" class="fa-yt" data-yt="3AAw0SJhic8" aria-label="Play video: Squid-Inspired Flexible Nozzle for Underwater Propulsion (ARCHER2 entry)" style="background-image: url('https://i.ytimg.com/vi/3AAw0SJhic8/hqdefault.jpg');">
+                     <span class="fa-play" aria-hidden="true"><i class="fa fa-play"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Squid-Inspired Flexible Nozzle for Underwater Propulsion (ARCHER2 entry)</span><span class="fa-meta">ARCHER2 Image &amp; Video Competition 2025 &middot; Paras Singh, Daehyun Choi, Gourav Samal, Halley Wallace, Saad Bhamla and Chandan Bose &middot; <a href="https://www.youtube.com/watch?v=3AAw0SJhic8" target="_blank" rel="noopener">Watch on YouTube</a></span></figcaption>
+               </figure>
+               <figure class="fa-video">
+                  <button type="button" class="fa-yt" data-yt="2-va-Jqr-8o" aria-label="Play video: Wake Dynamics of Bio-Inspired Vertical Axis Wind Turbine Rotors" style="background-image: url('https://i.ytimg.com/vi/2-va-Jqr-8o/hqdefault.jpg');">
+                     <span class="fa-play" aria-hidden="true"><i class="fa fa-play"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Wake Dynamics of Bio-Inspired Vertical Axis Wind Turbine Rotors</span><span class="fa-meta">ARCHER2 Image &amp; Video Competition 2025 &middot; Manu Aryal, Manabendra M. De and Chandan Bose &middot; <a href="https://www.youtube.com/watch?v=2-va-Jqr-8o" target="_blank" rel="noopener">Watch on YouTube</a></span></figcaption>
+               </figure>
+               <figure class="fa-video">
+                  <button type="button" class="fa-yt" data-yt="zm3cR8h53Ao" aria-label="Play video: Flow Around a Peregrine Falcon and Barn Owl during Gust Encounters" style="background-image: url('https://i.ytimg.com/vi/zm3cR8h53Ao/hqdefault.jpg');">
+                     <span class="fa-play" aria-hidden="true"><i class="fa fa-play"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Flow Around a Peregrine Falcon and Barn Owl during Gust Encounters</span><span class="fa-meta">ARCHER2 Image &amp; Video Competition 2025 &middot; Hibah Saddal, Lucky Jayswal and Chandan Bose &middot; <a href="https://www.youtube.com/watch?v=zm3cR8h53Ao" target="_blank" rel="noopener">Watch on YouTube</a></span></figcaption>
+               </figure>
+               <figure class="fa-video">
+                  <button type="button" class="fa-yt" data-yt="_sM5pZun7X0" aria-label="Play video: Deflected Wake of a Partially Trailing-Edge Flexible Aerofoil" style="background-image: url('https://i.ytimg.com/vi/_sM5pZun7X0/hqdefault.jpg');">
+                     <span class="fa-play" aria-hidden="true"><i class="fa fa-play"></i></span>
+                  </button>
+                  <figcaption><span class="fa-title">Deflected Wake of a Partially Trailing-Edge Flexible Aerofoil</span><span class="fa-meta">ARCHER2 Image &amp; Video Competition 2025 &middot; Hibah Saddal and Chandan Bose &middot; <a href="https://www.youtube.com/watch?v=_sM5pZun7X0" target="_blank" rel="noopener">Watch on YouTube</a></span></figcaption>
+               </figure>
+               </div>
+               <p class="fa-more"><a href="https://www.youtube.com/channel/UCV1hlegAWgRIZiY8fJZVQgw" target="_blank" rel="noopener"><i class="fa fa-youtube-play" aria-hidden="true"></i> More on our YouTube channel, including OpenFOAM tutorials &rarr;</a></p>
+               <p class="theme-top"><a href="#research-themes">Back to top &uarr;</a></p>
+            </section>
+
+         </section>
+
+         <dialog class="fa-lightbox" id="fa-lightbox" aria-label="Enlarged poster">
+            <button type="button" class="fa-lightbox-close" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <img src="" alt="">
+            <p class="fa-lightbox-cap"></p>
+         </dialog>
+         <!-- END FLUID ART -->
+
+
+   <footer id="footer">
+         <div class="site-footer">
+            <div class="site-footer-cols">
+               <div class="site-footer-col">
+                  <p class="site-footer-title">BioFSILab</p>
+                  <address>Bio-Inspired Fluid&ndash;Structure Interaction Laboratory<br><b>Office:</b> Room No. 1B27, Met &amp; Mat Building (G6)<br>Aerospace Engineering, School of Metallurgy and Materials<br>University of Birmingham, Edgbaston, Birmingham, B15 2TT, United Kingdom</address>
+               </div>
+               <div class="site-footer-col">
+                  <p class="site-footer-title">Contact</p>
+                  <p><a href="mailto:c.bose@bham.ac.uk"><i class="fa fa-envelope" aria-hidden="true"></i> c.bose@bham.ac.uk</a><br><a href="mailto:cb.ju.1991@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> cb.ju.1991@gmail.com</a></p>
+               </div>
+               <div class="site-footer-col">
+                  <p class="site-footer-title">Follow</p>
+                  <ul class="site-footer-social">
+                     <li><a href="https://www.linkedin.com/in/cbose1991/" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     <li><a href="https://github.com/BioFSILab" aria-label="GitHub" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                     <li><a href="https://scholar.google.com/citations?user=pj618AMAAAAJ&amp;hl=en" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a></li>
+                     <li><a href="https://twitter.com/cbose1991" aria-label="X (Twitter)" title="X (Twitter)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.researchgate.net/profile/Chandan_Bose3" aria-label="ResearchGate" title="ResearchGate"><i class="ai ai-researchgate" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.youtube.com/channel/UCV1hlegAWgRIZiY8fJZVQgw" aria-label="OpenFOAM Tutorials on YouTube" title="OpenFOAM Tutorials on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+            <p class="site-footer-copy">&copy; <span class="footer-year">2026</span> Chandan Bose &middot; All rights reserved</p>
+         </div>
+         <script>(function(){var y=new Date().getFullYear();Array.prototype.forEach.call(document.querySelectorAll('.footer-year'),function(e){e.textContent=y;});}());</script>
+      </footer>
+   </div>
+     
+      <!-- Javascript files -->
+      <script src="../js/jquery-1.9.1.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script> $('#main-carousel').carousel(); </script>
+
+<script id="research-theme-tabs">
+(function () {
+  'use strict';
+  var root = document.getElementById('research-themes');
+  if (!root) return;
+  var links = root.querySelectorAll('.research-index a[href^="#"]');
+  function highlightCurrentLink() {
+    var hash = window.location.hash;
+    Array.prototype.forEach.call(links, function (link) {
+      if (link.getAttribute('href') === hash) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+  // Native anchor navigation keeps every description visible and supports
+  // direct links, keyboard navigation and the browser Back/Forward buttons.
+  highlightCurrentLink();
+  window.addEventListener('hashchange', highlightCurrentLink);
+}());
+</script>
+
+      <script src="../js/mobile-menu.js"></script>
+
+<script id="fluid-art-script">
+(function () {
+  'use strict';
+  // Respect reduced-motion: don't autoplay looping videos
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('.fa-local-video'), function (v) { v.removeAttribute('autoplay'); v.pause(); v.setAttribute('controls', ''); });
+  }
+  // Click-to-play YouTube (loads the player only when asked)
+  Array.prototype.forEach.call(document.querySelectorAll('.fa-yt'), function (btn) {
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + btn.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      f.title = btn.getAttribute('aria-label').replace(/^Play video: /, '');
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen = true;
+      btn.parentNode.replaceChild(f, btn);
+    });
+  });
+  // Poster lightbox
+  var box = document.getElementById('fa-lightbox');
+  if (box && typeof box.showModal === 'function') {
+    var bImg = box.querySelector('img'), bCap = box.querySelector('.fa-lightbox-cap');
+    Array.prototype.forEach.call(document.querySelectorAll('.fa-poster-open'), function (btn) {
+      btn.addEventListener('click', function () {
+        var img = btn.querySelector('img');
+        bImg.src = btn.getAttribute('data-full'); bImg.alt = img.alt;
+        bCap.innerHTML = btn.getAttribute('data-caption');
+        box.showModal();
+      });
+    });
+    box.querySelector('.fa-lightbox-close').addEventListener('click', function () { box.close(); });
+    box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+  } else {
+    Array.prototype.forEach.call(document.querySelectorAll('.fa-poster-open'), function (btn) {
+      btn.addEventListener('click', function () { window.open(btn.getAttribute('data-full'), '_blank'); });
+    });
+  }
+  // Slideshow
+  var show = document.querySelector('.fa-slideshow');
+  if (!show) return;
+  var slides = show.querySelectorAll('.fa-slide'), dots = show.querySelector('.fa-dots');
+  var pauseBtn = show.querySelector('.fa-pause'), i = 0, timer = null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var playing = !reduce;
+  Array.prototype.forEach.call(slides, function (s, k) {
+    var d = document.createElement('button');
+    d.type = 'button'; d.setAttribute('aria-label', 'Show image ' + (k + 1));
+    d.addEventListener('click', function () { go(k); restart(); });
+    dots.appendChild(d);
+  });
+  function go(n) {
+    i = (n + slides.length) % slides.length;
+    Array.prototype.forEach.call(slides, function (s, k) {
+      var on = k === i;
+      s.classList.toggle('is-active', on);
+      if (on) { s.removeAttribute('hidden'); var im = s.querySelector('img'); if (im) im.loading = 'eager'; }
+      else s.setAttribute('hidden', '');
+    });
+    Array.prototype.forEach.call(dots.children, function (d, k) { d.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+  }
+  function restart() { clearInterval(timer); if (playing) timer = setInterval(function () { go(i + 1); }, 5000); }
+  function setPlaying(p) {
+    playing = p; pauseBtn.innerHTML = '<i class="fa fa-' + (p ? 'pause' : 'play') + '" aria-hidden="true"></i>';
+    pauseBtn.setAttribute('aria-label', p ? 'Pause slideshow' : 'Play slideshow'); restart();
+  }
+  show.querySelector('.fa-prev').addEventListener('click', function () { go(i - 1); restart(); });
+  show.querySelector('.fa-next').addEventListener('click', function () { go(i + 1); restart(); });
+  pauseBtn.addEventListener('click', function () { setPlaying(!playing); });
+  show.addEventListener('mouseenter', function () { clearInterval(timer); });
+  show.addEventListener('mouseleave', restart);
+  show.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { go(i - 1); restart(); } else if (e.key === 'ArrowRight') { go(i + 1); restart(); }
+  });
+  go(0); setPlaying(playing);
+}());
+</script>
+</body>
+</html>
+

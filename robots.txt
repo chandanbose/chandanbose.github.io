@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /html/old-html/
+Disallow: /_to_delete/
+
+Sitemap: https://chandanbose.com/sitemap.xml
