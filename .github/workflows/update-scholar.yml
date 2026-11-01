@@ -1,10 +1,10 @@
 # Refreshes the Google Scholar snapshot on html/journals.html.
 # Place this file at: .github/workflows/update-scholar.yml (in the root of the
-# chandanbose.github.io repository). It runs every Monday and can also be run
+# chandanbose.github.io repository). It runs every day and can also be run
 # by hand from the repository's "Actions" tab ("Run workflow").
 #
 # Google Scholar has no official API and sometimes blocks automated requests.
-# If that happens, the job keeps the last good numbers and tries again next week.
+# If that happens, the job keeps the last good numbers and tries again the next day.
 # For a more reliable fallback, add a free SerpApi key as a repository secret
 # named SERPAPI_KEY (Settings > Secrets and variables > Actions).
 
@@ -12,7 +12,7 @@ name: Update Google Scholar stats
 
 on:
   schedule:
-    - cron: "17 6 * * 1"   # Mondays, 06:17 UTC
+    - cron: "17 6 * * *"   # Every day, 06:17 UTC
   workflow_dispatch:
 
 permissions:
@@ -125,8 +125,7 @@ jobs:
 
           stats_keys = ("since_label", "citations", "h_index", "i10_index", "per_year")
           if all(old.get(k) == data[k] for k in stats_keys):
-              print("No change in stats.")
-              sys.exit(0)
+              print("No change in stats; refreshing the 'last updated' date only.")
 
           out = {"profile_url": PROFILE, "updated": datetime.date.today().isoformat(), **data}
           os.makedirs(os.path.dirname(OUT), exist_ok=True)
