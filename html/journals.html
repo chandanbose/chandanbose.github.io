@@ -223,7 +223,7 @@
                      </div>
                      <div class="gs-body">
                         <div class="gs-stats">
-                           <div class="gs-stat"><span class="gs-num" data-gs="citations.all">718</span><span class="gs-label">Citations</span><span class="gs-since"><span data-gs="since_label">Since 2021</span>: <b data-gs="citations.since">640</b></span></div>
+                           <div class="gs-stat"><span class="gs-num" data-gs="citations.all">719</span><span class="gs-label">Citations</span><span class="gs-since"><span data-gs="since_label">Since 2021</span>: <b data-gs="citations.since">641</b></span></div>
                            <div class="gs-stat"><span class="gs-num" data-gs="h_index.all">15</span><span class="gs-label">h-index</span><span class="gs-since"><span data-gs="since_label">Since 2021</span>: <b data-gs="h_index.since">15</b></span></div>
                            <div class="gs-stat"><span class="gs-num" data-gs="i10_index.all">20</span><span class="gs-label">i10-index</span><span class="gs-since"><span data-gs="since_label">Since 2021</span>: <b data-gs="i10_index.since">17</b></span></div>
                         </div>
@@ -232,7 +232,7 @@
                            <figcaption>Citations per year</figcaption>
                         </figure>
                      </div>
-                     <p class="gs-updated">Source: Google Scholar &middot; last updated <span data-gs="updated">27 Oct 2026</span></p>
+                     <p class="gs-updated">Source: Google Scholar &middot; last updated <span data-gs="updated">2 Nov 2026</span></p>
                   </section>
                   <!-- END GOOGLE SCHOLAR SNAPSHOT -->
                   <!--div class="">
@@ -1416,8 +1416,7 @@
   var root = document.getElementById('gs-snapshot');
   if (!root) return;
   // Fallback values, used if data/scholar.json cannot be loaded (e.g. when the page is opened from disk).
-  var fallback = {"updated":"2026-10-27","since_label":"Since 2021","citations":{"all":718,"since":640},"h_index":{"all":15,"since":15},"i10_index":{"all":20,"since":17},
-    "per_year":[{"year":2018,"citations":14},{"year":2019,"citations":26},{"year":2020,"citations":30},{"year":2021,"citations":61},{"year":2022,"citations":79},{"year":2023,"citations":96},{"year":2024,"citations":135},{"year":2025,"citations":148},{"year":2026,"citations":121}]};
+  var fallback = {"updated":"2026-11-02","since_label":"Since 2021","citations":{"all":719,"since":641},"h_index":{"all":15,"since":15},"i10_index":{"all":20,"since":17},"per_year":[{"year":2018,"citations":14},{"year":2019,"citations":26},{"year":2020,"citations":30},{"year":2021,"citations":61},{"year":2022,"citations":79},{"year":2023,"citations":96},{"year":2024,"citations":133},{"year":2025,"citations":148},{"year":2026,"citations":124}]};
   function get(o, path) { return path.split('.').reduce(function (v, k) { return v == null ? v : v[k]; }, o); }
   function fmtDate(iso) {
     var d = new Date(iso + 'T00:00:00');
