@@ -182,6 +182,17 @@
       .sv-feature-body { display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 22px 24px; }
       .sv-feature-tag { align-self: flex-start; padding: 3px 10px; border-radius: 999px; background: #e3e9f6; color: #1e3a8a; font-size: 12px; font-weight: bold; letter-spacing: .04em; text-transform: uppercase; }
       .sv-feature-title { font-size: 21px; font-weight: bold; line-height: 1.25; color: #1f2a37; }
+      .sv-feature-video { position: relative; aspect-ratio: 16 / 9; background: #000; display: block; }
+      .sv-feature-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+      .sv-feature-poster { background: #fff; }
+      .sv-play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
+      .sv-play img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .sv-play-icon { position: absolute; left: 50%; top: 50%; width: 72px; height: 50px; margin: -25px 0 0 -36px; border-radius: 12px; background: rgba(204,0,0,.9); box-shadow: 0 4px 14px rgba(0,0,0,.3); transition: transform .15s, background .15s; }
+      .sv-play-icon::after { content: ""; position: absolute; left: 29px; top: 15px; border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #fff; }
+      .sv-play:hover .sv-play-icon, .sv-play:focus-visible .sv-play-icon { transform: scale(1.08); background: #c00; }
+      .sv-play:focus-visible { outline: 3px solid #1e40af; outline-offset: -3px; }
+      .sv-feature-poster iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+      .research-themes .sv-feature-poster { aspect-ratio: 1 / 1; min-height: 0; align-self: center; }
       .sv-feature-desc { font-size: 15px; line-height: 1.6; color: #4b5563; }
       .sv-feature-desc a { color: #1e40af; text-decoration: underline; }
       .research-themes .sv-feature-wide { flex-direction: column; }
@@ -312,6 +323,17 @@
             </div>
 
             <div class="sv-feature">
+               <span class="sv-feature-img sv-feature-poster"><button type="button" class="sv-play" data-yt="yTPD5YTZmco" data-title="Democratising CFD with Open-Source Codes: Bridging Academic Innovation and Industrial Practice" aria-label="Play video: Democratising CFD with Open-Source Codes: Bridging Academic Innovation and Industrial Practice"><img src="../pictures/images/news/fdp2026-poster.webp" alt="Poster: FOSSEE, IIT Bombay session on Democratising CFD with Open-Source Codes: Bridging Academic Innovation and Industrial Practice, speaker Prof. Chandan Bose, University of Birmingham" loading="lazy" decoding="async"><span class="sv-play-icon" aria-hidden="true"></span></button></span>
+               <span class="sv-feature-body">
+                  <span class="sv-feature-tag">Highlight &middot; Faculty Development Program</span>
+                  <a class="sv-feature-title" href="https://youtu.be/yTPD5YTZmco" target="_blank" rel="noopener">Democratising CFD with Open-Source Codes: Bridging Academic Innovation and Industrial Practice</a>
+                  <span class="sv-feature-desc">Prof. Chandan Bose was the invited speaker for this session of the FOSSEE, IIT Bombay Faculty Development Program on CFD using OpenFOAM (2026). The talk explored how open-source codes such as OpenFOAM are democratising computational fluid dynamics, and how they bridge academic innovation and industrial practice. The FOSSEE project is funded by the National Mission on Education through ICT (NMEICT), Ministry of Education, Government of India.</span>
+                  <span class="sv-feature-stats"><a href="https://youtu.be/yTPD5YTZmco" target="_blank" rel="noopener"><b>65</b> min session</a><a href="https://cfd.fossee.in/home" target="_blank" rel="noopener"><b>FOSSEE</b> IIT Bombay</a><span><b>2026</b> FDP</span></span>
+                  <a class="sv-feature-more" href="https://youtu.be/yTPD5YTZmco" target="_blank" rel="noopener">Watch the session on YouTube &rarr;</a>
+               </span>
+            </div>
+
+            <div class="sv-feature">
                <span class="sv-feature-img"><img src="../pictures/images/news/mfmm2025-group.webp" alt="Group photo of participants at the Midlands Fluid Mechanics Meeting 2025 in front of Old Joe, University of Birmingham" loading="lazy" decoding="async"></span>
                <span class="sv-feature-body">
                   <span class="sv-feature-tag">Highlight &middot; Regional research network</span>
@@ -435,6 +457,19 @@
 </script>
 
       <script src="../js/mobile-menu.js"></script>
+<script id="sv-play-script">
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('.sv-play');
+  if (!b) return;
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+  f.title = b.getAttribute('data-title') || 'YouTube video';
+  f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  f.referrerPolicy = 'strict-origin-when-cross-origin';
+  f.allowFullscreen = true;
+  b.parentNode.replaceChild(f, b);
+});
+</script>
 </body>
 </html>
 
