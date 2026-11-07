@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+      <meta charset="utf-8">
+      <title>OpenFOAM Training | Dr Chandan Bose</title>
+      <!-- BEGIN SEO / link previews -->
+      <meta name="description" content="OpenFOAM training lectures by Dr Chandan Bose: recorded FOSSEE, IIT Bombay sessions on external aerodynamics, dynamic meshing, turbulence modelling and open-source CFD.">
+      <link rel="canonical" href="https://chandanbose.com/html/openfoam_training.html">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="BioFSI Lab – Dr Chandan Bose">
+      <meta property="og:title" content="OpenFOAM Training | Dr Chandan Bose">
+      <meta property="og:description" content="OpenFOAM training lectures by Dr Chandan Bose: recorded FOSSEE, IIT Bombay sessions on external aerodynamics, dynamic meshing, turbulence modelling and open-source CFD.">
+      <meta property="og:url" content="https://chandanbose.com/html/openfoam_training.html">
+      <meta property="og:image" content="https://chandanbose.com/pictures/images/social-preview.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:image:alt" content="Simulations of bio-inspired flows from the BioFSI Lab: butterfly swarm, squid-inspired nozzle, morphing wings and vortex wakes">
+      <meta property="og:locale" content="en_GB">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:creator" content="@cbose1991">
+      <meta name="twitter:title" content="OpenFOAM Training | Dr Chandan Bose">
+      <meta name="twitter:description" content="OpenFOAM training lectures by Dr Chandan Bose: recorded FOSSEE, IIT Bombay sessions on external aerodynamics, dynamic meshing, turbulence modelling and open-source CFD.">
+      <meta name="twitter:image" content="https://chandanbose.com/pictures/images/social-preview.jpg">
+      <meta name="twitter:image:alt" content="Simulations of bio-inspired flows from the BioFSI Lab: butterfly swarm, squid-inspired nozzle, morphing wings and vortex wakes">
+      <!-- END SEO / link previews -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Dr. Chandan Bose">
+      <meta name="keywords" content="Chandan Bose">
+   <link rel="icon" href="../pictures/images/BioFSI_Lab_Logo.png">
+      
+   <!-- Le styles -->
+   <link href="../css/bootstrap.min.css" rel="stylesheet">
+   <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+   <link href="../css/theme.css" rel="stylesheet">
+   <link href="../css/animate.css" rel="stylesheet">
+   <link href="../css/style.css" rel="stylesheet">
+      <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+   
+   <!-- Research theme styles are scoped to preserve the existing team layout. -->
+   <style id="research-theme-styles">
+      .research-themes { max-width: 1000px; margin: 24px auto 40px; padding: 0 10px; box-sizing: border-box; font-family: 'Times New Roman', Times, serif; color: #333; }
+
+
+      .research-themes a { color: #1e40af; }
+      .research-themes a:focus-visible { outline: 2px solid #1e3a8a; outline-offset: 3px; }
+      .research-themes h3 { font-size: 22px; line-height: 1.35; margin: 26px 0 10px; font-weight: 600; }
+      .research-themes .theme-rule { border: 0; height: 2px; background: #1e3a8a; margin: 0 0 12px; }
+      .research-themes .research-theme-table { width: 100%; table-layout: fixed; border-spacing: 10px; border-collapse: separate; }
+      .research-themes .theme-image-cell { width: 35%; vertical-align: top; }
+      .research-themes .theme-copy-cell { vertical-align: top; }
+      .research-themes .theme-image { display: block; width: 100%; height: auto; aspect-ratio: 32 / 23; object-fit: cover; border-radius: 3px; background: #eef2f4; }
+      .research-themes .theme-image-note { font-size: 11px; line-height: 1.4; color: #666; margin: 6px 0 0; }
+      .research-themes .theme-description { font-size: 14px; line-height: 1.75; margin: 0 0 12px; }
+      .research-themes .theme-reference-title { color: #1e3a8a; font-size: 14px; margin: 16px 0 8px; }
+      .research-themes .theme-references { margin: 0; padding: 0; list-style: none; }
+      .research-themes .theme-references li { font-size: 13px; line-height: 1.65; padding-left: 22px; text-indent: -22px; margin: 0 0 12px; overflow-wrap: anywhere; }
+      .research-themes .theme-status { font-size: 13px; line-height: 1.65; color: #666; font-style: italic; }
+      .research-themes .theme-top { font-size: 12px; text-align: right; margin: 4px 10px 22px; }
+      @media (max-width: 680px) {
+         .research-themes { padding: 0 8px; }
+         .research-themes h3 { font-size: 20px; }
+         .research-themes .research-theme-table, .research-themes .research-theme-table tbody, .research-themes .research-theme-table tr, .research-themes .research-theme-table td { display: block; width: 100%; box-sizing: border-box; }
+         .research-themes .theme-image-cell { padding: 0 0 16px; }
+         .research-themes .theme-image { max-width: 440px; }
+         .research-themes .theme-copy-cell { padding: 0; }
+      }
+
+      /* Research-theme tabs; each link also works as an anchor without JavaScript. */
+      .research-themes #research-themes-title { color: #1e3a8a; font-size: 28px; line-height: 1.25; margin: 0 0 18px; padding-bottom: 12px; border-bottom: 2px solid #1e3a8a; }
+      .research-themes .research-index { margin: 0 0 30px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+      .research-themes .research-index li { display: flex; margin: 0; padding: 0; font-size: 14px; min-width: 0; }
+      .research-themes .research-index a { display: flex; align-items: center; justify-content: center; flex: 1; box-sizing: border-box; min-height: 48px; padding: 11px 14px; border: 1px solid #d9dfe5; border-radius: 6px; background: #f5f7f9; color: #334155; font-weight: 600; line-height: 1.45; text-align: center; text-decoration: none; overflow-wrap: anywhere; transition: background-color .18s ease, color .18s ease, border-color .18s ease; }
+      .research-themes .research-index a:hover { background: #edf1fa; border-color: #7b93c9; color: #1e40af; text-decoration: none; }
+      .research-themes .research-index a[aria-current="location"] { background: #1e3a8a; border-color: #1e3a8a; color: #fff; }
+      .research-themes .research-index a:focus-visible { outline: 3px solid #1e40af; outline-offset: 3px; }
+
+      .research-themes .research-theme { scroll-margin-top: 20px; }
+      @media (max-width: 680px) {
+         .research-themes #research-themes-title { font-size: 25px; }
+         .research-themes .research-index { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+         .research-themes .research-index li:nth-child(n+10) { grid-column: 1 / -1; }
+         .research-themes .research-index a { font-size: 13px; padding: 10px; }
+      }
+      @media print {
+         .research-themes .research-index, .research-themes .theme-top { display: none; }
+
+      }
+   </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style id="page-extra-styles">
+      .research-themes .fund-intro { font-size: 15px; line-height: 1.7; margin: 0 0 20px; }
+      .research-themes .fund-count { display: inline-block; margin-left: 6px; padding: 0 8px; border-radius: 999px; background: #edf1fa; color: #1e3a8a; font-size: 12px; }
+      .research-themes .fund-tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 0; }
+      .research-themes .co-tabs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .research-themes .fund-tabs a[aria-current="location"] .fund-count { background: rgba(255,255,255,.25); color: #fff; }
+      .research-themes nav { margin-bottom: 26px; }
+      .research-themes .fund-group { margin: 34px 0 14px; padding: 10px 14px; font-size: 22px; line-height: 1.3; color: #fff; background: #1e3a8a; border-radius: 6px; scroll-margin-top: 20px; }
+      .research-themes .fund-group-intro { font-size: 14px; line-height: 1.7; margin: 0 0 12px; color: #444; }
+      .research-themes .fund-project { font-size: 15px; line-height: 1.55; margin: 0 0 6px; color: #333; }
+      .research-themes .fund-label { display: block; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; color: #1e3a8a; margin-bottom: 2px; }
+      .research-themes .fund-hpc-wrap { margin: 10px 0 4px; }
+      .research-themes .fund-hpc { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.5; }
+      .research-themes .fund-hpc th { text-align: left; padding: 9px 10px; background: #edf1fa; color: #1e3a8a; font-weight: 600; border-bottom: 2px solid #1e3a8a; }
+      .research-themes .fund-hpc td { padding: 9px 10px; vertical-align: top; border-bottom: 1px solid #e4e8ec; }
+      .research-themes .fund-hpc tbody tr:nth-child(even) td { background: #fafafa; }
+      .research-themes .fund-hpc tbody tr:hover td { background: #f4f7fc; }
+      .research-themes .te-table td:first-child { width: 46%; font-weight: 600; }
+      .research-themes .te-table td:last-child { width: 22%; }
+      .research-themes #workshops + .fund-group-intro + .fund-hpc-wrap td:first-child { width: 12%; font-weight: 600; white-space: nowrap; color: #1e3a8a; }
+      .research-themes .te-when { display: inline-block; margin-left: 8px; padding: 1px 10px; border-radius: 999px; background: #eef0f2; border: 1px solid #dde1e5; color: #555; font-size: 13px; font-weight: 600; vertical-align: 3px; }
+      .research-themes .te-inst h3 { margin-top: 18px; }
+      .research-themes .te-quote { margin: 0 0 16px; padding: 10px 16px; border-left: 4px solid #1e3a8a; background: #f6f8fc; font-size: 17px; font-style: italic; color: #444; }
+      .research-themes .te-quote cite { font-style: normal; font-size: 14px; color: #666; }
+      .research-themes .te-more { font-size: 14px; margin: 14px 0 0; }
+      .research-themes .co-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: -10px 0 6px; }
+      .research-themes .co-filters-label { font-size: 13px; font-weight: 600; color: #666; }
+      .research-themes .co-filter { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; border: 1px solid #d9dfe5; background: #fff; color: #334155; font-size: 13px; font-weight: 600; cursor: pointer; }
+      .research-themes .co-filter:hover { border-color: #7b93c9; color: #1e40af; }
+      .research-themes .co-filter.is-active { background: #1e3a8a; border-color: #1e3a8a; color: #fff; }
+      .research-themes .co-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+      .research-themes .co-card { padding: 14px 16px; border: 1px solid #e4e8ec; border-left: 4px solid #1e3a8a; border-radius: 6px; background: #fff; transition: opacity .2s, box-shadow .2s; }
+      .research-themes .co-card.is-dim { opacity: .3; }
+      .research-themes .co-card.is-hit { box-shadow: 0 6px 16px rgba(30,58,138,.15); }
+      .research-themes .co-name { margin: 0 0 2px; font-size: 17px; line-height: 1.35; font-weight: 600; }
+      .research-themes .co-name a { color: #1f2a37; text-decoration: none; }
+      .research-themes .co-name a:hover { color: #1e3a8a; text-decoration: underline; }
+      .research-themes .co-aff { margin: 0 0 8px; font-size: 14px; color: #666; }
+      .research-themes .co-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+      .research-themes .co-tag { padding: 1px 9px; border-radius: 999px; background: #edf1fa; color: #1e40af; font-size: 12px; font-weight: 600; }
+      .research-themes .co-tag .fa { margin-right: 2px; }
+      .research-themes .co-items { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #333; }
+      .research-themes .co-items li { margin: 0 0 3px; }
+      .research-themes .co-others { columns: 2; column-gap: 28px; margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+      .research-themes .co-others li { break-inside: avoid; margin-bottom: 4px; }
+      @media (max-width: 680px) {
+         .research-themes .fund-tabs, .research-themes .co-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+         .research-themes .fund-group { font-size: 19px; }
+         .research-themes .co-grid { grid-template-columns: 1fr; }
+         .research-themes .co-others { columns: 1; }
+         .research-themes .fund-hpc thead { display: none; }
+         .research-themes .fund-hpc, .research-themes .fund-hpc tbody, .research-themes .fund-hpc tr, .research-themes .fund-hpc td { display: block; width: 100% !important; box-sizing: border-box; }
+         .research-themes .fund-hpc tr { margin: 0 0 10px; border: 1px solid #e4e8ec; border-left: 4px solid #1e3a8a; border-radius: 6px; overflow: hidden; }
+         .research-themes .fund-hpc td { border: 0; padding: 3px 12px; white-space: normal !important; }
+         .research-themes .fund-hpc td:first-child { padding-top: 9px; }
+         .research-themes .fund-hpc td:last-child { padding-bottom: 9px; }
+         .research-themes .fund-hpc td:not(:first-child)::before { content: attr(data-label) ": "; font-weight: 600; color: #1e3a8a; }
+         .research-themes .fund-hpc tbody tr:nth-child(even) td { background: transparent; }
+      }
+      @media print { .research-themes nav, .research-themes .co-filters { display: none; } }
+      .research-themes .sv-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .research-themes .cp-list { list-style: none; margin: 0; padding: 0; }
+      .research-themes .cp-list li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 12px; padding: 10px 0; border-bottom: 1px solid #e4e8ec; font-size: 14px; line-height: 1.65; }
+      .research-themes .cp-no { align-self: start; padding: 2px 0; border-radius: 4px; background: #edf1fa; color: #1e3a8a; font-weight: 600; font-size: 13px; text-align: center; }
+      .research-themes .cp-list .cv-venue strong, .research-themes .cp-list strong { font-weight: 600; }
+      .research-themes .cp-year { margin: 18px 0 6px; font-size: 17px; color: #1e3a8a; border-bottom: 1px solid #cfd9ef; padding-bottom: 4px; }
+      .research-themes .cp-talks { margin: 0; padding-left: 20px; }
+      .research-themes .cp-talks li { margin: 0 0 8px; font-size: 14px; line-height: 1.65; }
+      .research-themes .fund-more { margin: 4px 0 0; }
+      .research-themes .fund-more summary { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; padding: 7px 16px; border: 1px solid #d9dfe5; border-radius: 6px; background: #f5f7f9; color: #334155; font-weight: 600; font-size: 14px; }
+      .research-themes .fund-more summary::-webkit-details-marker { display: none; }
+      .research-themes .fund-more summary::after { content: "\25be"; font-size: 12px; }
+      .research-themes .fund-more[open] summary::after { content: "\25b4"; }
+      .research-themes .fund-more summary:hover { background: #edf1fa; border-color: #7b93c9; color: #1e40af; }
+      .research-themes .fund-more .fund-more-close, .research-themes .fund-more[open] .fund-more-open { display: none; }
+      .research-themes .fund-more[open] .fund-more-close { display: inline; }
+      .research-themes .sv-table td.sv-when { width: 24%; font-weight: 600; color: #1e3a8a; }
+      .research-themes .sv-h3 { margin: 18px 0 6px; font-size: 18px; }
+      .research-themes .sv-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+      .research-themes .sv-chips li { padding: 4px 12px; border-radius: 999px; border: 1px solid #e4e8ec; background: #f7f8fa; font-size: 13px; }
+      .research-themes .sv-plain { margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.7; columns: 2; column-gap: 28px; }
+      .research-themes .sv-date { margin: 0 0 2px; font-size: 13px; font-weight: 600; color: #1e3a8a; }
+      .research-themes .sv-lead .co-name { font-size: 16px; }
+      @media (max-width: 680px) { .research-themes .sv-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); } .research-themes .sv-plain { columns: 1; } .research-themes .cp-list li { grid-template-columns: 1fr; gap: 4px; } .research-themes .cp-no { justify-self: start; padding: 2px 8px; } }
+   </style>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+   <style id="sv-feature-styles">
+      .research-themes .sv-feature { display: flex; margin: 0 0 30px; border: 1px solid #d9dfe5; border-radius: 10px; overflow: hidden; background: #fff; color: inherit; text-decoration: none !important; box-shadow: 0 2px 8px rgba(0,0,0,.05); transition: transform .15s, box-shadow .15s; }
+      .research-themes .sv-feature:hover, .research-themes .sv-feature:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.10); }
+      .sv-feature-img { flex: 0 0 46%; position: relative; min-height: 260px; background: #000; }
+      .sv-feature-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .sv-feature-body { display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 22px 24px; }
+      .sv-feature-tag { align-self: flex-start; padding: 3px 10px; border-radius: 999px; background: #e3e9f6; color: #1e3a8a; font-size: 12px; font-weight: bold; letter-spacing: .04em; text-transform: uppercase; }
+      .sv-feature-title { font-size: 21px; font-weight: bold; line-height: 1.25; color: #1f2a37; }
+      .sv-feature-video { position: relative; aspect-ratio: 16 / 9; background: #000; display: block; }
+      .sv-feature-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+      .sv-feature-poster { background: #fff; }
+      .sv-play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
+      .sv-play img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .sv-play-icon { position: absolute; left: 50%; top: 50%; width: 72px; height: 50px; margin: -25px 0 0 -36px; border-radius: 12px; background: rgba(204,0,0,.9); box-shadow: 0 4px 14px rgba(0,0,0,.3); transition: transform .15s, background .15s; }
+      .sv-play-icon::after { content: ""; position: absolute; left: 29px; top: 15px; border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #fff; }
+      .sv-play:hover .sv-play-icon, .sv-play:focus-visible .sv-play-icon { transform: scale(1.08); background: #c00; }
+      .sv-play:focus-visible { outline: 3px solid #1e40af; outline-offset: -3px; }
+      .sv-feature-poster iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+      .research-themes .sv-feature-poster { aspect-ratio: 1 / 1; min-height: 0; align-self: center; }
+      .sv-lectures { display: block; margin-top: 4px; padding: 12px 14px; border: 1px solid #dbe3f3; border-radius: 8px; background: #f8fafd; }
+      .sv-lectures-title { display: block; margin-bottom: 6px; font-size: 13px; font-weight: bold; letter-spacing: .04em; text-transform: uppercase; color: #1e3a8a; }
+      .sv-lectures-title .fa { color: #c00; margin-right: 4px; }
+      .sv-lectures-list { display: block; counter-reset: lec; }
+      .sv-lectures-list a { display: block; padding: 7px 0 7px 28px; position: relative; border-top: 1px solid #e6ebf3; text-decoration: none; color: #1f2a37; }
+      .sv-lectures-list a:first-child { border-top: 0; }
+      .sv-lectures-list a::before { counter-increment: lec; content: counter(lec); position: absolute; left: 0; top: 8px; width: 20px; height: 20px; border-radius: 50%; background: #1e3a8a; color: #fff; font-size: 11px; font-weight: bold; text-align: center; line-height: 20px; }
+      .sv-lec-name { display: block; font-size: 15px; font-weight: bold; color: #1e40af; }
+      .sv-lectures-list a:hover .sv-lec-name, .sv-lectures-list a:focus-visible .sv-lec-name { text-decoration: underline; }
+      .sv-lec-meta { display: block; font-size: 13px; color: #64748b; }
+      .sv-feature-desc { font-size: 15px; line-height: 1.6; color: #4b5563; }
+      .sv-feature-desc a { color: #1e40af; text-decoration: underline; }
+      .research-themes .sv-feature-wide { flex-direction: column; }
+      .sv-feature-wide .sv-feature-img { flex: none; min-height: 0; aspect-ratio: 800 / 263; }
+      .sv-feature-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+      .sv-feature-stats > * { padding: 6px 12px; border-radius: 8px; background: #f3f6fc; border: 1px solid #dbe3f3; font-size: 14px; color: #334155; }
+      .sv-feature-stats a { color: #334155; text-decoration: none; }
+      .sv-feature-stats a:hover, .sv-feature-stats a:focus-visible { border-color: #1e3a8a; background: #e3e9f6; }
+      .sv-feature-title, .sv-feature-more { text-decoration: none; }
+      .research-themes .sv-feature-title { color: #1f2a37; }
+      .sv-feature-title:hover, .sv-feature-more:hover { text-decoration: underline; }
+      .sv-feature-stats b { font-size: 18px; color: #1e3a8a; margin-right: 4px; }
+      .sv-feature-more { margin-top: 4px; font-size: 15px; font-weight: bold; color: #1e40af; }
+      @media (max-width: 680px) { .research-themes .sv-feature { flex-direction: column; } .sv-feature-img { flex: none; min-height: 0; aspect-ratio: 16 / 9; } }
+   </style>
+   <style id="oft-styles">
+      .research-themes .sv-feature-thumb { aspect-ratio: 16 / 9; min-height: 0; align-self: center; }
+      .research-themes .oft-count { margin: -6px 0 20px; font-size: 14px; color: #64748b; }
+      .research-themes .oft-count b { color: #1e3a8a; }
+   </style>
+</head>
+   
+   <body>
+      <div class="container">
+         <a href="#">
+            <img width="1000px" src="../pictures/images/cover-BioFSILab-2026-1.png" class="img-responsive animated pulse">
+         </a>
+         <!--header class="jumbotron subhead" id="overview">
+            <h1> Dr. Chandan Bose </h1-->
+            <!--p class="lead"> Postdoctoral Research Associate </p>
+            <h> University of LiÃ¨ge </h -->
+         <!--/header-->
+         <!--div class="masthead">
+            <div class="navbar">
+               <div class="navbar-inner">
+                  <div class="container">
+                     <ul class="nav">
+                        <li class="active"><a href="home.html">Home</a></li>
+                        <li><a href="biography.html">Profile</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="awards.html">Recognitions</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div-->
+
+         <div class="container">
+            <section id="intro">
+                           <ul class="nav_ul">
+                              <li class="active"><a href="home.html">Home</a></li>
+                           <li><a href="BioFSILab.html">People</a>
+                           <!--ul>
+                              <li><a href="biography.html"> Dr Chandan Bose </a></li>
+                              <li><a href="BioFSILab.html">BioFSILab Members</a></li>
+                           </ul-->
+                           </li>
+                           <li><a href="research_themes.html">Research</a>
+                           <!--ul>
+                              <li><a href="academic_projects.html">Ongoing Research</a></li>
+                              <li><a href="funded_projects.html">Grants</a></li>
+                              <li><a href="collaborators.html">Collaborators</a></li>
+                           </ul-->
+                              </li>
+                           <li><a href="funded_projects.html">Projects</a></li>
+                           <li><a href="journals.html">Publications</a>
+                              <ul>
+                                 <li><a href="journals.html">Journal Articles</a></li>
+                                 <li><a href="conferences.html">Conference Publications</a></li>
+                              </ul>
+                              <!--ul>
+                                 <li><a href="journals.html">Journal Articles</a></li>
+                                 <li><a href="proceedings.html">Proceedings</a></li>
+                                 <li><a href="chapters.html">Book Chapters</a></li>
+                                 <li><a href="conferences.html">Conference Presentations</a></li>
+                              </ul-->
+                              </li>
+                           <li><a href="fluid_art.html">Fluid Art</a></li>
+                           <li><a href="collaborators.html">Collaborators</a></li>
+                           <li><a href="teaching.html">Teaching</a></li>
+                           <li><a href="reviewer.html">Community</a>
+                              <ul>
+                                 <li><a href="reviewer.html">Academic Service</a></li>
+                                 <li><a href="openfoam_training.html">OpenFOAM Training</a></li>
+                              </ul>
+                              </li>
+                           <li><a href="news.html">News</a></li>
+                           <li><a href="press.html">Press</a></li>
+                           <li><a href="open_positions.html">Positions</a></li>
+                           <!--li><a href="awards.html">Recognitions</a>
+                              <ul>
+                                 <li><a href="awards.html">Awards/ Honors</a></li>
+                                 <li><a href="reviewer.html">Academic Service</a></li>
+                                 <li><a href="invited.html">Invited Talks</a></li>
+                              </ul>
+                              </li-->
+                              <!--li><a href="course_teaching.html">Teaching</a>
+                              <ul>
+                                 <li><a href="course_teaching.html">Assisting Courses</a></li>
+                                 <li><a href="mentoring.html">Mentoring</a></li>
+                                 <li><a href="codes.html">Codes/ Tutorials</a></li>
+                              </ul>
+                              </li>
+                              <li><a href="media.html">Miscellaneous</a>
+                                 <ul>
+                                    <li><a href="media.html">Media</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                 </ul>
+                              </li>
+                           </ul-->
+                           </ul>
+            </section>
+         </div>
+
+         <!-- <br/> -->
+         <!-- <br/> -->
+         <!-- <br/> -->
+
+
+         <!-- BEGIN OPENFOAM TRAINING -->
+         <section id="research-themes" class="research-themes" aria-labelledby="research-themes-title">
+            <h2 id="research-themes-title">OpenFOAM Training</h2>
+            <p class="fund-intro">As Principal Investigator of the <a href="https://cfd.fossee.in/home" target="_blank" rel="noopener">FOSSEE OpenFOAM project</a> at IIT Bombay, Dr Chandan Bose regularly teaches open-source computational fluid dynamics to students, researchers, faculty and industry. Recordings of his recent OpenFOAM lectures are collected below; click a cover to play the video here. See also the <a href="teaching.html#workshops">workshops and training</a> on the Teaching page and the <a href="reviewer.html">Community</a> page.</p>
+            <p class="oft-count"><b>5</b> recorded lectures &middot; newest first</p>
+
+            <div class="sv-feature">
+               <span class="sv-feature-img sv-feature-poster"><button type="button" class="sv-play" data-yt="yTPD5YTZmco" data-title="Democratising CFD with Open-Source Codes: Bridging Academic Innovation and Industrial Practice" aria-label="Play video: Democratising CFD with Open-Source Codes: Bridging Academic Innovation and Industrial Practice"><img src="../pictures/images/news/fdp2026-poster.webp" alt="Poster for the session: Democratising CFD with Open-Source Codes: Bridging Academic Innovation and Industrial Practice" loading="lazy" decoding="async"><span class="sv-play-icon" aria-hidden="true"></span></button></span>
+               <span class="sv-feature-body">
+                  <span class="sv-feature-tag">Lecture &middot; FOSSEE, IIT Bombay</span>
+                  <a class="sv-feature-title" href="https://youtu.be/yTPD5YTZmco" target="_blank" rel="noopener">Democratising CFD with Open-Source Codes: Bridging Academic Innovation and Industrial Practice</a>
+                  <span class="sv-feature-desc">An invited session for faculty on how open-source codes such as OpenFOAM are democratising computational fluid dynamics, and how they bridge academic innovation and industrial practice.</span>
+                  <span class="sv-feature-stats"><span>Faculty Development Program on CFD using OpenFOAM</span><span><b>65 min</b></span><span>Sep 2026</span></span>
+                  <a class="sv-feature-more" href="https://youtu.be/yTPD5YTZmco" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+               </span>
+            </div>
+
+            <div class="sv-feature">
+               <span class="sv-feature-img sv-feature-thumb"><button type="button" class="sv-play" data-yt="fRl-0ma_VYc" data-title="External Aerodynamics &amp; Dynamic Meshing Strategies in OpenFOAM" aria-label="Play video: External Aerodynamics &amp; Dynamic Meshing Strategies in OpenFOAM"><img src="https://i.ytimg.com/vi/fRl-0ma_VYc/hqdefault.jpg" alt="Video thumbnail: External Aerodynamics &amp; Dynamic Meshing Strategies in OpenFOAM" loading="lazy" decoding="async"><span class="sv-play-icon" aria-hidden="true"></span></button></span>
+               <span class="sv-feature-body">
+                  <span class="sv-feature-tag">Lecture &middot; FOSSEE, IIT Bombay</span>
+                  <a class="sv-feature-title" href="https://youtu.be/fRl-0ma_VYc" target="_blank" rel="noopener">External Aerodynamics &amp; Dynamic Meshing Strategies in OpenFOAM</a>
+                  <span class="sv-feature-desc">Setting up external-aerodynamics simulations in OpenFOAM and choosing dynamic-meshing strategies for moving bodies.</span>
+                  <span class="sv-feature-stats"><span>FOSSEE BOFCFD workshop &middot; Session 7</span><span><b>45 min</b></span><span>Jun 2026</span></span>
+                  <a class="sv-feature-more" href="https://youtu.be/fRl-0ma_VYc" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+               </span>
+            </div>
+
+            <div class="sv-feature">
+               <span class="sv-feature-img sv-feature-thumb"><button type="button" class="sv-play" data-yt="QNff3aawu5Q" data-title="External Aerodynamics, Dynamic Meshing and Turbulence Modelling in OpenFOAM" aria-label="Play video: External Aerodynamics, Dynamic Meshing and Turbulence Modelling in OpenFOAM"><img src="https://i.ytimg.com/vi/QNff3aawu5Q/hqdefault.jpg" alt="Video thumbnail: External Aerodynamics, Dynamic Meshing and Turbulence Modelling in OpenFOAM" loading="lazy" decoding="async"><span class="sv-play-icon" aria-hidden="true"></span></button></span>
+               <span class="sv-feature-body">
+                  <span class="sv-feature-tag">Lecture &middot; FOSSEE, IIT Bombay</span>
+                  <a class="sv-feature-title" href="https://youtu.be/QNff3aawu5Q" target="_blank" rel="noopener">External Aerodynamics, Dynamic Meshing and Turbulence Modelling in OpenFOAM</a>
+                  <span class="sv-feature-desc">External-aerodynamics workflows in OpenFOAM, combining dynamic meshing with practical turbulence modelling.</span>
+                  <span class="sv-feature-stats"><span>Faculty Development Program on CFD &middot; Session 7</span><span><b>1 h 1 min</b></span><span>May 2026</span></span>
+                  <a class="sv-feature-more" href="https://youtu.be/QNff3aawu5Q" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+               </span>
+            </div>
+
+            <div class="sv-feature">
+               <span class="sv-feature-img sv-feature-thumb"><button type="button" class="sv-play" data-yt="yQ6BHo8M6fc" data-title="India&ndash;UK Collaboration on CFD-OpenFOAM" aria-label="Play video: India&ndash;UK Collaboration on CFD-OpenFOAM"><img src="https://i.ytimg.com/vi/yQ6BHo8M6fc/hqdefault.jpg" alt="Video thumbnail: India&ndash;UK Collaboration on CFD-OpenFOAM" loading="lazy" decoding="async"><span class="sv-play-icon" aria-hidden="true"></span></button></span>
+               <span class="sv-feature-body">
+                  <span class="sv-feature-tag">Lecture &middot; FOSSEE, IIT Bombay</span>
+                  <a class="sv-feature-title" href="https://youtu.be/yQ6BHo8M6fc" target="_blank" rel="noopener">India&ndash;UK Collaboration on CFD-OpenFOAM</a>
+                  <span class="sv-feature-desc">A short talk on building India&ndash;UK collaboration around open-source CFD and the OpenFOAM community.</span>
+                  <span class="sv-feature-stats"><span>FOSSEE IAMCO workshop &middot; Session 4</span><span><b>12 min</b></span><span>May 2026</span></span>
+                  <a class="sv-feature-more" href="https://youtu.be/yQ6BHo8M6fc" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+               </span>
+            </div>
+
+            <div class="sv-feature">
+               <span class="sv-feature-img sv-feature-thumb"><button type="button" class="sv-play" data-yt="cnyy3LZQf7c" data-title="External Aerodynamics and Dynamic Meshing Strategies in OpenFOAM" aria-label="Play video: External Aerodynamics and Dynamic Meshing Strategies in OpenFOAM"><img src="https://i.ytimg.com/vi/cnyy3LZQf7c/hqdefault.jpg" alt="Video thumbnail: External Aerodynamics and Dynamic Meshing Strategies in OpenFOAM" loading="lazy" decoding="async"><span class="sv-play-icon" aria-hidden="true"></span></button></span>
+               <span class="sv-feature-body">
+                  <span class="sv-feature-tag">Lecture &middot; FOSSEE, IIT Bombay</span>
+                  <a class="sv-feature-title" href="https://youtu.be/cnyy3LZQf7c" target="_blank" rel="noopener">External Aerodynamics and Dynamic Meshing Strategies in OpenFOAM</a>
+                  <span class="sv-feature-desc">An extended hands-on session on external aerodynamics and dynamic-meshing strategies in OpenFOAM.</span>
+                  <span class="sv-feature-stats"><span>FOSSEE TCHTPO workshop &middot; Session 8</span><span><b>1 h 59 min</b></span><span>Apr 2026</span></span>
+                  <a class="sv-feature-more" href="https://youtu.be/cnyy3LZQf7c" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+               </span>
+            </div>
+
+            <p class="theme-top"><a href="#research-themes">Back to top ↑</a></p>
+         </section>
+         <!-- END OPENFOAM TRAINING -->
+
+
+   <footer id="footer">
+         <div class="site-footer">
+            <div class="site-footer-cols">
+               <div class="site-footer-col">
+                  <p class="site-footer-title">BioFSILab</p>
+                  <address>Bio-Inspired Fluid&ndash;Structure Interaction Laboratory<br><b>Office:</b> Room No. 1B27, Met &amp; Mat Building (G6)<br>Aerospace Engineering, School of Metallurgy and Materials<br>University of Birmingham, Edgbaston, Birmingham, B15 2TT, United Kingdom</address>
+               </div>
+               <div class="site-footer-col">
+                  <p class="site-footer-title">Contact</p>
+                  <p><a href="mailto:c.bose@bham.ac.uk"><i class="fa fa-envelope" aria-hidden="true"></i> c.bose@bham.ac.uk</a><br><a href="mailto:cb.ju.1991@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> cb.ju.1991@gmail.com</a></p>
+               </div>
+               <div class="site-footer-col">
+                  <p class="site-footer-title">Follow</p>
+                  <ul class="site-footer-social">
+                     <li><a href="https://www.linkedin.com/in/cbose1991/" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     <li><a href="https://github.com/BioFSILab" aria-label="GitHub" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                     <li><a href="https://scholar.google.com/citations?user=pj618AMAAAAJ&amp;hl=en" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a></li>
+                     <li><a href="https://twitter.com/cbose1991" aria-label="X (Twitter)" title="X (Twitter)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.researchgate.net/profile/Chandan_Bose3" aria-label="ResearchGate" title="ResearchGate"><i class="ai ai-researchgate" aria-hidden="true"></i></a></li>
+                     <li><a href="https://www.youtube.com/channel/UCV1hlegAWgRIZiY8fJZVQgw" aria-label="OpenFOAM Tutorials on YouTube" title="OpenFOAM Tutorials on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+            <p class="site-footer-copy">&copy; <span class="footer-year">2026</span> Chandan Bose &middot; All rights reserved</p>
+         </div>
+         <script>(function(){var y=new Date().getFullYear();Array.prototype.forEach.call(document.querySelectorAll('.footer-year'),function(e){e.textContent=y;});}());</script>
+      </footer>
+   </div>
+     
+      <!-- Javascript files -->
+      <script src="../js/jquery-1.9.1.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script> $('#main-carousel').carousel(); </script>
+
+<script id="research-theme-tabs">
+(function () {
+  'use strict';
+  var root = document.getElementById('research-themes');
+  if (!root) return;
+  var links = root.querySelectorAll('.research-index a[href^="#"]');
+  function highlightCurrentLink() {
+    var hash = window.location.hash;
+    Array.prototype.forEach.call(links, function (link) {
+      if (link.getAttribute('href') === hash) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+  // Native anchor navigation keeps every description visible and supports
+  // direct links, keyboard navigation and the browser Back/Forward buttons.
+  highlightCurrentLink();
+  window.addEventListener('hashchange', highlightCurrentLink);
+}());
+</script>
+
+      <script src="../js/mobile-menu.js"></script>
+<script id="sv-play-script">
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('.sv-play');
+  if (!b) return;
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+  f.title = b.getAttribute('data-title') || 'YouTube video';
+  f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  f.referrerPolicy = 'strict-origin-when-cross-origin';
+  f.allowFullscreen = true;
+  b.parentNode.replaceChild(f, b);
+});
+</script>
+</body>
+</html>
+

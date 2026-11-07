@@ -193,6 +193,16 @@
       .sv-play:focus-visible { outline: 3px solid #1e40af; outline-offset: -3px; }
       .sv-feature-poster iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
       .research-themes .sv-feature-poster { aspect-ratio: 1 / 1; min-height: 0; align-self: center; }
+      .sv-lectures { display: block; margin-top: 4px; padding: 12px 14px; border: 1px solid #dbe3f3; border-radius: 8px; background: #f8fafd; }
+      .sv-lectures-title { display: block; margin-bottom: 6px; font-size: 13px; font-weight: bold; letter-spacing: .04em; text-transform: uppercase; color: #1e3a8a; }
+      .sv-lectures-title .fa { color: #c00; margin-right: 4px; }
+      .sv-lectures-list { display: block; counter-reset: lec; }
+      .sv-lectures-list a { display: block; padding: 7px 0 7px 28px; position: relative; border-top: 1px solid #e6ebf3; text-decoration: none; color: #1f2a37; }
+      .sv-lectures-list a:first-child { border-top: 0; }
+      .sv-lectures-list a::before { counter-increment: lec; content: counter(lec); position: absolute; left: 0; top: 8px; width: 20px; height: 20px; border-radius: 50%; background: #1e3a8a; color: #fff; font-size: 11px; font-weight: bold; text-align: center; line-height: 20px; }
+      .sv-lec-name { display: block; font-size: 15px; font-weight: bold; color: #1e40af; }
+      .sv-lectures-list a:hover .sv-lec-name, .sv-lectures-list a:focus-visible .sv-lec-name { text-decoration: underline; }
+      .sv-lec-meta { display: block; font-size: 13px; color: #64748b; }
       .sv-feature-desc { font-size: 15px; line-height: 1.6; color: #4b5563; }
       .sv-feature-desc a { color: #1e40af; text-decoration: underline; }
       .research-themes .sv-feature-wide { flex-direction: column; }
@@ -271,7 +281,12 @@
                            <li><a href="fluid_art.html">Fluid Art</a></li>
                            <li><a href="collaborators.html">Collaborators</a></li>
                            <li><a href="teaching.html">Teaching</a></li>
-                           <li><a href="reviewer.html">Community</a></li>
+                           <li><a href="reviewer.html">Community</a>
+                              <ul>
+                                 <li><a href="reviewer.html">Academic Service</a></li>
+                                 <li><a href="openfoam_training.html">OpenFOAM Training</a></li>
+                              </ul>
+                              </li>
                            <li><a href="news.html">News</a></li>
                            <li><a href="press.html">Press</a></li>
                            <li><a href="open_positions.html">Positions</a></li>
@@ -318,6 +333,7 @@
                   <a class="sv-feature-title" href="https://cfd.fossee.in/home" target="_blank" rel="noopener">Open-Source CFD Education through FOSSEE</a>
                   <span class="sv-feature-desc">As Principal Investigator of the FOSSEE OpenFOAM project at IIT Bombay, Dr Chandan Bose helps make computational fluid dynamics accessible through free, open-source tools: OpenFOAM tutorials and lecture videos, case studies, textbook companions, lab and research migration projects, and hackathons. He has guided 25+ interns in OpenFOAM, and led the FOSSEE OpenFOAM Symposium on CFD at IIT Bombay (8&ndash;9 January 2026), including an intermediate and advanced OpenFOAM workshop.</span>
                   <span class="sv-feature-stats"><a href="https://cfd.fossee.in/case-study-project/completed-case-studies" target="_blank" rel="noopener"><b>214</b> completed case studies</a><a href="https://cfd.fossee.in/research-migration-project/completed-research-migration" target="_blank" rel="noopener"><b>66</b> completed research migration projects</a><a href="https://cfd.fossee.in/advisor" target="_blank" rel="noopener"><b>25+</b> interns guided in OpenFOAM</a></span>
+                  <a class="sv-feature-more" href="openfoam_training.html">Watch the OpenFOAM training lectures &rarr;</a>
                   <a class="sv-feature-more" href="https://cfd.fossee.in/home" target="_blank" rel="noopener">Visit FOSSEE CFD &rarr;</a>
                </span>
             </div>

@@ -91,7 +91,7 @@
    <style id="page-extra-styles">
       .research-themes .fund-intro { font-size: 15px; line-height: 1.7; margin: 0 0 20px; }
       .research-themes .fund-count { display: inline-block; margin-left: 6px; padding: 0 8px; border-radius: 999px; background: #edf1fa; color: #1e3a8a; font-size: 12px; }
-      .research-themes .fund-tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 0; }
+      .research-themes .fund-tabs { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-bottom: 0; }
       .research-themes .co-tabs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
       .research-themes .fund-tabs a[aria-current="location"] .fund-count { background: rgba(255,255,255,.25); color: #fff; }
       .research-themes nav { margin-bottom: 26px; }
@@ -248,7 +248,12 @@
                            <li><a href="fluid_art.html">Fluid Art</a></li>
                            <li><a href="collaborators.html">Collaborators</a></li>
                            <li><a href="teaching.html">Teaching</a></li>
-                           <li><a href="reviewer.html">Community</a></li>
+                           <li><a href="reviewer.html">Community</a>
+                              <ul>
+                                 <li><a href="reviewer.html">Academic Service</a></li>
+                                 <li><a href="openfoam_training.html">OpenFOAM Training</a></li>
+                              </ul>
+                              </li>
                            <li><a href="news.html">News</a></li>
                            <li><a href="press.html">Press</a></li>
                            <li><a href="open_positions.html">Positions</a></li>
@@ -287,7 +292,7 @@
             <h2 id="research-themes-title">Teaching</h2>
             <blockquote class="te-quote">&ldquo;If you want to master something, teach it!&rdquo; <cite>&mdash; Richard Feynman</cite></blockquote>
             <p class="fund-intro">Dr Chandan Bose teaches aerodynamics, aeroelasticity and fluid mechanics at the University of Birmingham, and has taught at the University of Edinburgh, the University of Li&egrave;ge and IIT Madras. He is a Fellow of the Higher Education Academy and regularly runs training on open-source computational fluid dynamics with OpenFOAM.</p>
-            <nav aria-label="Teaching"><ul class="research-index fund-tabs"><li><a href="#qualifications">Teaching Qualifications</a></li><li><a href="#current-teaching">Current Teaching</a></li><li><a href="#previous-teaching">Previous Teaching</a></li><li><a href="#workshops">Workshops &amp; Training <span class="fund-count">9</span></a></li></ul></nav>
+            <nav aria-label="Teaching"><ul class="research-index fund-tabs"><li><a href="#qualifications">Teaching Qualifications</a></li><li><a href="#current-teaching">Current Teaching</a></li><li><a href="#previous-teaching">Previous Teaching</a></li><li><a href="#mooc">MOOC</a></li><li><a href="#workshops">Workshops &amp; Training <span class="fund-count">9</span></a></li></ul></nav>
 
             <h2 class="fund-group" id="qualifications">Teaching Qualifications</h2>
             <div class="co-grid te-quals">
@@ -327,6 +332,19 @@
             </section>
             <p class="theme-top"><a href="#research-themes">Back to teaching ↑</a></p>
             </details>
+
+            <h2 class="fund-group" id="mooc">MOOC</h2>
+            <div class="sv-feature">
+               <span class="sv-feature-img"><img src="../pictures/images/news/fossee-openfoam-aircraft.webp" alt="OpenFOAM simulation of streamlines around a fighter aircraft" loading="lazy" decoding="async"></span>
+               <span class="sv-feature-body">
+                  <span class="sv-feature-tag">Highlight &middot; MOOC</span>
+                  <a class="sv-feature-title" href="https://elearn.nptel.ac.in/product-page/introduction-to-cfd-using-openfoam" target="_blank" rel="noopener">Introduction to CFD using OpenFOAM</a>
+                  <span class="sv-feature-desc">Dr Chandan Bose was the course instructor for <i>Introduction to CFD using OpenFOAM</i> (2023), a free online course on NPTEL+, the e-learning platform of the National Programme on Technology Enhanced Learning hosted at IIT Madras. Offered to students, research scholars, faculty and industry professionals, the course introduces computational fluid dynamics through the open-source OpenFOAM toolbox.</span>
+                  <span class="sv-feature-stats"><span><b>NPTEL+</b> platform</span><span><b>Free</b> to enrol</span><span><b>2023</b></span></span>
+                  <a class="sv-feature-more" href="https://elearn.nptel.ac.in/product-page/introduction-to-cfd-using-openfoam" target="_blank" rel="noopener">View the course on NPTEL+ &rarr;</a>
+               </span>
+            </div>
+            <p class="theme-top"><a href="#research-themes">Back to teaching ↑</a></p>
 
             <h2 class="fund-group" id="workshops">Workshops &amp; Training</h2>
             <p class="fund-group-intro">Hands-on training in computational fluid dynamics, OpenFOAM and high-performance computing for students and early-career researchers.</p>
